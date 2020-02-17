@@ -1,0 +1,15 @@
+@import url('./general/normalize.css');
+@import url('./general/base.css');
+@import url('./general/animations.css');
+@import url('./blocks/intro.css');
+@import url('./blocks/header.css');
+@import url('./blocks/top-menu.css');
+@import url('./blocks/sidebar-left.css');
+@import url('./blocks/breadcrumbs.css');
+@import url('./blocks/flight-crew.css');
+@import url('./blocks/partners.css');
+@import url('./blocks/reviews.css');
+@import url('./blocks/form.css');
+@import url('./blocks/last-news.css');
+@import url('./blocks/pagination.css');
+@import url('./blocks/footer.css');

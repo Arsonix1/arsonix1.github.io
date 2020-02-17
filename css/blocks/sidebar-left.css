@@ -1,0 +1,128 @@
+.sidebar-style {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-left {
+  line-height: 47px;
+  font-weight: bold;
+  vertical-align: top;
+  min-width: 292px;
+  margin-right: 23px;
+}
+
+.top-tariff {
+  margin-top: 4.5%;
+  margin-left: 7%;
+  padding-top: 8%;
+}
+
+.top-tariff__tariff-title {
+  text-transform: uppercase;
+  margin-left: -10px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  color: #262424;
+}
+
+.top-tariff__tariff-subtitle {
+  margin-top: 9px;
+  margin-left: -5px;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  line-height: 51px;
+  color: #262626;
+  font-weight: 700;
+  text-align: center;
+}
+
+.top-tariff__tariff-content {
+  display: block;
+  margin-left: 40px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #262424;
+  font-weight: 300;
+}
+
+.top-tariff__tariff-content li {
+  margin: 0 0 5.5% 10%;
+  text-align: left;
+  line-height: 0.5;
+}
+
+.top-tariff__tariff-content li:before {
+  content:"·";
+  margin-left: -12%;
+  margin-right: 5%;
+  font-size:40px;
+}
+
+.top-tariff__tariff-price {
+  font-size: 54px;
+  line-height: 182px;
+  color: #252525;
+  font-weight: 400;
+  text-align: center;
+  margin-top: -19%;
+  margin-bottom: -15%;
+}
+
+.top-tariff__tariff-price:before {
+  content:"$";
+  font-size:32px;
+  margin-right: -4%;
+}
+
+.tariff-border {
+  border: 1px solid grey;
+}
+
+.socials {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 4.3%;
+  margin-left: 27.4%;
+}
+
+.socials ul {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 12%;
+  margin-top: -3%;
+}
+.socials ul li {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.pattern {
+  margin: 5.3% 0 0 7%;
+  text-align: center;
+  width: 274px;
+  padding: 2%;
+  padding-bottom: 1.2%;
+  background-color: #5972b1;
+}
+
+.pattern__text {
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.pattern__text a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.pattern__text .phone {
+  text-decoration: none;
+}

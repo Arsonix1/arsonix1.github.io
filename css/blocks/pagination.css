@@ -1,0 +1,43 @@
+.pagination {
+  display: flex; 
+  font-size: 14px;
+}
+
+.pagination-reviews {
+  margin: 2.5% 0 0 25.2%;
+}
+
+.pagination-reviews li a {
+  font-weight: bold;
+}
+
+.pagination-last-news {
+  margin: 2.5% 0 -6.8% 22.4%;
+}
+
+.pagination-last-news a {
+  font-weight: 500;
+}
+
+.pagination__list {
+  display: inline-flex;
+}
+
+.pagination__page-counter {
+  align-self: center;
+}
+
+.pagination a {
+  display: inline-flex;
+  color: black;
+  border-radius: 20%;
+  padding: 4px 8px;
+  margin-left: 0px;
+  margin-right: 4px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #5973b1;
+  color: white;
+}

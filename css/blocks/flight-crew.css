@@ -1,0 +1,85 @@
+.block-title__flight-crew {
+  margin-top: 4%;
+}
+
+.flight-crew {
+  margin-top: 5.5%;
+  margin-bottom: -8.6%;
+}
+
+.flight-crew ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flight-crew li {
+  width: 33.3%;
+  justify-content: space-between;
+}
+
+.single-pilot {
+  display: flex;
+  margin: 0 0 16% 0;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+}
+
+.single-pilot__avatar {
+  position: relative;
+  align-self: center;
+  margin: 0 0 0 -7%;
+  width: 161px;
+}
+
+.single-pilot__avatar-img::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #5972b1;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.single-pilot__avatar-img {
+  position: relative;
+}
+
+.single-pilot__avatar-border {
+  border-radius: 50%;
+  border: 4px solid #5972b1;
+}
+
+.single-pilot__avatar-text {
+  position: relative;
+  margin: -58% 0 45% 0;  
+  font-size: 24px;
+  line-height: 21px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.single-pilot__name {
+  margin: 4.7% 0 0 -7%;
+  letter-spacing: -0.3px;
+  font-size: 18.3px;
+  font-weight: 700;
+}
+
+.single-pilot__post {
+  color: #5973b2;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin: -0.7% 0 0 -7%;
+}
+
+.single-pilot__desc {
+  margin-top: 1.6%;
+  width: 92%;
+  font-size: 14px;
+  line-height: 21.12px;
+}

@@ -1,0 +1,22 @@
+@keyframes introAnimation {
+  0%, 55%, 80% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-40px);
+  }
+
+  70% {
+    transform: translateY(-20px);
+  }
+
+  90% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

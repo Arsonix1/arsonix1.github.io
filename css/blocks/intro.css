@@ -1,0 +1,80 @@
+.intro {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro__background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.welcome__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: introAnimation 1s 1s ease-in forwards;
+}
+
+.welcome__logo {
+  margin: 70px 0 39px 0;
+}
+
+.welcome__button {
+  border: 1px solid #1c5bc3;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 17px 44px 17px 21px;
+  text-align: left;
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  color: #1c5bc4;
+  font-weight: 700;
+}
+
+.welcome__button-text {
+  position: relative;
+}
+
+.welcome__button-text::after {
+  position: absolute;
+  content: "";
+  display: inline-flex;
+  margin: -1% 0 0 3%;
+  width: 24px;
+  height: 18px;
+  background: right center / contain no-repeat;
+  background: url('../../img/icons/css_sprites.png') -10px -10px;
+}
+
+.welcome__button:hover {
+  background-color: #3a5bbf;
+  color: #fff;
+}
+
+.welcome__button:hover .welcome__button-text::before {
+  opacity: 1;
+}
+
+.welcome__button:hover .welcome__button-text::after {
+  opacity: 0;
+}
+
+.welcome__button-text::before {
+  position: absolute;
+  content: "";
+  display: inline-flex;
+  margin: -1% 0 0 103%;
+  width: 24px;
+  height: 18px;
+  background: right center / contain no-repeat;
+  background: url('../../img/icons/css_sprites.png') -45px -10px;
+  opacity: 0;
+}

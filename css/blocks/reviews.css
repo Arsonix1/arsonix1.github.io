@@ -1,0 +1,55 @@
+.block-title__reviews {
+  margin-top: 2.2%;
+}
+
+.reviews {
+  margin-top: 1.6%;
+  margin-left: 0.8%;
+}
+
+.reviews li {
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+.reviews .no-underline {
+  border-bottom: none;
+}
+
+.single-review {
+  display: flex;
+  margin-top: -6.6%;
+  margin-bottom: 2%;
+}
+
+.single-review__review-logo {
+  overflow: hidden;
+  margin: 10.2% 2.5% 0 -0.2%;
+  width: 172px;
+  border-radius: 50%;
+}
+
+.single-review__review-content {
+  margin-top: 5.7%;
+  width: 76%;
+  height: 176px;
+  color: #656464;
+  font-weight: 300;
+}
+
+.single-review__review-date {
+  font-size: 14px;
+  margin: 5.8% 0 0.4% 0;
+}
+
+.single-review__review-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 19px;
+}
+
+.single-review__content {
+  margin-top: -1.8%;
+  line-height: 30px;
+  font-size: 18px;
+}
