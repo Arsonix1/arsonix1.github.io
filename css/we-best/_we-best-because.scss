@@ -1,0 +1,46 @@
+.because {
+  display: flex;
+  margin-top: 156px;
+  margin-left: 4.3%;
+  & li {
+    width: 33.3%;
+  }
+  &__subtitle {
+    font-size: 24px;
+    letter-spacing: -1px;
+    line-height: 28px;
+    color: #2f3234;
+    font-family: "Lifehack";
+    font-weight: 500;
+    text-align: center;
+  }
+  &__desc {
+    width: 300px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #2f3234;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    
+  }
+  &-meat {
+    display: flex;
+    flex-direction: column;
+    &__logo {
+      width: 97px;
+      height: 89px;
+    }
+  }
+  &-hand {
+    &__logo {
+      width: 73px;
+      height: 85px;
+    }
+  }
+  &-natural {
+    &__logo {
+      width: 88px;
+      height: 75px;
+    }
+  }
+}
