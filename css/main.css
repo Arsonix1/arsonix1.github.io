@@ -50,20 +50,6 @@
   color: #fff;
   text-decoration: none;
 }
-.header__button {
-  width: 97px;
-  height: 35px;
-  border-radius: 5px;
-  background-color: #e45028;
-  margin-top: 27px;
-  margin-left: 15px;
-  color: #fff;
-  border: none;
-}
-.header__button-text {
-  text-transform: uppercase;
-  position: relative;
-}
 
 .slider-switch {
   display: flex;
@@ -255,6 +241,49 @@
   margin-left: 15px;
   opacity: 0.5;
 }
+.black-burger__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 51%;
+  margin-top: 135px;
+}
+.black-burger__text-title {
+  width: 330px;
+  font-size: 72px;
+  line-height: 64px;
+  color: #fff;
+  font-family: "Gagalin";
+  text-transform: uppercase;
+}
+.black-burger__text-desc {
+  margin-top: 47px;
+  width: 459px;
+  height: 153px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  font-family: "Ubuntu";
+  font-weight: 300;
+}
+.black-burger__text-price {
+  margin-top: -16px;
+  font-size: 72px;
+  letter-spacing: -2px;
+  line-height: 28px;
+  color: #e35028;
+  font-family: "Gagalin";
+  display: flex;
+}
+.black-burger__text-price h3 {
+  margin-top: 16px;
+  margin-left: 10px;
+  font-size: 31px;
+}
+.black-burger__text button {
+  position: absolute;
+  margin-top: 328px;
+  margin-left: 230px;
+}
 
 ul {
   margin: 0;
@@ -331,4 +360,22 @@ h1, h2, h3, h4, h5, h6 {
   top: 584px;
   left: 49.4%;
   transform: rotate(45deg);
+}
+
+.button {
+  font-size: 13px;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  width: 97px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #e45028;
+  margin-top: 27px;
+  margin-left: 15px;
+  color: #fff;
+  border: none;
+}
+.button-text {
+  text-transform: uppercase;
+  position: relative;
 }

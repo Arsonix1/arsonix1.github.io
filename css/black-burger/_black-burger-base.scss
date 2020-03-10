@@ -63,4 +63,47 @@
       opacity: .5;
     }
   }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 51%;
+    margin-top: 135px;
+    &-title {
+      width: 330px;
+      font-size: 72px;
+      line-height: 64px;
+      color: #fff;
+      font-family: "Gagalin";
+      text-transform: uppercase;
+    }
+    &-desc {
+      margin-top: 47px;
+      width: 459px;
+      height: 153px;
+      font-size: 14px;
+      line-height: 24px;
+      color: #fff;
+      font-family: "Ubuntu";
+      font-weight: 300;
+    }
+    &-price {
+      margin-top: -16px;
+      font-size: 72px;
+      letter-spacing: -2px;
+      line-height: 28px;
+      color: #e35028;
+      font-family: "Gagalin";
+      display: flex;
+      & h3 {
+        margin-top: 16px;
+        margin-left: 10px;
+        font-size: 31px;
+      }
+    }
+    & button {
+      position: absolute;
+      margin-top: 328px;
+      margin-left: 230px;
+    }
+  }
 }
