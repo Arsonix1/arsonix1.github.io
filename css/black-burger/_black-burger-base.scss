@@ -33,4 +33,34 @@
       text-align: center;
     }
   }
+  &__calories {
+    position: absolute;
+    margin-left: 4.2%;
+    margin-top: 485px;
+    z-index: 1;
+    &::before {
+      content: "1200";
+      position: absolute;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+      font-family: "Gagalin";
+      text-align: right;
+      margin-top: 25px;
+      margin-left: 13px;
+      opacity: .5;
+    }
+    &::after {
+      content: "ккал";
+      position: absolute;
+      font-size: 14px;
+      line-height: 24px;
+      color: #ffffff;
+      font-family: "Gagalin";
+      text-align: right;
+      margin-top:-2px;
+      margin-left: 15px;
+      opacity: .5;
+    }
+  }
 }
