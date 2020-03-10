@@ -189,9 +189,41 @@
   height: 75px;
 }
 
-.dark-beef {
+.black-burger {
   background: url("../../img/backgrounds/dark-beef-bg.png");
   background-position-y: 33%;
+}
+.black-burger__img {
+  position: absolute;
+  margin-top: 167px;
+  margin-left: 2.5%;
+}
+.black-burger__icon {
+  width: 46px;
+  height: 44px;
+  position: absolute;
+  margin-left: 5.3%;
+  margin-top: 104px;
+  z-index: 1;
+}
+.black-burger__icon::before {
+  content: "";
+  position: absolute;
+  margin-left: -21px;
+  margin-top: -14px;
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  background-color: #f08c33;
+  z-index: -1;
+}
+.black-burger__icon::after {
+  content: "состав";
+  font-size: 14px;
+  line-height: 28px;
+  color: #ffffff;
+  font-family: "Gagalin";
+  text-align: center;
 }
 
 ul {
