@@ -82,6 +82,16 @@ h1, h2, h3, h4, h5, h6 {
     left: 49.4%;
     transform: rotate(45deg);
   }
+  &__left-third-slide {
+    margin-left: 2.5%;
+    margin-top: -177px;
+    transform: rotate(135deg);
+  }
+  &__right-third-slide {
+    margin-left: 54%;
+    margin-top: -177px;
+    transform: rotate(-45deg);
+  }
 }
 
 .button {
