@@ -44,6 +44,10 @@
 .burgers {
   background: url("../../img/backgrounds/burgers.png");
   background-position-x: 95%;
+  width: 1100px;
+  margin: 0 auto;
+  height: 650px;
+  border: 1px solid black;
 }
 .burgers::after {
   content: "";
@@ -121,6 +125,8 @@
 
 .we-best {
   background: url("../../img/backgrounds/we-best-bg.png");
+  width: 1100px;
+  margin: 0 auto;
 }
 .we-best__title {
   position: relative;
@@ -183,10 +189,12 @@
   background: url("../../img/backgrounds/dark-beef-bg.png");
   background-position-y: 33%;
   background-position-x: 30%;
+  width: 1100px;
+  margin: 0 auto;
 }
 .black-burger__img {
   position: absolute;
-  margin-top: 167px;
+  margin-top: 32px;
   margin-left: 2.5%;
 }
 .black-burger__icon {
@@ -194,7 +202,7 @@
   height: 44px;
   position: absolute;
   margin-left: 5.3%;
-  margin-top: 104px;
+  margin-top: -31px;
   z-index: 1;
 }
 .black-burger__icon::before {
@@ -219,7 +227,7 @@
 .black-burger__calories {
   position: absolute;
   margin-left: 4.2%;
-  margin-top: 485px;
+  margin-top: 350px;
   z-index: 1;
 }
 .black-burger__calories::before {
@@ -325,15 +333,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
   overflow: hidden;
-  width: 100%;
   min-width: 1100px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-}
-.wrapper__content {
-  width: 100%;
-  flex: 1;
 }
 
 .container {

@@ -1,6 +1,10 @@
 .burgers {
   background: url('../../img/backgrounds/burgers.png');
   background-position-x: 95%;
+  width: 1100px;
+  margin: 0 auto;
+  height: 650px;
+  border: 1px solid black;
   &::after {
     content: "";
     display: block;

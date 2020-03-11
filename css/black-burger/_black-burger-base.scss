@@ -2,9 +2,11 @@
   background: url('../../img/backgrounds/dark-beef-bg.png');
   background-position-y: 33%;
   background-position-x: 30%;
+  width: 1100px;
+  margin: 0 auto;
   &__img {
     position: absolute;
-    margin-top: 167px;
+    margin-top: 32px;
     margin-left: 2.5%;
   }
   &__icon {
@@ -12,7 +14,7 @@
     height: 44px;
     position: absolute;
     margin-left: 5.3%;
-    margin-top: 104px;
+    margin-top: -31px;
     z-index: 1;
     &::before {
       content: "";
@@ -37,7 +39,7 @@
   &__calories {
     position: absolute;
     margin-left: 4.2%;
-    margin-top: 485px;
+    margin-top: 350px;
     z-index: 1;
     &::before {
       content: "1200";

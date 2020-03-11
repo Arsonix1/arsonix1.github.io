@@ -2,90 +2,92 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1100, initial-scale=1.0">
   <title>Burger</title>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
   <div class="wrapper">
-    <div class="wrapper__content">
-      <header class="header">
-        <div class="container main-menu">
-          <img src="./img/burgers/header/logo.png" alt="" class="header__logo">
-          <nav class="navigation">
-            <ul class="navigation__menu">
-              <li class="navigation__menu-item">
-                <a href="#">О нас</a>
-              </li>
-              <li class="navigation__menu-item">
-                <a href="#">Бургеры</a>
-              </li>
-              <li class="navigation__menu-item">
-                <a href="#">Команда</a>
-              </li>
-              <li class="navigation__menu-item">
-                <a href="#">Меню</a>
-              </li>
-              <li class="navigation__menu-item">
-                <a href="#">Отзывы</a>
-              </li>
-              <li class="navigation__menu-item">
-                <a href="#">Как мы работаем</a>
-              </li>
-              <li class="navigation__menu-item">
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <button type="submit" class="button">
-            <span class="button-text">Заказать</span>
-          </button>
-        </div>
-      </header>
-      <div class="container">
-        <section class="landing-block burgers">
-          <ul class="slider-switch">
-            <li class="slider-switch__item slider-switch__item-active">
-              <a href="#">•</a>
+    <header class="header">
+      <div class="container main-menu">
+        <img src="./img/burgers/header/logo.png" alt="" class="header__logo">
+        <nav class="navigation">
+          <ul class="navigation__menu">
+            <li class="navigation__menu-item">
+              <a href="#">О нас</a>
             </li>
-            <li class="slider-switch__item">
-              <a href="#">•</a>
+            <li class="navigation__menu-item">
+              <a href="#">Бургеры</a>
             </li>
-            <li class="slider-switch__item">
-              <a href="#">•</a>
+            <li class="navigation__menu-item">
+              <a href="#">Команда</a>
             </li>
-            <li class="slider-switch__item">
-              <a href="#">•</a>
+            <li class="navigation__menu-item">
+              <a href="#">Меню</a>
             </li>
-            <li class="slider-switch__item">
-              <a href="#">•</a>
+            <li class="navigation__menu-item">
+              <a href="#">Отзывы</a>
             </li>
-            <li class="slider-switch__item">
-              <a href="#">•</a>
+            <li class="navigation__menu-item">
+              <a href="#">Как мы работаем</a>
             </li>
-            <li class="slider-switch__item">
-              <a href="#">•</a>
-            </li>
-            <li class="slider-switch__item">
-              <a href="#">•</a>
-            </li>
-            <li class="slider-switch__item">
-              <a href="#">•</a>
+            <li class="navigation__menu-item">
+              <a href="#">Контакты</a>
             </li>
           </ul>
-          <div class="slide1">
-            <div class="slide1__burger">
-              <img src="./img/burgers/burger.png" alt="" class="slide1__burger-img">
-            </div>
-            <div class="slide1__sign">
-              <div class="slide1__sign title">Мы делаем</div>
-              <div class="slide1__sign subtitle">натуральные<br>бургеры</div>
-            </div>
+        </nav>
+        <button type="submit" class="button">
+          <span class="button-text">Заказать</span>
+        </button>
+      </div>
+    </header>
+    <section class="burgers">
+      <div class="container">
+        <ul class="slider-switch">
+          <li class="slider-switch__item slider-switch__item-active">
+            <a href="#">•</a>
+          </li>
+          <li class="slider-switch__item">
+            <a href="#">•</a>
+          </li>
+          <li class="slider-switch__item">
+            <a href="#">•</a>
+          </li>
+          <li class="slider-switch__item">
+            <a href="#">•</a>
+          </li>
+          <li class="slider-switch__item">
+            <a href="#">•</a>
+          </li>
+          <li class="slider-switch__item">
+            <a href="#">•</a>
+          </li>
+          <li class="slider-switch__item">
+            <a href="#">•</a>
+          </li>
+          <li class="slider-switch__item">
+            <a href="#">•</a>
+          </li>
+          <li class="slider-switch__item">
+            <a href="#">•</a>
+          </li>
+        </ul>
+        <div class="slide1">
+          <div class="slide1__burger">
+            <img src="./img/burgers/burger.png" alt="" class="slide1__burger-img">
           </div>
-          <div class="arrow arrow__down-first-slide"></div>
-        </section>
-        <section class="landing-block we-best">
+          <div class="slide1__sign">
+            <div class="slide1__sign title">Мы делаем</div>
+            <div class="slide1__sign subtitle">натуральные<br>бургеры</div>
+          </div>
+        </div>
+        <div class="arrow arrow__down-first-slide"></div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="landing-block we-best">
+        <div class="container">
           <div class="we-best__title title">Мы лучшие</div>
           <ul class="because">
             <li class="because-meat">
@@ -104,8 +106,10 @@
               <div class="because__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</div>
             </li>
           </ul>
-        </section>
-        <section class="landing-block black-burger">
+        </div>
+      </section>
+      <section class="landing-block black-burger">
+        <div class="container">
           <img src="./img/black-burger/black-burger.png" alt="" class="black-burger__img">
           <div class="black-burger__icon">
             <img src="./img/black-burger/burger-icon.png" alt="">
@@ -123,41 +127,55 @@
           </div>
           <div class="arrow arrow__left-third-slide"></div>
           <div class="arrow arrow__right-third-slide"></div>
-        </section>
-        <section class="landing-block team">
+        </div>
+      </section>
+      <section class="landing-block team">
+        <div class="container">
 
-        </section>
-        <section class="landing-block">
+        </div>
+      </section>
+      <section class="landing-block">
+        <div class="container">
           <div class="block-menu">
 
           </div>
           <div class="block-menu-meet">
-
+  
           </div>
           <div class="block-menu-vegan">
-
+  
           </div>
           <div class="block-menu-diet">
-
+  
           </div>
-        </disectionv>
-        <section class="landing-block reviews">
-
-        </section>
-        <section class="landing-block how-work">
-
-        </section>
-        <section class="landing-block delivery">
-
-        </section>
-        <div class="landing-block">
-          <section class="map">
-
-          </section>
-          <section class="contacts">
-
-          </section>
         </div>
+      </section>
+      <section class="landing-block reviews">
+        <div class="container">
+
+        </div>
+      </section>
+      <section class="landing-block how-work">
+        <div class="container">
+          
+        </div>
+      </section>
+      <section class="landing-block delivery">
+        <div class="container">
+          
+        </div>
+      </section>
+      <div class="landing-block">
+        <section class="map">
+          <div class="container">
+          
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="container">
+          
+          </div>
+        </section>
       </div>
     </div>
   </div>
