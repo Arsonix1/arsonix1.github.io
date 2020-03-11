@@ -1,17 +1,5 @@
-.header {
-  height: 79px;
-  width: 100%;
-  display: flex;
-  position: absolute;
-  font-size: 13px;
-  line-height: 30px;
-  font-family: "Ubuntu";
-  font-weight: 500;
-  text-transform: uppercase;
-  &__logo {
-    margin-left: 4%;
-    margin-top: 10px;
-  }
+.navigation {
+  width: 68%;
   &__menu {
     display: flex;
     margin-left: 70px;

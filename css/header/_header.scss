@@ -1,0 +1,15 @@
+.header {
+  height: 79px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  font-size: 13px;
+  line-height: 30px;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  text-transform: uppercase;
+  &__logo {
+    margin-left: 7%;
+    margin-top: 13px;
+  }
+}
