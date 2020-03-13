@@ -9,6 +9,9 @@
 
 @import './black-burger/black-burger-base';
 
+@import './reviews/reviews-base';
+@import './reviews/review';
+
 ul {
   margin: 0;
   padding: 0;
@@ -110,5 +113,8 @@ h1, h2, h3, h4, h5, h6 {
   &-text {
     text-transform: uppercase;
     position: relative;
+  }
+  &__review {
+    background-color: #2f3234;
   }
 }
