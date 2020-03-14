@@ -1,0 +1,19 @@
+.team {
+  background: url('../../img/backgrounds/team-bg.png');
+  position: relative;
+  &__title {
+    color: #f9b43b;
+    text-align: center;
+    margin-left: -9%;
+    margin-top: 17%;
+  }
+  &__block {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    background: rgba(#2f3234, .9);
+    margin-left: 1%;
+  }
+}
