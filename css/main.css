@@ -544,24 +544,79 @@
   margin-top: 35px;
 }
 .team-accordeon__item {
-  margin-bottom: 22px;
+  margin-bottom: -18px;
+}
+.team-accordeon__item.active .team-accordeon__name {
+  color: #f9b43b;
+}
+.team-accordeon__item.active .team-accordeon__name:before {
+  transform: rotate(-180deg);
+}
+.team-accordeon__item.active .team-accordeon__content {
+  height: 100%;
+  margin-bottom: 54px;
 }
 .team-accordeon__name {
   text-decoration: none;
+  position: relative;
   font-size: 14px;
   line-height: 28px;
   color: #fff;
   font-family: "Gagalin";
 }
-.team-accordeon__content {
-  display: flex;
+.team-accordeon__name:before, .team-accordeon__name:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -18px;
+  top: 8px;
+  width: 0;
+  height: 0;
 }
-.team-accordeon__post {
+.team-accordeon__name:before {
+  border-top: 7px solid #f9b43b;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 0px solid transparent;
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+.team-accordeon__name:after {
+  display: none;
+  border-bottom: 7px solid #f9b43b;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 0px solid transparent;
+}
+.team-accordeon__content {
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  margin-top: 4px;
+  width: 330px;
+  margin-bottom: 35px;
+}
+.team-accordeon__avatar {
+  text-align: center;
+  margin-top: 5px;
+  width: 66%;
+}
+.team-accordeon__img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.team-accordeon__text {
   font-size: 14px;
   line-height: 24px;
   color: #fff;
   font-family: "Ubuntu";
   font-weight: 700;
+  padding-left: 18px;
+}
+.team-accordeon__text-content {
+  margin-top: 11px;
+  font-weight: 300;
 }
 
 ul {
