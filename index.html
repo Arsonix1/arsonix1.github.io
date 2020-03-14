@@ -78,8 +78,8 @@
             <img src="./img/burgers/burger.png" alt="" class="slide1__burger-img">
           </div>
           <div class="slide1__sign">
-            <div class="slide1__sign title">Мы делаем</div>
-            <div class="slide1__sign subtitle">натуральные<br>бургеры</div>
+            <h2 class="slide1__sign title">Мы делаем</h2>
+            <h2 class="slide1__sign subtitle">натуральные<br>бургеры</h2>
           </div>
         </div>
         <a href="#" class="arrow arrow__down-first-slide"></a>
@@ -88,7 +88,7 @@
     <div class="container">
       <section class="landing-block we-best">
         <div class="container">
-          <div class="we-best__title title">Мы лучшие</div>
+          <h2 class="we-best__title title">Мы лучшие</h2>
           <ul class="because">
             <li class="because-meat">
               <img src="./img/we-best/meat.png" alt="" class="because-meat__logo">
@@ -118,7 +118,7 @@
             <img src="./img/black-burger/girya.png" alt="">
           </div>
           <div class="black-burger__text">
-            <div class="black-burger__text-title">Dark beef burger</div>
+            <h2 class="black-burger__text-title">Dark beef burger</h2>
             <div class="black-burger__text-desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
             <div class="black-burger__text-price">500 <h3>рублей</h3></div>
             <button type="submit" class="button">
@@ -257,7 +257,87 @@
       </section>
       <section class="landing-block delivery">
         <div class="container">
-          
+          <h2 class="title delivery__title">Закажите доставку</h2>
+          <form class="order">
+            <div class="order__left">
+              <div class="order__row">
+                <label class="order__block">
+                  <div class="order__title">Имя</div>
+                  <input type="text" class="order__input">
+                </label>
+                <label class="order__block">
+                  <div class="order__title">Телефон</div>
+                  <input type="text" class="order__input" placeholder="89212264923">
+                </label>
+              </div>
+              <div class="order__row">
+                <label class="order__block">
+                  <div class="order__title">Улица</div>
+                  <input type="text" class="order__input">
+                </label>
+              </div>
+              <div class="order__row">
+                <label class="order__block">
+                  <div class="order__title">Дом</div>
+                  <input type="text" class="order__input">
+                </label>
+                <label class="order__block">
+                  <div class="order__title">Корпус</div>
+                  <input type="text" class="order__input">
+                </label>
+                <label class="order__block">
+                  <div class="order__title">Квартира</div>
+                  <input type="text" class="order__input">
+                </label>
+                <label class="order__block">
+                  <div class="order__title">Этаж</div>
+                  <input type="text" class="order__input">
+                </label>
+              </div>
+            </div>
+            <div class="order__right">
+              <div class="order__row">
+                <label class="order__block">
+                  <div class="order__title">Комментарий</div>
+                  <textarea class="order__input order__input_textarea"></textarea>
+                </label>
+              </div>
+              <div class="order__row">
+                <label class="order__block">
+                  <div class="payment">
+                    <div class="payment-switch">
+                      <label class="payment-switch__elem">
+                        <input type="radio" name="payment-switch__type" class="payment-switch__radio">
+                        <div class="payment-switch__elem-title">
+                          Потребуется сдача
+                        </div>
+                      </label>
+                      <label class="payment-switch__elem">
+                        <input type="radio" name="payment-switch__type" class="payment-switch__radio">
+                        <div class="payment-switch__elem-title">
+                          Оплата по карте
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="order__row">
+                <label class="calling">
+                  <input type="checkbox" name="calling-check" class="calling__checkbox">
+                  <div class="calling__checkbox-title">Не перезванивать</div>
+                </label>
+              </div>
+              <div class="order__row">
+                <label class="order__buttons">
+                  <button type="submit" class="button">
+                    <span class="button-text">Заказать</span>
+                  </button>
+                  <button type="submit" class="order__button-clear">Очистить</button>
+                </label>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
       <div class="landing-block">
