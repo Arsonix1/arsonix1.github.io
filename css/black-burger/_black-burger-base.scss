@@ -103,10 +103,13 @@
         font-size: 31px;
       }
     }
-    & button {
+    &-button {
       position: absolute;
+      width: 97px;
+      height: 35px;
       margin-top: 328px;
       margin-left: 230px;
+      background-color: #e45028;
     }
   }
 }

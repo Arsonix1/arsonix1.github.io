@@ -110,17 +110,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Ubuntu";
   font-weight: 500;
   border-radius: 5px;
-  background-color: #e45028;
   color: #fff;
   border: none;
   &-text {
     text-transform: uppercase;
     position: relative;
-  }
-  &__review {
-    background-color: #2f3234;
-    margin-top: -4px;
-    margin-left: 2px;
-    width: 109px;
   }
 }
