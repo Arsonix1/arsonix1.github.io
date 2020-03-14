@@ -539,6 +539,31 @@
   margin-left: 1%;
 }
 
+.team-accordeon {
+  margin-left: 116px;
+  margin-top: 35px;
+}
+.team-accordeon__item {
+  margin-bottom: 22px;
+}
+.team-accordeon__name {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 28px;
+  color: #fff;
+  font-family: "Gagalin";
+}
+.team-accordeon__content {
+  display: flex;
+}
+.team-accordeon__post {
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  font-family: "Ubuntu";
+  font-weight: 700;
+}
+
 ul {
   margin: 0;
   padding: 0;
