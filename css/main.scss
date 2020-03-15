@@ -81,27 +81,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .arrow {
-  position: absolute;
-  border: solid #fff;
-  width: 23px;
-  height: 23px;
-  border-radius: 0 0 8px 0;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  &__down-first-slide {
-    top: 584px;
-    left: 49.4%;
-    transform: rotate(45deg);
+  position: relative;
+  &__burger {
+    position: absolute;
+    top: 595px;
+    left: 534px;
+    width: 30px;
+    height: 15px;
   }
-  &__left-third-slide {
-    margin-left: 2.5%;
-    margin-top: -177px;
-    transform: rotate(135deg);
-  }
-  &__right-third-slide {
-    margin-left: 54%;
-    margin-top: -177px;
-    transform: rotate(-45deg);
+  &__black {
+    &-left {
+      position: absolute;
+      width: 30px;
+      height: 15px;
+      top: -172px;
+      left: 38px;
+      transform: rotate(90deg);
+    }
+    &-right {
+      position: absolute;
+      width: 30px;
+      height: 15px;
+      top: -172px;
+      left: 1031px;
+      transform: rotate(-90deg);
+    }
   }
 }
 

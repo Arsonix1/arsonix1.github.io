@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .header {
-  height: 79px;
+  height: 82px;
   width: 100%;
   display: flex;
   position: absolute;
@@ -18,6 +18,7 @@
   background-color: #e45028;
 }
 .header__logo {
+  width: 8.4%;
   margin-left: 7%;
   margin-top: 13px;
 }
@@ -198,25 +199,30 @@
   background-position-x: 30%;
   width: 1100px;
   margin: 0 auto;
+  position: relative;
 }
 .black-burger__img {
   position: absolute;
-  margin-top: 32px;
-  margin-left: 2.5%;
+  top: 168px;
+  left: 4.2%;
 }
 .black-burger__icon {
   width: 46px;
   height: 44px;
   position: absolute;
-  margin-left: 5.3%;
-  margin-top: -31px;
+  left: 9.2%;
+  top: 104px;
   z-index: 1;
+}
+.black-burger__icon svg {
+  width: 46px;
+  height: 41px;
 }
 .black-burger__icon::before {
   content: "";
   position: absolute;
-  margin-left: -21px;
-  margin-top: -14px;
+  left: -21px;
+  top: -14px;
   width: 90px;
   height: 90px;
   border-radius: 5px;
@@ -233,9 +239,9 @@
 }
 .black-burger__calories {
   position: absolute;
-  margin-left: 4.2%;
-  margin-top: 350px;
-  z-index: 1;
+  left: 7.2%;
+  top: 486px;
+  opacity: 0.6;
 }
 .black-burger__calories::before {
   content: "1200";
@@ -245,9 +251,9 @@
   color: #ffffff;
   font-family: "Gagalin";
   text-align: right;
-  margin-top: 25px;
-  margin-left: 13px;
-  opacity: 0.5;
+  top: 25px;
+  left: 13px;
+  opacity: 0.8;
 }
 .black-burger__calories::after {
   content: "ккал";
@@ -257,9 +263,9 @@
   color: #ffffff;
   font-family: "Gagalin";
   text-align: right;
-  margin-top: -2px;
-  margin-left: 15px;
-  opacity: 0.5;
+  top: 57px;
+  left: 15px;
+  opacity: 0.8;
 }
 .black-burger__text {
   display: flex;
@@ -694,28 +700,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .arrow {
+  position: relative;
+}
+.arrow__burger {
   position: absolute;
-  border: solid #fff;
-  width: 23px;
-  height: 23px;
-  border-radius: 0 0 8px 0;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
+  top: 595px;
+  left: 534px;
+  width: 30px;
+  height: 15px;
 }
-.arrow__down-first-slide {
-  top: 584px;
-  left: 49.4%;
-  transform: rotate(45deg);
+.arrow__black-left {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  top: -172px;
+  left: 38px;
+  transform: rotate(90deg);
 }
-.arrow__left-third-slide {
-  margin-left: 2.5%;
-  margin-top: -177px;
-  transform: rotate(135deg);
-}
-.arrow__right-third-slide {
-  margin-left: 54%;
-  margin-top: -177px;
-  transform: rotate(-45deg);
+.arrow__black-right {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  top: -172px;
+  left: 1031px;
+  transform: rotate(-90deg);
 }
 
 .button {
