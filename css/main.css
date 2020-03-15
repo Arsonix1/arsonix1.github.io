@@ -793,33 +793,46 @@
   margin-bottom: 0;
 }
 .footer__address {
+  margin-top: 5px;
+  margin-left: 79px;
+  margin-bottom: 7px;
   color: #fff;
   font-size: 14px;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  text-decoration: none;
 }
 .footer__phone {
   color: #e35028;
   font-family: "Ubuntu";
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   font-size: 14px;
+}
+.footer__phone-icon {
+  margin-left: 79px;
+  margin-right: 6px;
+  width: 11px;
+  height: 11px;
 }
 
 .socials {
   position: relative;
-  top: 50%;
+  top: 22%;
+  left: -14.9%;
 }
 
 .socials__item {
   display: inline-block;
   vertical-align: top;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .socials__link {
   color: #fff;
   display: inline-block;
-  max-width: 23px;
-  max-height: 20px;
+  max-width: 40px;
+  max-height: 40px;
   opacity: 0.3;
   transition: 0.3s;
 }
