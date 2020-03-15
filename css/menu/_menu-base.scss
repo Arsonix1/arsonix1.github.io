@@ -1,0 +1,12 @@
+.menu {
+  position: relative;
+  background: url('../../img/backgrounds/menu-main.png');
+  background-position-y: -90px;
+  background-position-x: -10px;
+  &__title {
+    position: absolute;
+    top: 91px;
+    left: 95px;
+    color: #fff;
+  }
+}

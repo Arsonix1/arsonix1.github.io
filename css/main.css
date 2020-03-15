@@ -637,6 +637,201 @@
   font-weight: 300;
 }
 
+.menu {
+  position: relative;
+  background: url("../../img/backgrounds/menu-main.png");
+  background-position-y: -90px;
+  background-position-x: -10px;
+}
+.menu__title {
+  position: absolute;
+  top: 91px;
+  left: 95px;
+  color: #fff;
+}
+
+.menu-accordeon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.menu-accordeon:before, .menu-accordeon:after {
+  content: "";
+  display: table;
+}
+.menu-accordeon__item {
+  position: relative;
+  float: left;
+  height: 100%;
+}
+.menu-accordeon__item:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 0;
+}
+.menu-accordeon__item_meat {
+  background: url("../../img/backgrounds/menu-meat.png") center center/cover no-repeat;
+}
+.menu-accordeon__item_vegan {
+  background: url("../../img/backgrounds/menu-vegan.png") center center/cover no-repeat;
+}
+.menu-accordeon__item_diet {
+  background: url("../../img/backgrounds/menu-diet.png") center center/cover no-repeat;
+}
+.menu-accordeon__item.active .menu-accordeon__title-text {
+  color: #f9b43b;
+}
+.menu-accordeon__item.active .menu-accordeon__content {
+  width: 540px;
+}
+.menu-accordeon__title {
+  width: 80px;
+  display: block;
+  height: 100%;
+  float: left;
+  text-decoration: none;
+  position: relative;
+}
+.menu-accordeon__title-text {
+  font-size: 40px;
+  color: #fff;
+  font-family: "Gagalin";
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: -36px;
+}
+.menu-accordeon__content {
+  height: 100%;
+  float: left;
+  width: 0;
+  overflow: hidden;
+}
+.menu-accordeon__text {
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  padding: 60px 30px;
+  width: 100%;
+  line-height: 1.8;
+  font-family: "Ubuntu";
+  font-weight: 300;
+}
+
+.contacts {
+  position: relative;
+}
+.contacts__map {
+  transform: scale(1.28);
+  object-position: 0 35px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.contacts__mark {
+  width: 46px;
+  height: 58px;
+}
+.contacts__mark.one {
+  position: absolute;
+  top: 128px;
+  left: 500px;
+}
+.contacts__mark.two {
+  position: absolute;
+  top: 229px;
+  left: 628px;
+}
+.contacts__mark.three {
+  position: absolute;
+  top: 339px;
+  left: 831px;
+}
+.contacts__mark.four {
+  position: absolute;
+  top: 435px;
+  left: 504px;
+}
+
+.footer {
+  background: url("../../img/backgrounds/delivery-bg.png") center bottom no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 58px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+}
+.footer__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer__col {
+  width: 50%;
+  height: 100%;
+  margin-bottom: 15px;
+}
+.footer__col_right {
+  text-align: right;
+  margin-bottom: 0;
+}
+.footer__address {
+  color: #fff;
+  font-size: 14px;
+}
+.footer__phone {
+  color: #e35028;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.socials {
+  position: relative;
+  top: 50%;
+}
+
+.socials__item {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+.socials__link {
+  color: #fff;
+  display: inline-block;
+  max-width: 23px;
+  max-height: 20px;
+  opacity: 0.3;
+  transition: 0.3s;
+}
+.socials__link:hover {
+  opacity: 1;
+}
+
+.socials__link-icon {
+  width: 20px;
+  height: 20px;
+}
+
 ul {
   margin: 0;
   padding: 0;

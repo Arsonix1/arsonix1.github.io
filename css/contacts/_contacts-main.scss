@@ -1,0 +1,36 @@
+.contacts {
+  position: relative;
+  &__map {
+    transform: scale(1.28);
+    object-position: 0 35px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__mark {
+    width: 46px;
+    height: 58px;
+    &.one {
+      position: absolute;
+      top: 128px;
+      left: 500px;
+    }
+    &.two {
+      position: absolute;
+      top: 229px;
+      left: 628px;
+    }
+    &.three {
+      position: absolute;
+      top: 339px;
+      left: 831px;
+    }
+    &.four {
+      position: absolute;
+      top: 435px;
+      left: 504px;
+    }
+  }
+}

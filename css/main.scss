@@ -18,6 +18,13 @@
 @import './team/team-base';
 @import './team/team-accordeon';
 
+@import './menu/menu-base';
+@import './menu/menu-accordeon';
+
+@import './contacts/contacts-main';
+@import './contacts/footer';
+@import './contacts/socials';
+
 ul {
   margin: 0;
   padding: 0;
