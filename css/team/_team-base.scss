@@ -1,11 +1,10 @@
 .team {
-  background: url('../../img/backgrounds/team-bg.png');
+  background: url('../../img/backgrounds/team-bg.png')  no-repeat;
+  background-size: 50.1% 100%;
   position: relative;
   &__title {
     color: #f9b43b;
-    text-align: center;
-    margin-left: -9%;
-    margin-top: 17%;
+    margin-left: -3%;
   }
   &__block {
     position: absolute;
@@ -14,6 +13,6 @@
     bottom: 0;
     left: 50%;
     background: rgba(#2f3234, .9);
-    margin-left: 1%;
+    padding: 5% 2% 0 7%;
   }
 }

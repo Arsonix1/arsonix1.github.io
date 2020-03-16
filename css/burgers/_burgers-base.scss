@@ -1,10 +1,11 @@
 .burgers {
-  background: url('../../img/backgrounds/burgers.png');
-  background-position-x: 95%;
-  margin: 0 auto;
+  background: $black url('../../img/backgrounds/burgers.png') center center no-repeat;
+  background-size: cover;
+  position: relative;
   height: 650px;
   &::after {
     content: "";
+    position: absolute;
     display: block;
     top: 0;
     left: 0;

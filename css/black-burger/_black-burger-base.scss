@@ -1,20 +1,17 @@
 .black-burger {
-  background: url('../../img/backgrounds/dark-beef-bg.png');
-  background-position-y: 33%;
-  background-position-x: 30%;
-  width: 1100px;
-  margin: 0 auto;
+  background: url('../../img/backgrounds/dark-beef-bg.png') 50% no-repeat;
+  background-size: cover;
   position: relative;
   &__img {
     position: absolute;
     top: 168px;
-    left: 4.2%;
+    left: 23.6%;
   }
   &__icon {
     width: 46px;
     height: 44px;
     position: absolute;
-    left: 9.2%;
+    left: 26.5%;
     top: 104px;
     z-index: 1;
     & svg {
@@ -43,7 +40,7 @@
   }
   &__calories {
     position: absolute;
-    left: 7.2%;
+    left: 25.4%;
     top: 486px;
     opacity: .6;
     &::before {

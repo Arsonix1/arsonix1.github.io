@@ -1,7 +1,9 @@
 .we-best {
-  background: url('../../img/backgrounds/we-best-bg.png');
-  width: 1100px;
-  margin: 0 auto;
+  background: url('../../img/backgrounds/we-best-bg.png') no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  background-position: center center;
   &__title {
     position: relative;
     color: #2f3234;

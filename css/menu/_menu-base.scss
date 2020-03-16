@@ -1,8 +1,7 @@
 .menu {
   position: relative;
-  background: url('../../img/backgrounds/menu-main.png');
-  background-position-y: -90px;
-  background-position-x: -10px;
+  background: url('../../img/backgrounds/menu-main.png') 50% no-repeat;
+  background-size: cover;
   &__title {
     position: absolute;
     top: 91px;
