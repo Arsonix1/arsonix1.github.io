@@ -26,13 +26,14 @@
 // }
 
 .slide1 {
-  position: absolute;
+  position: relative;
   display: flex;
   top: 76px;
   left: 478px;
   &__burger {
-    margin-left: 10px;
-    margin-top: 10px;
+    position: absolute;
+    left: -393px;
+    top: 10px;
     width: 461px;
     height: 424px;
     background: url('../../img/burgers/drops.png') no-repeat;
@@ -47,7 +48,7 @@
   }
   &__sign {
     margin-top: 65px;
-    margin-left: 6px;
+    margin-left: 40px;
     .title {
       color: #f9b43b;
     }
