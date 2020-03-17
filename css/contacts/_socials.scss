@@ -1,20 +1,20 @@
 .socials {
 	position: relative;
 	text-align: center;
-	margin-top: -16px;
+	margin-top: -1rem;
 	left: -8.7%;
 }
 
 .socials__item {
   display: inline-block;
-	margin-left: 15px;
+	margin-left: 0.9375rem;
 }
 
 .socials__link {
   color: #fff;
 	display: inline-block;
-	max-width: 40px;
-	max-height: 40px;
+	max-width: 2.5rem;
+	max-height: 2.5rem;
 	opacity: .3;
 	transition: .3s;
 
@@ -24,6 +24,6 @@
 }
 
 .socials__link-icon {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }

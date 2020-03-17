@@ -33,19 +33,19 @@
         color: #f9b43b;
       }
       .menu-accordeon__content {
-        width: 540px;
+        width: 33.75rem;
       }
     }
   }
   &__title {
-    width: 80px;
+    width: 5rem;
     display: block;
     height: 100%;
     float: left;
     text-decoration: none;
     position: relative;
     &-text {
-      font-size: 40px;
+      font-size: 2.5rem;
       color: #fff;
       font-family: "Gagalin";
       text-align: center;
@@ -55,7 +55,7 @@
       transform-origin: 0 0;
       left: 50%;
       top: 100%;
-      margin-top: -36px;
+      margin-top: -2.25rem;
     }
   }
   &__content {
@@ -66,9 +66,9 @@
   }
   &__text {
     position: relative;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #fff;
-    padding: 60px 30px;
+    padding: 3.75rem 1.875rem;
     width: 100%;
     line-height: 1.8;
     font-family: "Ubuntu";

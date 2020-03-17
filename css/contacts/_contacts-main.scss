@@ -1,31 +1,31 @@
 .contacts {
   position: relative;
   &__map {
-    margin-top: 44px;
+    margin-top: 2.75rem;
     transform: scale(1.3);
   }
   &__mark {
-    width: 46px;
-    height: 58px;
+    width: 2.875rem;
+    height: 3.625rem;
     &.one {
       position: absolute;
-      top: 128px;
-      left: 501px;
+      top: 8rem;
+      left: 31.3125rem;
     }
     &.two {
       position: absolute;
-      top: 229px;
-      left: 629px;
+      top: 14.3125rem;
+      left: 39.3125rem;
     }
     &.three {
       position: absolute;
-      top: 339px;
-      left: 832px;
+      top: 21.1875rem;
+      left: 52rem;
     }
     &.four {
       position: absolute;
-      top: 435px;
-      left: 505px;
+      top: 27.1875rem;
+      left: 31.5625rem;
     }
   }
 }

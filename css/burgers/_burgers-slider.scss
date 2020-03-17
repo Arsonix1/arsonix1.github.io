@@ -1,61 +1,34 @@
-// .slider-switch {
-//   display: flex;
-//   flex-direction: column;
-//   position: absolute;
-//   left: 75.7%;
-//   top: 83px;
-//   &__item {
-//     position: relative;
-//     margin-bottom: -8px;
-//     &-active::after {
-//       content: "";
-//       position: absolute;
-//       right: -5px;
-//       top: 5px;
-//       width: 16px;
-//       height: 16px;
-//       border-radius: 8px;
-//       border: 1px solid #fff;
-//     }
-//     & a {
-//       text-decoration: none;
-//       font-size: 25px;
-//       color: #fff;
-//     }
-//   }
-// }
-
 .slide1 {
   position: relative;
   display: flex;
-  top: 76px;
-  left: 478px;
+  top: 4.75rem;
+  left: 29.875rem;
   &__burger {
     position: absolute;
-    left: -393px;
-    top: 10px;
-    width: 461px;
-    height: 424px;
+    left: -24.5625rem;
+    top: 0.625rem;
+    width: 28.8125rem;
+    height: 26.5rem;
     background: url('../../img/burgers/drops.png') no-repeat;
-    background-position-x: 10px;
-    background-position-y: 58px;
+    background-position-x: 0.625rem;
+    background-position-y: 3.625rem;
     &-img {
-      width: 416px;
-      height: 424px;
-      margin-top: -9px;
-      margin-left: 44px;
+      width: 26rem;
+      height: 26.5rem;
+      margin-top: -0.5625rem;
+      margin-left: 2.75rem;
     }
   }
   &__sign {
-    margin-top: 65px;
-    margin-left: 40px;
+    margin-top: 4.0625rem;
+    margin-left: 2.5rem;
     .title {
       color: #f9b43b;
     }
     .subtitle {
-      margin-top: 22px;
+      margin-top: 1.375rem;
       line-height: 0.99;
-      font-size: 63px;
+      font-size: 3.9375rem;
       color: #fff;
       font-family: "Lifehack";
       font-weight: 500;
