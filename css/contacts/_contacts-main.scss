@@ -1,12 +1,8 @@
 .contacts {
   position: relative;
   &__map {
-    position: absolute;
-    top: -31px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    margin-top: 44px;
+    transform: scale(1.3);
   }
   &__mark {
     width: 46px;
@@ -14,22 +10,22 @@
     &.one {
       position: absolute;
       top: 128px;
-      left: 903px;
+      left: 501px;
     }
     &.two {
       position: absolute;
       top: 229px;
-      left: 1031px;
+      left: 629px;
     }
     &.three {
       position: absolute;
       top: 339px;
-      left: 1234px;
+      left: 832px;
     }
     &.four {
       position: absolute;
       top: 435px;
-      left: 907px;
+      left: 505px;
     }
   }
 }
