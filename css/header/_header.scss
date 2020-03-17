@@ -16,11 +16,17 @@
     width: 6.0625rem;
     height: 2.1875rem;
     background-color: #e45028;
+    @include tablets {
+      margin-left: -2.5625rem;
+    }
   }
   &__logo {
     position: absolute;
-    width: 8.4%;
+    width: 5.75rem;
     margin-left: 7%;
     margin-top: 0.8125rem;
+    @include tablets {
+      margin-left: 0.3125rem;
+    }
   }
 }

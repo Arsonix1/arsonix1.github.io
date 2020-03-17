@@ -8,6 +8,10 @@ $tablets: 768px;
 $laptop: 992px;
 $desktop: 1200px;
 
+@import './media';
+@import './hamburger/hamburger-menu-link';
+@import './hamburger/hamburger-menu';
+
 @import './header/header';
 @import './navigation/navigation';
 
@@ -94,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .landing-block {
   width: 100%;
-  height: 650px;
+  height: 40.625rem;
   overflow: hidden;
 }
 
@@ -107,36 +111,40 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   &__burger {
     position: absolute;
-    top: 595px;
-    left: 534px;
-    width: 30px;
-    height: 15px;
+    top: 37.25rem;
+    left: 33.375rem;
+    width: 1.875rem;
+    height: 0.9375rem;
+    @include tablets {
+      top: 60.625rem;
+      left: 48%;
+    }
   }
   &__black {
     &-left {
       position: absolute;
-      width: 30px;
-      height: 15px;
-      top: -172px;
-      left: 38px;
+      width: 1.875rem;
+      height: 0.9375rem;
+      top: -10.75rem;
+      left: 2.375rem;
       transform: rotate(90deg);
     }
     &-right {
       position: absolute;
-      width: 30px;
-      height: 15px;
-      top: -172px;
-      left: 1031px;
+      width: 1.875rem;
+      height: 0.9375rem;
+      top: -10.75rem;
+      left: 64.4375rem;
       transform: rotate(-90deg);
     }
   }
 }
 
 .button {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-family: "Ubuntu";
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   color: #fff;
   border: none;
   &-text {
