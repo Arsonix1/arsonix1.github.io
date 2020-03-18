@@ -11,6 +11,7 @@
     flex-direction: column;
     width: auto;
     margin-left: 0;
+    padding: 0 17.6%;
   }
   &__row {
     margin-bottom: 0.875rem;
@@ -101,6 +102,9 @@
   margin-top: 0.3125rem;
   display: flex;
   align-items: center;
+  @include tablets {
+    margin-bottom: 10px;
+  }
   &__checkbox {
     width: 0.9375rem;
     height: 0.9375rem;
