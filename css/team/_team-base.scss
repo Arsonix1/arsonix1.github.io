@@ -2,9 +2,17 @@
   background: url('../../img/backgrounds/team-bg.png')  no-repeat;
   background-size: 50.1% 100%;
   position: relative;
+  @include tablets {
+    background-size: auto 100%;
+    background-position-x: -23.9375rem;
+  }
   &__title {
     color: #f9b43b;
     margin-left: -3%;
+    @include tablets {
+      margin-left: -2rem;
+      margin-top: 10.0625rem;
+    }
   }
   &__block {
     position: absolute;
@@ -14,5 +22,9 @@
     left: 50%;
     background: rgba(#2f3234, .9);
     padding: 5% 2% 0 7%;
+    @include tablets {
+      left: 0;
+      text-align: center;
+    }
   }
 }

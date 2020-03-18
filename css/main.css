@@ -150,12 +150,6 @@
   background: #2f3234 url("../../img/backgrounds/burgers.png") center center no-repeat;
   background-size: cover;
   position: relative;
-  height: 40.625rem;
-}
-@media screen and (max-width: 768px) {
-  .burgers {
-    height: 63.9375rem;
-  }
 }
 .burgers::after {
   content: "";
@@ -187,10 +181,9 @@
   background: url("../../img/burgers/drops.png") no-repeat;
   background-position-x: 0.625rem;
   background-position-y: 3.625rem;
+  width: 28.75rem;
 }
 .slide1__burger-img {
-  width: 26rem;
-  height: 26.5rem;
   margin-top: -0.5625rem;
   margin-left: 2.75rem;
 }
@@ -222,8 +215,15 @@
   background: url("../../img/backgrounds/we-best-bg.png") no-repeat;
   background-size: cover;
   text-align: center;
+  position: relative;
   display: flex;
   background-position: center center;
+  height: 40.625rem;
+}
+@media screen and (max-width: 768px) {
+  .we-best {
+    height: 64rem;
+  }
 }
 .we-best__title {
   position: relative;
@@ -231,11 +231,22 @@
   text-align: center;
   top: 7rem;
 }
+@media screen and (max-width: 768px) {
+  .we-best__title {
+    top: 13.75rem;
+  }
+}
 
 .because {
   display: flex;
   margin-top: 9.75rem;
   margin-left: 7%;
+}
+@media screen and (max-width: 768px) {
+  .because {
+    margin-top: 16.75rem;
+    margin-left: 0.25rem;
+  }
 }
 .because li {
   display: flex;
@@ -402,6 +413,7 @@
 
 .reviews {
   background: black;
+  height: 40.625rem;
 }
 .reviews__list {
   display: flex;
@@ -412,6 +424,12 @@
   width: 25%;
   height: 50%;
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .reviews__item {
+    width: 50%;
+    height: 25%;
+  }
 }
 .reviews__button {
   background-color: #2f3234;
@@ -434,37 +452,50 @@
 }
 .review__hover {
   position: absolute;
-  top: 41px;
-  left: 19px;
+  top: 2.5625rem;
+  left: 1.1875rem;
   right: 0;
   bottom: 0;
   transform: scale(0.8);
   transition: 0.3s;
   opacity: 0;
 }
+@media screen and (max-width: 768px) {
+  .review__hover {
+    padding: 0 14%;
+    left: 0;
+    top: 1.625rem;
+    text-align: center;
+    align-items: center;
+  }
+}
 .review__pic {
-  display: block;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .review__name {
-  font-size: 14px;
-  line-height: 28px;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
   color: #fff;
   font-family: "Gagalin";
 }
 .review__content {
-  width: 233px;
-  height: 160px;
-  font-size: 14px;
-  line-height: 24px;
+  width: 14.5625rem;
+  height: 10rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   color: #fff;
   font-family: "Ubuntu";
   font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .review__content {
+    margin-top: -0.625rem;
+    margin-bottom: 1.625rem;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .delivery {
@@ -472,6 +503,11 @@
   background-size: cover;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .delivery {
+    margin-top: -0.8125rem;
+  }
 }
 .delivery:before {
   content: "";
@@ -482,11 +518,21 @@
   z-index: -1;
   background: url("../../img/backgrounds/delivery-bg.png") center center/cover no-repeat;
 }
+@media screen and (max-width: 768px) {
+  .delivery:before {
+    height: 64rem;
+  }
+}
 .delivery__title {
   line-height: 4rem;
   color: #f9b43b;
   text-align: center;
   margin-top: -0.6%;
+}
+@media screen and (max-width: 768px) {
+  .delivery__title {
+    margin-top: -8.75rem;
+  }
 }
 
 .order {
@@ -498,6 +544,13 @@
   line-height: 1.5rem;
   font-family: "Ubuntu";
   font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .order {
+    flex-direction: column;
+    width: auto;
+    margin-left: 0;
+  }
 }
 .order__row {
   margin-bottom: 0.875rem;
@@ -529,9 +582,21 @@
   width: 50%;
   padding-right: 0.625rem;
 }
+@media screen and (max-width: 768px) {
+  .order__left {
+    width: auto;
+    padding-right: 0;
+  }
+}
 .order__right {
   width: 50%;
   padding-left: 0.625rem;
+}
+@media screen and (max-width: 768px) {
+  .order__right {
+    width: auto;
+    padding-left: 0;
+  }
 }
 .order__button {
   width: 6.0625rem;
@@ -598,9 +663,21 @@
   background-size: 50.1% 100%;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .team {
+    background-size: auto 100%;
+    background-position-x: -23.9375rem;
+  }
+}
 .team__title {
   color: #f9b43b;
   margin-left: -3%;
+}
+@media screen and (max-width: 768px) {
+  .team__title {
+    margin-left: -2rem;
+    margin-top: 10.0625rem;
+  }
 }
 .team__block {
   position: absolute;
@@ -610,6 +687,12 @@
   left: 50%;
   background: rgba(47, 50, 52, 0.9);
   padding: 5% 2% 0 7%;
+}
+@media screen and (max-width: 768px) {
+  .team__block {
+    left: 0;
+    text-align: center;
+  }
 }
 
 .team-accordeon {
@@ -628,6 +711,20 @@
 .team-accordeon__item.active .team-accordeon__content {
   height: 100%;
   margin-bottom: 3.375rem;
+}
+@media screen and (max-width: 768px) {
+  .team-accordeon__item.active .team-accordeon__content {
+    padding: 0 20%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-accordeon__item.active .team-accordeon__content .team-accordeon__avatar {
+    width: auto;
+  }
 }
 .team-accordeon__name {
   text-decoration: none;
@@ -696,6 +793,7 @@
   position: relative;
   background: url("../../img/backgrounds/menu-main.png") 50% no-repeat;
   background-size: cover;
+  height: 40.625rem;
 }
 .menu__title {
   position: absolute;
@@ -781,6 +879,11 @@
   line-height: 1.8;
   font-family: "Ubuntu";
   font-weight: 300;
+}
+
+.how-work {
+  position: relative;
+  height: 40.625rem;
 }
 
 .contacts {
@@ -998,8 +1101,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .landing-block {
   width: 100%;
-  height: 40.625rem;
   overflow: hidden;
+  height: 40.625rem;
+}
+@media screen and (max-width: 768px) {
+  .landing-block {
+    height: 64rem;
+  }
 }
 
 .title {

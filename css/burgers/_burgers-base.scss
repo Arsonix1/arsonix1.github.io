@@ -2,10 +2,6 @@
   background: $black url('../../img/backgrounds/burgers.png') center center no-repeat;
   background-size: cover;
   position: relative;
-  height: 40.625rem;
-  @include tablets {
-    height: 63.9375rem;
-  }
   &::after {
     content: "";
     position: absolute;

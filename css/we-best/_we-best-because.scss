@@ -2,6 +2,10 @@
   display: flex;
   margin-top: 9.75rem;
   margin-left: 7%;
+  @include tablets {
+    margin-top: 16.75rem;
+    margin-left: 0.25rem;
+  }
   & li {
     display: flex;
     flex-direction: column;

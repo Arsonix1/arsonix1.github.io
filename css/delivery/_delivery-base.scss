@@ -3,6 +3,9 @@
   background-size: cover;
   display: flex;
   align-items: center;
+  @include tablets {
+    margin-top: -0.8125rem;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -11,11 +14,17 @@
     height: 40.625rem;
     z-index: -1;
     background: url('../../img/backgrounds/delivery-bg.png') center center / cover no-repeat;
+    @include tablets {
+      height: 64rem;
+    }
   }
   &__title {
     line-height: 4rem;
     color: #f9b43b;
     text-align: center;
     margin-top: -0.6%;
+    @include tablets {
+      margin-top: -8.75rem;
+    }
   }
 }

@@ -1,5 +1,6 @@
 .reviews {
   background: black;
+  height: 40.625rem;
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +10,10 @@
     width: 25%;
     height: 50%;
     overflow: hidden;
+    @include tablets {
+      width: 50%;
+      height: 25%;
+    }
   }
   &__button {
     background-color: #2f3234;
