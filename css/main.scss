@@ -110,6 +110,10 @@ h1, h2, h3, h4, h5, h6 {
       top: -10.75rem;
       left: 2.375rem;
       transform: rotate(90deg);
+      @include tablets {
+        top: -23.25rem;
+        left: 1.1875rem;
+      }
       @include phones {
         top: -22rem;
         left: -0.625rem;
@@ -122,6 +126,10 @@ h1, h2, h3, h4, h5, h6 {
       top: -10.75rem;
       left: 64.4375rem;
       transform: rotate(-90deg);
+      @include tablets {
+        top: -23.25rem;
+        left: 42.625rem;
+      }
       @include phones {
         top: -22rem;
         left: 27.125rem;

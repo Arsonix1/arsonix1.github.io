@@ -6,6 +6,10 @@
     position: absolute;
     top: 10.5rem;
     left: 4.2%;
+    @include tablets {
+      top: 11.9375rem;
+      left: 6.9375rem;
+    }
     @include phones {
       position: relative;
       transform: scale(0.9);
@@ -20,6 +24,10 @@
     left: 9.4%;
     top: 6.5rem;
     z-index: 1;
+    @include tablets {
+      left: 20.4%;
+      top: 8rem;
+    }
     @include phones {
       left: 4.4%;
       top: 4rem;
@@ -53,6 +61,10 @@
     left: 7.4%;
     top: 30.375rem;
     opacity: .6;
+    @include tablets {
+      left: 74%;
+      top: 7.1rem;
+    }
     @include phones {
       left: 87%;
       top: 3.1rem;
@@ -87,6 +99,11 @@
     flex-direction: column;
     margin-left: 51%;
     margin-top: 8.4375rem;
+    @include tablets {
+      text-align: center;
+      margin-top: 33.6875rem;
+      margin-left: 12.5rem;
+    }
     @include phones {
       text-align: center;
       margin-top: 8.6875rem;
@@ -113,6 +130,11 @@
       color: #fff;
       font-family: "Ubuntu";
       font-weight: 300;
+      @include tablets {
+        margin-top: 2.8125rem;
+        margin-left: -7.5rem;
+        width: 35.4375rem;
+      }
       @include phones {
         margin-top: 1.4375rem;
         margin-left: -4.0625rem;
@@ -126,6 +148,9 @@
       color: #e35028;
       font-family: "Gagalin";
       display: flex;
+      @include tablets {
+        margin-top: -2rem;
+      }
       @include phones {
         margin-top: -2.125rem;
         margin-left: 1.5rem;
@@ -149,6 +174,9 @@
       margin-top: 20.5rem;
       margin-left: 14.375rem;
       background-color: #e45028;
+      @include tablets {
+        margin-top: 19.5rem;
+      }
       @include phones {
         margin-top: 16.125rem;
         margin-left: 12.875rem;

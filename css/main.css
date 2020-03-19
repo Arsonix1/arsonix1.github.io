@@ -109,6 +109,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 2.375rem;
   transform: rotate(90deg);
 }
+@media screen and (max-width: 768px) {
+  .arrow__black-left {
+    top: -23.25rem;
+    left: 1.1875rem;
+  }
+}
 @media screen and (max-width: 480px) {
   .arrow__black-left {
     top: -22rem;
@@ -122,6 +128,12 @@ h1, h2, h3, h4, h5, h6 {
   top: -10.75rem;
   left: 64.4375rem;
   transform: rotate(-90deg);
+}
+@media screen and (max-width: 768px) {
+  .arrow__black-right {
+    top: -23.25rem;
+    left: 42.625rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .arrow__black-right {
@@ -538,6 +550,12 @@ h1, h2, h3, h4, h5, h6 {
   top: 10.5rem;
   left: 4.2%;
 }
+@media screen and (max-width: 768px) {
+  .black-burger__img {
+    top: 11.9375rem;
+    left: 6.9375rem;
+  }
+}
 @media screen and (max-width: 480px) {
   .black-burger__img {
     position: relative;
@@ -553,6 +571,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 9.4%;
   top: 6.5rem;
   z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .black-burger__icon {
+    left: 20.4%;
+    top: 8rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .black-burger__icon {
@@ -588,6 +612,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 7.4%;
   top: 30.375rem;
   opacity: 0.6;
+}
+@media screen and (max-width: 768px) {
+  .black-burger__calories {
+    left: 74%;
+    top: 7.1rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .black-burger__calories {
@@ -625,6 +655,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 51%;
   margin-top: 8.4375rem;
 }
+@media screen and (max-width: 768px) {
+  .black-burger__text {
+    text-align: center;
+    margin-top: 33.6875rem;
+    margin-left: 12.5rem;
+  }
+}
 @media screen and (max-width: 480px) {
   .black-burger__text {
     text-align: center;
@@ -656,6 +693,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Ubuntu";
   font-weight: 300;
 }
+@media screen and (max-width: 768px) {
+  .black-burger__text-desc {
+    margin-top: 2.8125rem;
+    margin-left: -7.5rem;
+    width: 35.4375rem;
+  }
+}
 @media screen and (max-width: 480px) {
   .black-burger__text-desc {
     margin-top: 1.4375rem;
@@ -670,6 +714,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #e35028;
   font-family: "Gagalin";
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .black-burger__text-price {
+    margin-top: -2rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .black-burger__text-price {
@@ -697,6 +746,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 20.5rem;
   margin-left: 14.375rem;
   background-color: #e45028;
+}
+@media screen and (max-width: 768px) {
+  .black-burger__text-button {
+    margin-top: 19.5rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .black-burger__text-button {
@@ -1093,6 +1147,11 @@ h1, h2, h3, h4, h5, h6 {
 .team-accordeon__item {
   margin-bottom: -1.125rem;
 }
+@media screen and (max-width: 768px) {
+  .team-accordeon__item {
+    margin-bottom: -1.4375rem;
+  }
+}
 @media screen and (max-width: 480px) {
   .team-accordeon__item {
     margin-bottom: -0.5rem;
@@ -1115,6 +1174,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 2.5625rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1135,6 +1195,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.75rem;
   color: #fff;
   font-family: "Gagalin";
+}
+@media screen and (max-width: 768px) {
+  .team-accordeon__name {
+    font-size: 24px;
+    top: 9px;
+    margin-left: -12px;
+  }
 }
 @media screen and (max-width: 480px) {
   .team-accordeon__name {
@@ -1173,6 +1240,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 20.625rem;
   margin-bottom: 2.1875rem;
 }
+@media screen and (max-width: 768px) {
+  .team-accordeon__content {
+    margin-top: 1.125rem;
+    margin-left: -1.25rem;
+  }
+}
 .team-accordeon__avatar {
   text-align: center;
   margin-top: 0.3125rem;
@@ -1190,6 +1263,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Ubuntu";
   font-weight: 700;
   padding-left: 1.125rem;
+}
+@media screen and (max-width: 768px) {
+  .team-accordeon__text {
+    margin-top: 0.9375rem;
+    margin-left: 0.375rem;
+    padding: 0 10%;
+  }
 }
 @media screen and (max-width: 480px) {
   .team-accordeon__text {
