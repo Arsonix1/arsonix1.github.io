@@ -13,6 +13,10 @@
       margin-left: -2rem;
       margin-top: 10.0625rem;
     }
+    @include phones {
+      margin-top: 7.0625rem;
+      margin-left: -1.4375rem;
+    }
   }
   &__block {
     position: absolute;

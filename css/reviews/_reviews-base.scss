@@ -1,6 +1,5 @@
 .reviews {
   background: black;
-  height: 40.625rem;
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -21,5 +20,8 @@
     margin-left: 2px;
     width: 109px;
     height: 35px;
+    @include phones {
+      margin-top: 1.5625rem;
+    }
   }
 }

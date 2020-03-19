@@ -5,17 +5,17 @@
   position: relative;
   display: flex;
   background-position: center center;
-  height: 40.625rem;
-  @include tablets {
-    height: 64rem;
-  }
   &__title {
-    @include tablets {
-      top: 13.75rem;
-    }
     position: relative;
     color: #2f3234;
     text-align: center;
     top: 7rem;
+    @include tablets {
+      top: 13.75rem;
+    }
+    @include phones {
+      top: 5.6875rem;
+      font-size: 3.125rem;
+    }
   }
 }

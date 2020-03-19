@@ -43,7 +43,9 @@
           <span class="button-text">Заказать</span>
         </button>
         <a class="hamburger-menu-link" href="">
-          <div class="hamburger-menu-link__bars"></div>
+          <div class="hamburger-menu-link__bars">
+
+          </div>
         </a>
       </div>
     </header>
@@ -67,28 +69,34 @@
     </section>
     <section class="landing-block we-best">
       <div class="container">
-        <h2 class="we-best__title title">Мы лучшие</h2>
+        <h2 class="title we-best__title">Мы лучшие</h2>
         <ul class="because">
           <li class="because-meat">
             <svg class="because-meat__logo">
               <use xlink:href="./img/svg/sprite.svg#meat"></use>
             </svg>
-            <div class="because__subtitle">100% свежее мясо</div>
-            <div class="because__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</div>
+            <div class="because-text">
+              <div class="because__subtitle">100% свежее мясо</div>
+              <div class="because__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</div>
+            </div>
           </li>
           <li class="because-hand">
             <svg class="because-hand__logo">
               <use xlink:href="./img/svg/sprite.svg#hand"></use>
             </svg>
-            <div class="because__subtitle">Ручная сборка</div>
-            <div class="because__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</div>
+            <div class="because-text">
+              <div class="because__subtitle">Ручная сборка</div>
+              <div class="because__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</div>
+            </div>
           </li>
           <li class="because-natural">
             <svg class="because-natural__logo">
               <use xlink:href="./img/svg/sprite.svg#natural"></use>
             </svg>
-            <div class="because__subtitle">Натуральные<br>ингридиенты</div>
-            <div class="because__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</div>
+            <div class="because-text">
+              <div class="because__subtitle">Натуральные ингридиенты</div>
+              <div class="because__desc">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</div>
+            </div>
           </li>
         </ul>
       </div>
@@ -348,7 +356,7 @@
                 <div class="order__title">Квартира</div>
                 <input type="text" class="order__input">
               </label>
-              <label class="order__block">
+              <label class="order__block order__block_no-phone">
                 <div class="order__title">Этаж</div>
                 <input type="text" class="order__input">
               </label>

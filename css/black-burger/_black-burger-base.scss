@@ -6,6 +6,12 @@
     position: absolute;
     top: 10.5rem;
     left: 4.2%;
+    @include phones {
+      position: relative;
+      transform: scale(0.9);
+      top: 8.9375rem;
+      left: 0;
+    }
   }
   &__icon {
     width: 2.875rem;
@@ -14,6 +20,10 @@
     left: 9.4%;
     top: 6.5rem;
     z-index: 1;
+    @include phones {
+      left: 4.4%;
+      top: 4rem;
+    }
     & svg {
       width: 2.875rem;
       height: 2.5625rem;
@@ -43,6 +53,10 @@
     left: 7.4%;
     top: 30.375rem;
     opacity: .6;
+    @include phones {
+      left: 87%;
+      top: 3.1rem;
+    }
     &::before {
       content: "1200";
       position: absolute;
@@ -73,6 +87,11 @@
     flex-direction: column;
     margin-left: 51%;
     margin-top: 8.4375rem;
+    @include phones {
+      text-align: center;
+      margin-top: 8.6875rem;
+      margin-left: 3.9375rem;
+    }
     &-title {
       width: 20.625rem;
       font-size: 4.5rem;
@@ -80,6 +99,10 @@
       color: #fff;
       font-family: "Gagalin";
       text-transform: uppercase;
+      @include phones {
+        font-size: 3.125rem;
+        line-height: 1.1;
+      }
     }
     &-desc {
       margin-top: 2.9375rem;
@@ -90,6 +113,10 @@
       color: #fff;
       font-family: "Ubuntu";
       font-weight: 300;
+      @include phones {
+        margin-top: 1.4375rem;
+        margin-left: -4.0625rem;
+      }
     }
     &-price {
       margin-top: -1rem;
@@ -99,10 +126,20 @@
       color: #e35028;
       font-family: "Gagalin";
       display: flex;
+      @include phones {
+        margin-top: -2.125rem;
+        margin-left: 1.5rem;
+        font-size: 3.125rem;
+      }
       & h3 {
         margin-top: 1rem;
         margin-left: 0.625rem;
         font-size: 1.9375rem;
+        @include phones {
+          margin-top: 0.6875rem;
+          font-size: 1.625rem;
+          margin-left: 0.5625rem;
+        }
       }
     }
     &-button {
@@ -112,6 +149,10 @@
       margin-top: 20.5rem;
       margin-left: 14.375rem;
       background-color: #e45028;
+      @include phones {
+        margin-top: 16.125rem;
+        margin-left: 12.875rem;
+      }
     }
   }
 }

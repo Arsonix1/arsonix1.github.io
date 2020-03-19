@@ -6,12 +6,26 @@
     margin-top: 16.75rem;
     margin-left: 0.25rem;
   }
+  @include phones {
+    flex-direction: column;
+    margin-top: 7.4375rem;
+  }
   & li {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 18.75rem;
     margin-right: 1.25rem;
+    @include phones {
+      flex-direction: row;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  &-text {
+    @include phones {
+      text-align: left;
+    }
   }
   &__subtitle {
     font-size: 1.5rem;
@@ -28,32 +42,56 @@
     color: #2f3234;
     font-family: "Ubuntu";
     font-weight: 300;
+    @include phones {
+      text-align: left;
+    }
   }
   &-meat {
+    @include phones {
+      margin-top: -0.1875rem;
+      margin-bottom: 2.6875rem;
+    }
     &__logo {
       margin-bottom: 1.8125rem;
       position: relative;
       align-self: center;
       width: 6.0625rem;
       height: 5.5625rem;
+      @include phones {
+        width: 16.625rem;
+      }
     }
   }
   &-hand {
+    @include phones {
+      margin-bottom: 2.375rem;
+    }
     &__logo {
       margin-bottom: 2.0625rem;
       position: relative;
       align-self: center;
       width: 4.5625rem;
       height: 5.3125rem;
+      @include phones {
+        width: 22.0625rem;
+        margin-left: 0.8125rem;
+        margin-top: -1.4375rem;
+      }
     }
   }
   &-natural {
+    padding: 0 0.3%;
     &__logo {
       margin-bottom: 2.6875rem;
       position: relative;
       align-self: center;
       width: 5.5rem;
       height: 4.6875rem;
+      @include phones {
+        width: 13.0625rem;
+        margin-left: 0.5rem;
+        margin-top: -1.0625rem;
+      }
     }
   }
 }

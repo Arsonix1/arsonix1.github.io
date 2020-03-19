@@ -9,39 +9,6 @@ $laptop: 992px;
 $desktop: 1200px;
 
 @import './media';
-@import './hamburger/hamburger-menu-link';
-@import './hamburger/hamburger-menu';
-
-@import './header/header';
-@import './navigation/navigation';
-
-@import './burgers/burgers-base';
-@import './burgers/burgers-slider';
-
-@import './we-best/we-best-base';
-@import './we-best/we-best-because';
-
-@import './black-burger/black-burger-base';
-
-@import './reviews/reviews-base';
-@import './reviews/review';
-
-@import './delivery/delivery-base';
-@import './delivery/order-form';
-
-@import './team/team-base';
-@import './team/team-accordeon';
-
-@import './menu/menu-base';
-@import './menu/menu-accordeon';
-
-@import './how-work/how-work-base';
-
-@import './contacts/contacts-main';
-@import './contacts/footer';
-@import './contacts/socials';
-
-@import './fixed-menu/fixed-menu';
 
 ul {
   margin: 0;
@@ -105,11 +72,17 @@ h1, h2, h3, h4, h5, h6 {
   @include tablets {
     height: 64rem;
   }
+  @include phones {
+    height: 50rem;
+  }
 }
 
 .title {
   font-size: 72px;
   font-family: "Gagalin";
+  @include phones {
+    font-size: 50px;
+  }
 }
 
 .arrow {
@@ -124,6 +97,10 @@ h1, h2, h3, h4, h5, h6 {
       top: 60.625rem;
       left: 48%;
     }
+    @include phones {
+      top: 47.2rem;
+      left: 47%;
+    }
   }
   &__black {
     &-left {
@@ -133,6 +110,10 @@ h1, h2, h3, h4, h5, h6 {
       top: -10.75rem;
       left: 2.375rem;
       transform: rotate(90deg);
+      @include phones {
+        top: -22rem;
+        left: -0.625rem;
+      }
     }
     &-right {
       position: absolute;
@@ -141,6 +122,10 @@ h1, h2, h3, h4, h5, h6 {
       top: -10.75rem;
       left: 64.4375rem;
       transform: rotate(-90deg);
+      @include phones {
+        top: -22rem;
+        left: 27.125rem;
+      }
     }
   }
 }
@@ -157,3 +142,37 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
   }
 }
+
+@import './hamburger/hamburger-menu-link';
+@import './hamburger/hamburger-menu';
+
+@import './header/header';
+@import './navigation/navigation';
+
+@import './burgers/burgers-base';
+@import './burgers/burgers-slider';
+
+@import './we-best/we-best-base';
+@import './we-best/we-best-because';
+
+@import './black-burger/black-burger-base';
+
+@import './reviews/reviews-base';
+@import './reviews/review';
+
+@import './delivery/delivery-base';
+@import './delivery/order-form';
+
+@import './team/team-base';
+@import './team/team-accordeon';
+
+@import './menu/menu-base';
+@import './menu/menu-accordeon';
+
+@import './how-work/how-work-base';
+
+@import './contacts/contacts-main';
+@import './contacts/footer';
+@import './contacts/socials';
+
+@import './fixed-menu/fixed-menu';

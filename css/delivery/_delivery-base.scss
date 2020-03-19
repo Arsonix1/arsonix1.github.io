@@ -6,6 +6,9 @@
   @include tablets {
     margin-top: -0.8125rem;
   }
+  @include phones {
+    margin-top: -7.8125rem;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -17,6 +20,9 @@
     @include tablets {
       height: 64rem;
     }
+    @include phones {
+      height: 50rem;
+    }
   }
   &__title {
     line-height: 4rem;
@@ -26,6 +32,10 @@
     @include tablets {
       margin-top: -5.75rem;
       margin-bottom: 1.375rem;
+    }
+    @include phones {
+      margin-top: -2.5rem;
+      margin-bottom: 0;
     }
   }
 }

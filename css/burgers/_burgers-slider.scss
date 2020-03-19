@@ -15,9 +15,19 @@
     background-position-x: 0.625rem;
     background-position-y: 3.625rem;
     width: 28.75rem;
+    @include phones {
+      width: auto;
+      background-position-x: 0.625rem;
+      background-position-y: 0.625rem;
+      background-size: contain;
+    }
     &-img {
       margin-top: -0.5625rem;
       margin-left: 2.75rem;
+      @include phones {
+        width: 20.75rem;
+        margin-top: -2.5625rem;
+      }
     }
   }
   &__sign {
@@ -28,8 +38,15 @@
       margin-left: 0.1875rem;
       text-align: center;
     }
+    @include phones {
+      margin-top: 19px;
+    }
     .title {
       color: #f9b43b;
+      @include phones {
+        font-size: 3.9375rem;
+        margin-bottom: -0.5625rem;
+      }
     }
     .subtitle {
       width: 25rem;
@@ -39,6 +56,9 @@
       color: #fff;
       font-family: "Lifehack";
       font-weight: 500;
+      @include phones {
+        font-size: 3.1875rem;
+      }
     }
   }
 }

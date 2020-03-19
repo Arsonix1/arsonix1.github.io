@@ -35,6 +35,11 @@
       .menu-accordeon__content {
         width: 33.75rem;
       }
+      @include phones {
+        .menu-accordeon__content {
+          width: 21rem;
+        }
+      }
     }
   }
   &__title {
@@ -44,6 +49,9 @@
     float: left;
     text-decoration: none;
     position: relative;
+    @include phones {
+      width: 3rem;
+    }
     &-text {
       font-size: 2.5rem;
       color: #fff;
@@ -56,6 +64,9 @@
       left: 50%;
       top: 100%;
       margin-top: -2.25rem;
+      @include phones {
+        font-size: 1.5rem;
+      }
     }
   }
   &__content {

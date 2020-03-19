@@ -7,15 +7,25 @@
 	left: 0;
 	right: 0;
   padding: 0.625rem 0;
+  @include phones {
+    text-align: center;
+    height: 7.1875rem;
+  }
   &__container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    @include phones {
+      flex-direction: column;
+    }
   }
   &__col {
     width: 50%;
     height: 100%;
     margin-bottom: 0.9375rem;
+    @include phones {
+      width: auto;
+    }
     &_right {
       text-align: right;
       margin-bottom: 0;
@@ -23,6 +33,10 @@
         margin-left: 170px;
         display: flex;
         justify-content: flex-end;
+      }
+      @include phones {
+        margin-left: 0;
+        justify-content: center;
       }
     }
   }
@@ -38,6 +52,10 @@
     @include tablets {
       margin-left: 1.5rem;
     }
+    @include phones {
+      margin-left: 0;
+      margin-top: 0.375rem;
+    }
   }
   &__phone {
     color: #e35028;
@@ -52,6 +70,9 @@
       height: 0.6875rem;
       @include tablets {
         margin-left: 1.5rem;
+      }
+      @include phones {
+        margin-left: 0;
       }
     }
   }

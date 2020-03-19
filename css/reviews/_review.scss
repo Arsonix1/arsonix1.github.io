@@ -31,12 +31,19 @@
     width: 100%;
     height: 100%;
     filter: grayscale(100%);
+    @include phones {
+      transform: scale(1.5, 1);
+    }
   }
   &__name {
     font-size: 0.875rem;
     line-height: 1.75rem;
     color: #fff;
     font-family: "Gagalin";
+    @include phones {
+      font-size: 1.5rem;
+      margin-top: 0.8125rem;
+    }
   }
   &__content {
     width: 14.5625rem;
@@ -51,6 +58,9 @@
       margin-bottom: 1.625rem;
       width: 100%;
       height: auto;
+    }
+    @include phones {
+      display: none;
     }
   }
 }

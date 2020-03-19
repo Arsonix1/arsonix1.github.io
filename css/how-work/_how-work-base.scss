@@ -1,4 +1,6 @@
 .how-work {
   position: relative;
-  height: 40.625rem;
+  @include phones {
+    height: 57.8rem;
+  }
 }

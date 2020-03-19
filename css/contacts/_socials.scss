@@ -3,6 +3,9 @@
 	text-align: center;
 	margin-top: -1rem;
 	left: -8.7%;
+	@include phones {
+		margin-top: 0;
+	}
 }
 
 .socials__item {
