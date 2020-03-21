@@ -1,20 +1,21 @@
 .black-burger {
-  background: url('../../img/backgrounds/dark-beef-bg.png') 50% no-repeat;
-  background-size: cover;
+  background: linear-gradient(to top, #f9b43b 0%, #eb8c38 50%, #f9b43b 100%);
   position: relative;
   &__img {
-    position: absolute;
+    position: relative;
     top: 10.5rem;
-    left: 4.2%;
+    left: 2.5%;
+    width: 31.25rem;
+    height: 20.625rem;
     @include tablets {
       top: 11.9375rem;
       left: 6.9375rem;
     }
     @include phones {
       position: relative;
-      transform: scale(0.9);
-      top: 8.9375rem;
-      left: 0;
+      transform: scale(0.8);
+      top: 7.9375rem;
+      left: -1.4375rem;
     }
   }
   &__icon {
@@ -97,16 +98,16 @@
   &__text {
     display: flex;
     flex-direction: column;
-    margin-left: 51%;
-    margin-top: 8.4375rem;
+    margin-left: 29.5%;
+    margin-top: -12.0625rem;
     @include tablets {
       text-align: center;
-      margin-top: 33.6875rem;
+      margin-top: 13rem;
       margin-left: 12.5rem;
     }
     @include phones {
       text-align: center;
-      margin-top: 8.6875rem;
+      margin-top: 6.6875rem;
       margin-left: 3.9375rem;
     }
     &-title {
@@ -182,5 +183,17 @@
         margin-left: 12.875rem;
       }
     }
+  }
+}
+
+.slider {
+  display: flex;
+  &__slides {
+    display: flex;
+    position: relative;
+    will-change: right;
+  }
+  &__slide {
+    width: 118.75rem;
   }
 }

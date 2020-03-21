@@ -33,10 +33,17 @@
         color: #f9b43b;
       }
       .menu-accordeon__content {
-        width: 33.75rem;
+        display: block;
+      }
+      @include tablets {
+        .menu-accordeon__content {
+          display: block;
+          width: 33rem;
+        }
       }
       @include phones {
         .menu-accordeon__content {
+          display: block;
           width: 21rem;
         }
       }
@@ -72,8 +79,8 @@
   &__content {
     height: 100%;
     float: left;
-    width: 0;
-    overflow: hidden;
+    width: 33.75rem;
+    display: none;
   }
   &__text {
     position: relative;
