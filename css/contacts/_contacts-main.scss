@@ -1,8 +1,7 @@
 .contacts {
   position: relative;
   &__map {
-    margin-top: 2.75rem;
-    transform: scale(1.3);
+    height: 100vh;
     @include tablets {
       margin-top: 10.375rem;
       width: 100%;

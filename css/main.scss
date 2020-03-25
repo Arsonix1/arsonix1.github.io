@@ -68,13 +68,10 @@ h1, h2, h3, h4, h5, h6 {
 .landing-block {
   width: 100%;
   overflow: hidden;
-  height: 40.625rem;
-  @include tablets {
-    height: 64rem;
-  }
-  @include phones {
-    height: 50rem;
-  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title {
