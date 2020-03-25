@@ -3,11 +3,7 @@
   &__map {
     height: 100vh;
     @include tablets {
-      margin-top: 10.375rem;
-      width: 100%;
-      height: 32rem;
-      object-position: 0 3.25rem;
-      transform: scale(2.2);
+      height: 93.4vh;
     }
   }
   &__mark {

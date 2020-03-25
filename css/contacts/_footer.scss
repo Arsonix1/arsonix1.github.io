@@ -51,6 +51,7 @@
     text-decoration: none;
     @include tablets {
       margin-left: 1.5rem;
+      width: 100%;
     }
     @include phones {
       margin-left: 0;

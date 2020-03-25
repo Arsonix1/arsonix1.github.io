@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 1.875rem;
     height: 0.9375rem;
     @include tablets {
-      top: 60.625rem;
+      top: 110%;
       left: 48%;
     }
     @include phones {
