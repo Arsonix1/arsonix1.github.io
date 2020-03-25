@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 480px) {
   .arrow__burger {
-    top: 47.2rem;
+    top: 120%;
     left: 47%;
   }
 }
@@ -333,7 +333,6 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../../img/burgers/drops.png") no-repeat;
   background-position-x: 0.625rem;
   background-position-y: 3.625rem;
-  width: 28.75rem;
 }
 @media screen and (max-width: 480px) {
   .slide1__burger {
@@ -350,11 +349,9 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 480px) {
   .slide1__burger-img {
     width: 20.75rem;
-    margin-top: -2.5625rem;
   }
 }
 .slide1__sign {
-  margin-top: 3.8125rem;
   margin-left: 0.375rem;
 }
 @media screen and (max-width: 768px) {
@@ -364,18 +361,12 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 }
-@media screen and (max-width: 480px) {
-  .slide1__sign {
-    margin-top: 19px;
-  }
-}
 .slide1__sign .title {
   color: #f9b43b;
 }
 @media screen and (max-width: 480px) {
   .slide1__sign .title {
     font-size: 3.9375rem;
-    margin-bottom: -0.5625rem;
   }
 }
 .slide1__sign .subtitle {
@@ -407,7 +398,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 480px) {
   .we-best__title {
-    top: 5.6875rem;
     font-size: 3.125rem;
   }
 }
@@ -425,7 +415,6 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 480px) {
   .because {
     flex-direction: column;
-    margin-top: 7.4375rem;
   }
 }
 .because li {
@@ -470,7 +459,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 480px) {
   .because-meat {
-    margin-top: -0.1875rem;
     margin-bottom: 2.6875rem;
   }
 }
@@ -502,7 +490,6 @@ h1, h2, h3, h4, h5, h6 {
   .because-hand__logo {
     width: 22.0625rem;
     margin-left: 0.8125rem;
-    margin-top: -1.4375rem;
   }
 }
 .because-natural {
@@ -519,7 +506,6 @@ h1, h2, h3, h4, h5, h6 {
   .because-natural__logo {
     width: 13.0625rem;
     margin-left: 0.5rem;
-    margin-top: -1.0625rem;
   }
 }
 

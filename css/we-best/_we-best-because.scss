@@ -7,7 +7,6 @@
   }
   @include phones {
     flex-direction: column;
-    margin-top: 7.4375rem;
   }
   & li {
     display: flex;
@@ -47,7 +46,6 @@
   }
   &-meat {
     @include phones {
-      margin-top: -0.1875rem;
       margin-bottom: 2.6875rem;
     }
     &__logo {
@@ -74,7 +72,6 @@
       @include phones {
         width: 22.0625rem;
         margin-left: 0.8125rem;
-        margin-top: -1.4375rem;
       }
     }
   }
@@ -89,7 +86,6 @@
       @include phones {
         width: 13.0625rem;
         margin-left: 0.5rem;
-        margin-top: -1.0625rem;
       }
     }
   }
