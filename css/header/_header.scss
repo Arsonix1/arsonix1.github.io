@@ -17,10 +17,10 @@
     height: 2.1875rem;
     background-color: #e45028;
     @include tablets {
-      margin-left: -2.5625rem;
+      margin-left: 78%;
     }
     @include phones {
-      margin-left: -5.2rem;
+      margin-left: 67%;
     }
   }
   &__logo {

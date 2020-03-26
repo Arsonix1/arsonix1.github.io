@@ -199,12 +199,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   .header__button {
-    margin-left: -2.5625rem;
+    margin-left: 78%;
   }
 }
 @media screen and (max-width: 480px) {
   .header__button {
-    margin-left: -5.2rem;
+    margin-left: 67%;
   }
 }
 .header__logo {
@@ -266,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
   .navigation_hamburger-visible {
     display: flex;
     z-index: 2;
-    opacity: 0.8;
+    opacity: 0.9;
     transition: opacity ease-in-out;
     margin-left: 0;
   }
