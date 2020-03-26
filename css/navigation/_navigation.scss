@@ -1,20 +1,70 @@
 .navigation {
   width: 68%;
   margin-left: 15.3%;
+  @include tablets {
+    display: none;
+    &_hamburger {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: #0a0a16;
+      opacity: 0;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      
+      width: auto;
+      .navigation__menu {
+        margin-left: 0;
+        flex-direction: column;
+        font-family: 'Lifehack-Medium';
+        align-items: center;
+        justify-content: center;
+      }
+      .navigation__menu-item {
+        text-align: center;
+        margin-bottom: 1.25rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::before {
+          display: none;
+        }
+      }
+      & a {
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+
+  &_hamburger-visible {
+    @include tablets {
+      display: flex;
+      z-index: 2;
+      opacity: .8;
+      transition: opacity ease-in-out;
+      margin-left: 0;
+      .hamburger__close {
+        display: block;
+      }
+    }
+  }
+  
   &__menu {
     display: flex;
-    margin-left: 70px;
-    @include tablets {
-      display: none;
-    }
+    margin-left: 4.375rem;
     &-item {
-      margin-top: 30px;
+      margin-top: 1.875rem;
       &::before {
         content:"•";
-        font-size: 13px;
+        font-size: 0.8125rem;
         color: #fff;
-        margin-left: 15px;
-        margin-right: 12px;
+        margin-left: 0.9375rem;
+        margin-right: 0.75rem;
       }
       &:first-child:before {
         content: "";
@@ -24,6 +74,33 @@
         color: #fff;
         text-decoration: none;
       }
+    }
+  }
+}
+
+.hamburger {
+  &__close {
+    display: none;
+    &-icon {
+      fill: #fff;
+      height: 1.25rem;
+      width: 1.25rem;
+      position: absolute;
+      top: 5%;
+      right: 5%;
+    }
+  }
+  &__icon {
+    display: none;
+    @include tablets {
+      display: block;
+      margin-top: 1.875rem;
+      margin-left: 1.25rem;
+    }
+    &-img {
+      height: 1.5625rem;
+      width: 1.5625rem;
+      fill: #fff;
     }
   }
 }

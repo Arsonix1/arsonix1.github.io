@@ -26,10 +26,6 @@
 	font-style: normal;
 }
 
-@mixin gagalin() {
-	font-family: 'Gagalin-Regular', Helvetica, sans-serif;
-}
-
 @mixin ubuntu($style: light) {
 	font-family: 'Ubuntu', Helvetica, sans-serif;
 

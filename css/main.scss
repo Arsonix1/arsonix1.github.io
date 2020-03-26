@@ -30,6 +30,7 @@ html, body {
   height: 100%;
 }
 
+
 img {
   display: block;
   max-width: 100%;
@@ -59,6 +60,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   max-width: 1100px;
   width: 95%;
+}
+
+.body--menu-openned {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .main-menu {
@@ -148,9 +154,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
   }
 }
-
-@import './hamburger/hamburger-menu-link';
-@import './hamburger/hamburger-menu';
 
 @import './header/header';
 @import './navigation/navigation';
