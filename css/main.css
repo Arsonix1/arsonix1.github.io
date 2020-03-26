@@ -267,7 +267,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     z-index: 2;
     opacity: 0.9;
-    transition: opacity ease-in-out;
     margin-left: 0;
   }
   .navigation_hamburger-visible .hamburger__close {
