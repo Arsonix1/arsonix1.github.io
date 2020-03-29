@@ -34,16 +34,10 @@
       }
       .menu-accordeon__content {
         display: block;
-      }
-      @include tablets {
-        .menu-accordeon__content {
-          display: block;
+        @include tablets {
           width: 33rem;
         }
-      }
-      @include phones {
-        .menu-accordeon__content {
-          display: block;
+        @include phones {
           width: 21rem;
         }
       }

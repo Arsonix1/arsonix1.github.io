@@ -77,6 +77,12 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.error {
+  font-family: "Lifehack-Medium";
+  font-size: 24px;
+  color: #e35028;
+}
+
 .main-menu {
   display: flex;
   flex-direction: row;
@@ -1390,13 +1396,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   .menu-accordeon__item.active .menu-accordeon__content {
-    display: block;
     width: 33rem;
   }
 }
 @media screen and (max-width: 480px) {
   .menu-accordeon__item.active .menu-accordeon__content {
-    display: block;
     width: 21rem;
   }
 }
