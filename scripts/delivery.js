@@ -22,16 +22,16 @@ sendButton.addEventListener('click', (event) => {
     }
     sendStatus = !sendStatus
     xhr.send(formData)
+    xhr.addEventListener('load', () => {
+      overlay.open()
+      document.body.classList.add('body__overlay')
+      if (xhr.status === 200) {
+        overlay.setContent('Loftschool на связи')
+      } else {
+        overlay.setContent('Ошибочка')
+      }
+    })
   }
-  xhr.addEventListener('load', () => {
-    overlay.open()
-    document.body.classList.add('body__overlay')
-    if (xhr.status === 200) {
-      overlay.setContent('Loftschool на связи')
-    } else {
-      overlay.setContent('Ошибочка')
-    }
-  })
 })
 
 function validateForm (form) {
