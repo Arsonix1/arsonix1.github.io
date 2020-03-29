@@ -170,19 +170,21 @@
       }
     }
     &-button {
-      position: absolute;
       width: 6.0625rem;
       height: 2.1875rem;
-      margin-top: 20.5rem;
-      margin-left: 14.375rem;
       background-color: #e45028;
-      @include tablets {
-        margin-top: 19.5rem;
-      }
-      @include phones {
-        margin-top: 16.125rem;
-        margin-left: 12.875rem;
-      }
+    }
+  }
+  &__button {
+    position: absolute;
+    margin-top: 20.5rem;
+    margin-left: 14.375rem;
+    @include tablets {
+      margin-top: 19.5rem;
+    }
+    @include phones {
+      margin-top: 16.125rem;
+      margin-left: 12.875rem;
     }
   }
 }
