@@ -2,34 +2,38 @@ const deliveryForm = document.querySelector('#order')
 const sendButton = document.querySelector('#openOverlay')
 const template = document.querySelector('#overlayTemplate').innerHTML
 const overlay = createOverlay(template)
+let sendStatus = false
 
 sendButton.addEventListener('click', (event) => {
   event.preventDefault()
+  let xhr
   if (validateForm(deliveryForm)) {
-    const data = {
-      name: deliveryForm.elements.name.name,
-      phone: deliveryForm.elements.phone.value,
-      comment: deliveryForm.elements.comment.value,
-      email: 'privet@pechenek.net'
-    }
-    const xhr = new XMLHttpRequest()
+    const formData = new FormData()
+    formData.append('name', deliveryForm.elements.name.value)
+    formData.append('phone', deliveryForm.elements.phone.value)
+    formData.append('comment', deliveryForm.elements.comment.value)
+    formData.append('to', 'privet@pechenek.net')
+    xhr = new XMLHttpRequest()
     xhr.responseType = 'json'
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail')
-    xhr.send(JSON.stringify(data))
-    xhr.addEventListener('load', () => {
-      console.log(xhr.response)
-  });
-    // xhr.addEventListener('load', () => {
-    //     if (xhr.status === 404) {
-    //         console.log('Файл не найден')
-    //     } else {
-    //         console.log(xhr.responseText)
-    //     }
-    // })
+    if (!sendStatus) {
+      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail')
+      sendStatus = true
+    } else {
+      xhr.open('POST', 'https://webdev-api.loftschool.com')
+      sendStatus = false
+    }
+    xhr.send(formData)
   }
   document.body.classList.add('body__overlay')
-  overlay.open()
-  overlay.setContent('Тест123')
+  xhr.addEventListener('load', () => {
+    overlay.open()
+    console.log(xhr)
+    if (xhr.status === 200) {
+      overlay.setContent('Loftschool на связи')
+    } else {
+      overlay.setContent('Ошибочка')
+    }
+  })
 })
 
 function validateForm(form) {
@@ -43,11 +47,7 @@ function validateForm(form) {
       valid = false;
   }
 
-  if (!validateField(form.elements.street)) {
-      valid = false;
-  }
-
-  if (!validateField(form.elements.home)) {
+  if (!validateField(form.elements.comment)) {
     valid = false;
 }
 

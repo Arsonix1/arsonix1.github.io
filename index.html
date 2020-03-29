@@ -385,15 +385,13 @@
             <div class="order__row">
               <label class="order__block">
                 <div class="order__title">Улица</div>
-                <input type="text" name="street" class="order__input" required>
-                <div class="error"></div>
+                <input type="text" name="street" class="order__input">
               </label>
             </div>
             <div class="order__row">
               <label class="order__block">
                 <div class="order__title">Дом</div>
-                <input type="text" name="home" class="order__input" required>
-                <div class="error"></div>
+                <input type="text" name="home" class="order__input">
               </label>
               <label class="order__block">
                 <div class="order__title">Корпус</div>
@@ -413,7 +411,8 @@
             <div class="order__row">
               <label class="order__block">
                 <div class="order__title">Комментарий</div>
-                <textarea name="comment" class="order__input order__input_textarea"></textarea>
+                <textarea name="comment" class="order__input order__input_textarea" required></textarea>
+                <div class="error"></div>
               </label>
             </div>
             <div class="order__row">
