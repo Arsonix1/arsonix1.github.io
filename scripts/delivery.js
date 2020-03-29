@@ -17,17 +17,15 @@ sendButton.addEventListener('click', (event) => {
     xhr.responseType = 'json'
     if (!sendStatus) {
       xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail')
-      sendStatus = true
     } else {
       xhr.open('POST', 'https://webdev-api.loftschool.com')
-      sendStatus = false
     }
+    sendStatus = !sendStatus
     xhr.send(formData)
   }
-  document.body.classList.add('body__overlay')
   xhr.addEventListener('load', () => {
     overlay.open()
-    console.log(xhr)
+    document.body.classList.add('body__overlay')
     if (xhr.status === 200) {
       overlay.setContent('Loftschool на связи')
     } else {
@@ -36,30 +34,26 @@ sendButton.addEventListener('click', (event) => {
   })
 })
 
-function validateForm(form) {
-  let valid = true;
-
+function validateForm (form) {
+  let valid = true
   if (!validateField(form.elements.name)) {
-      valid = false;
+      valid = false
   }
-
   if (!validateField(form.elements.phone)) {
-      valid = false;
+      valid = false
   }
-
   if (!validateField(form.elements.comment)) {
-    valid = false;
+    valid = false
+}
+  return valid
 }
 
-  return valid;
-}
-
-function validateField(field) {
-  field.nextElementSibling.textContent = field.validationMessage;
+function validateField (field) {
+  field.nextElementSibling.textContent = field.validationMessage
   return field.checkValidity()
 }
 
-function createOverlay(template) {
+function createOverlay (template) {
   const fragment = document.createElement('div')
   fragment.innerHTML = template
   const overlayElement = fragment.querySelector('.modal-overlay')
