@@ -6,14 +6,13 @@ let sendStatus = false
 
 sendButton.addEventListener('click', (event) => {
   event.preventDefault()
-  let xhr
   if (validateForm(deliveryForm)) {
     const formData = new FormData()
     formData.append('name', deliveryForm.elements.name.value)
     formData.append('phone', deliveryForm.elements.phone.value)
     formData.append('comment', deliveryForm.elements.comment.value)
     formData.append('to', 'privet@pechenek.net')
-    xhr = new XMLHttpRequest()
+    const xhr = new XMLHttpRequest()
     xhr.responseType = 'json'
     if (!sendStatus) {
       xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail')
