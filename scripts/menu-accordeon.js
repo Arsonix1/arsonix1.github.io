@@ -1,7 +1,7 @@
 const menuItems = document.querySelectorAll('.menu-accordeon__title')
 menuItems.forEach(item => {
-  item.addEventListener('click', (evt) => {
-    evt.preventDefault()
+  item.addEventListener('click', (event) => {
+    event.preventDefault()
     const menuItem = item.parentElement
     if (menuItem.classList.contains('active')) {
       menuItem.classList.remove('active')

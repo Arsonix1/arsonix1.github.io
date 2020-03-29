@@ -1,7 +1,7 @@
 const teamItems = document.querySelectorAll('.team-accordeon__name')
 teamItems.forEach(item => {
-  item.addEventListener('click', (evt) => {
-    evt.preventDefault()
+  item.addEventListener('click', (event) => {
+    event.preventDefault()
     const teamItem = item.parentElement
     if (teamItem.classList.contains('active')) {
       teamItem.classList.remove('active')

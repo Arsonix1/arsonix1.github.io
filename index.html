@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
   <script type="module" async src="./scripts/main.js"></script>
+  <script type="template" id="overlayTemplate">
+    <div class="modal-overlay">
+      <div class="modal-container">
+        <a class="modal-close" href="#">x</a>
+        <div class="modal-content"></div>
+      </div>
+    </div>
+  </script>
 </head>
 <body>
   <div class="wrapper">
@@ -432,7 +440,7 @@
             </div>
             <div class="order__row">
               <label class="order__buttons">
-                <button type="submit" class="button order__button">
+                <button id="openOverlay" type="submit" class="button order__button">
                   <span class="button-text">Заказать</span>
                 </button>
                 <button type="submit" class="order__button-clear">Очистить</button>
