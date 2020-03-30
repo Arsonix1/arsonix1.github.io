@@ -8,8 +8,9 @@ $tablets: 768px;
 $laptop: 992px;
 $desktop: 1200px;
 
-@import './media';
-@import './fonts';
+@import './misc/normalize';
+@import './misc/media';
+@import './misc/fonts';
 
 ul {
   margin: 0;
@@ -161,33 +162,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@import './header/header';
-@import './navigation/navigation';
-
-@import './burgers/burgers-base';
-@import './burgers/burgers-slider';
-
-@import './we-best/we-best-base';
-@import './we-best/we-best-because';
-
-@import './black-burger/black-burger-base';
-
-@import './reviews/reviews-base';
-@import './reviews/review';
-
-@import './delivery/delivery-base';
-@import './delivery/order-form';
-
-@import './team/team-base';
-@import './team/team-accordeon';
-
-@import './menu/menu-base';
-@import './menu/menu-accordeon';
-
-@import './how-work/how-work-base';
-
-@import './contacts/contacts-main';
-@import './contacts/footer';
-@import './contacts/socials';
-
-@import './fixed-menu/fixed-menu';
+@import './blocks/header/header';
+@import './blocks/burgers/burgers-base';
+@import './blocks/we-best/we-best-base';
+@import './blocks/black-burger/black-burger-base';
+@import './blocks/team/team-base';
+@import './blocks/menu/menu-base';
+@import './blocks/reviews/reviews-base';
+@import './blocks/how-work/how-work-base';
+@import './blocks/delivery/delivery-base';
+@import './blocks/contacts/contacts-main';
+@import './blocks/fixed-menu/fixed-menu';
