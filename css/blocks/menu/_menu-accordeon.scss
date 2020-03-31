@@ -28,7 +28,7 @@
         background: url('../../img/backgrounds/menu-#{$bg}.png') center center / cover no-repeat;
       }
     }
-    &.active {
+    &.menu-active {
       .menu-accordeon__title-text {
         color: #f9b43b;
       }

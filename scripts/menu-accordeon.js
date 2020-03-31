@@ -1,16 +1,16 @@
 const menuItems = document.querySelectorAll('.menu-accordeon__title')
 menuItems.forEach(item => {
-  item.addEventListener('click', (event) => {
+  $(item).on('click', event => {
     event.preventDefault()
     const menuItem = item.parentElement
-    if (menuItem.classList.contains('active')) {
-      menuItem.classList.remove('active')
+    if ($(menuItem).hasClass('menu-active')) {
+      $(menuItem).removeClass('menu-active')
     } else {
-      const openedMenuElement = document.querySelector('.active')
+      const openedMenuElement = document.querySelector('.menu-active')
       if (openedMenuElement && !menuItem.isEqualNode(openedMenuElement)) {
-        openedMenuElement.classList.remove('active') 
+        $(openedMenuElement).removeClass('menu-active')
       }
-      menuItem.classList.add('active')
+      $(menuItem).addClass('menu-active')
     }
   })
 })

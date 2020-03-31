@@ -13,7 +13,7 @@
     @include phones {
       margin-bottom: -1.5rem;
     }
-    &.active {
+    &.team-active {
       .team-accordeon__name {
         color: #f9b43b;
         &:before {
