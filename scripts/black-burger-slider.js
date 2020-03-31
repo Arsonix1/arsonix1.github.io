@@ -1,34 +1,33 @@
-const left = document.querySelector('#left')
-const right = document.querySelector('#right')
-const slider = document.querySelector('#slider')
-const computed = getComputedStyle(slider)
+const left = $('.wrapper').find('#left')
+const right = $('.wrapper').find('#right')
+const slider = $('.wrapper').find('#slider')
 const slidesCount = document.getElementById('slider').children.length
 const maxSlidesWidth = 1900*(slidesCount-1)
 
-right.addEventListener('click', (event) => {
+$(right).on('click', event => {
   event.preventDefault()
-  let currentRight = parseInt(computed.right)
+  let currentRight = parseInt(slider.css('right'))
   if (!currentRight) {
     currentRight = 0
   }
   if (currentRight < maxSlidesWidth) {
-    slider.style.right = currentRight + 1900 + 'px'
+    slider.css('right', currentRight + 1900)
   }
   if (currentRight === maxSlidesWidth) {
-    slider.style.right = 0
+    slider.css('right', 0)
   }
 })
 
-left.addEventListener('click', (event) => {
+$(left).on('click', event => {
   event.preventDefault()
-  let currentRight = parseInt(computed.right)
+  let currentRight = parseInt(slider.css('right'))
   if (!currentRight) {
     currentRight = 0
   }
   if (currentRight === 0) {
-    slider.style.right = maxSlidesWidth + 'px'
+    slider.css('right', maxSlidesWidth)
   }
   if (currentRight === maxSlidesWidth) {
-    slider.style.right = 0
+    slider.css('right', 0)
   }
 })

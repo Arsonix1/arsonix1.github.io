@@ -1,15 +1,15 @@
-const hamburger = document.querySelector('.hamburger__icon-link')
-const nav = document.querySelector('.navigation')
-const hamburgerClose = document.querySelector('.hamburger__close')
+const hamburger = $('.wrapper').find('.hamburger__icon-link')
+const nav = $('.wrapper').find('.navigation')
+const hamburgerClose = $('.wrapper').find('.hamburger__close')
 
-hamburger.addEventListener('click', (event) => {
+hamburger.on('click', event => {
   event.preventDefault()
-  nav.classList.add('navigation_hamburger-visible')
-  document.body.classList.add('body__overlay')
+  nav.addClass('navigation_hamburger-visible')
+  $('body').addClass('body__overlay')
 })
 
-hamburgerClose.addEventListener('click', (event) => {
+hamburgerClose.on('click', event => {
   event.preventDefault()
-  nav.classList.remove('navigation_hamburger-visible') 
-  document.body.classList.remove('body__overlay')
+  nav.removeClass('navigation_hamburger-visible')
+  $('body').removeClass('body__overlay')
 })
