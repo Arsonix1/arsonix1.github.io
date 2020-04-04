@@ -107,58 +107,80 @@
         </ul>
       </div>
     </section>
-    <section class="landing-block black-burger">
+    <section class="landing-block burgers-slider">
       <div class="container">
-        <div class="black-burger__icon">
-          <svg>
-            <use xlink:href="./img/svg/sprite.svg#burger-icon"></use>
-          </svg>
-        </div>
-        <div class="black-burger__calories">
-          <svg>
-            <use xlink:href="./img/svg/sprite.svg#kkal"></use>
-          </svg>
-        </div>
         <div class="slider">
           <div id="slider" class="slider__slides">
-            <div class="slider__slide">
-              <img src="./img/black-burger/black-burger.png" alt="" class="black-burger__img">
-              <div class="black-burger__text">
-                <h2 class="black-burger__text-title">Dark beef burger</h2>
-                <div class="black-burger__text-desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
-                <div class="black-burger__text-price">500 <h3>рублей</h3></div>
-                <div class="black-burger__button">
-                  <button type="submit" class="button black-burger__text-button">
-                    <span class="button-text">Заказать</span>
-                  </button>
+            <ul class="slider__list">
+              <li class="slider__item">
+                <div class="burgers-slider__icon">
+                  <svg>
+                    <use xlink:href="./img/svg/sprite.svg#burger-icon"></use>
+                  </svg>
                 </div>
-              </div>
-            </div>
-            <div class="slider__slide">
-              <img src="./img/burgers/burger.png" alt="" class="black-burger__img">
-              <div class="black-burger__text">
-                <h2 class="black-burger__text-title">Example burger</h2>
-                <div class="black-burger__text-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ab sed maxime maiores odio consequuntur cumque ipsam atque, officiis dicta fuga. Voluptatem iusto alias rerum omnis? Molestiae et quae quidem!</div>
-                <div class="black-burger__text-price">200 <h3>рублей</h3></div>
-                <div class="black-burger__button">
-                  <button type="submit" class="button black-burger__text-button">
-                    <span class="button-text">Заказать</span>
-                  </button>
+                <div class="burgers-slider__calories">
+                  <svg>
+                    <use xlink:href="./img/svg/sprite.svg#kkal"></use>
+                  </svg>
                 </div>
-              </div>
-            </div>
+                <img src="./img/black-burger/black-burger.png" alt="" class="burgers-slider__img">
+                <div class="burgers-slider__text">
+                  <h2 class="burgers-slider__text-title">Dark beef burger</h2>
+                  <div class="burgers-slider__text-desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                  <div class="burgers-slider__text-price">500 <h3>рублей</h3></div>
+                  <div class="burgers-slider__button">
+                    <button type="submit" class="button burgers-slider__text-button">
+                      <span class="button-text">Заказать</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="slider__item">
+                <div class="burgers-slider__icon">
+                  <svg>
+                    <use xlink:href="./img/svg/sprite.svg#burger-icon"></use>
+                  </svg>
+                </div>
+                <div class="burgers-slider__calories">
+                  <svg>
+                    <use xlink:href="./img/svg/sprite.svg#kkal"></use>
+                  </svg>
+                </div>
+                <img src="./img/black-burger/burger-sandwich.png" alt="" class="burgers-slider__img">
+                <div class="burgers-slider__text">
+                  <h2 class="burgers-slider__text-title">Example burger</h2>
+                  <div class="burgers-slider__text-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ab sed maxime maiores odio consequuntur cumque ipsam atque, officiis dicta fuga. Voluptatem iusto alias rerum omnis? Molestiae et quae quidem!</div>
+                  <div class="burgers-slider__text-price">200 <h3>рублей</h3></div>
+                  <div class="burgers-slider__button">
+                    <button type="submit" class="button burgers-slider__text-button">
+                      <span class="button-text">Заказать</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <ul class="slider__dots">
+            <li class="slider__dots-item">
+              <div class="slider__dots-circle"></div>
+            </li>
+            <li class="slider__dots-item">
+              <div class="slider__dots-circle"></div>
+            </li>
+          </ul>
+          <div class="slider__controls">
+            <a href="" id="left" class="arrow">
+              <svg class="arrow__black-left">
+                <use xlink:href="./img/svg/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+            <a href="" id="right" class="arrow">
+              <svg class="arrow__black-right">
+                <use xlink:href="./img/svg/sprite.svg#arrow"></use>
+              </svg>
+            </a>
           </div>
         </div>
-        <a href="" id="left" class="arrow">
-          <svg class="arrow__black-left">
-            <use xlink:href="./img/svg/sprite.svg#arrow"></use>
-          </svg>
-        </a>
-        <a href="" id="right" class="arrow">
-          <svg class="arrow__black-right">
-            <use xlink:href="./img/svg/sprite.svg#arrow"></use>
-          </svg>
-        </a>
       </div>
     </section>
     <section class="landing-block team">
@@ -267,7 +289,7 @@
         <li class="reviews__item review">
           <img src="./img/reviews/2.png" alt="" class="review__pic">
           <div class="review__hover">
-            <h3 class="review__name">Константин Спилберг</h3>
+            <h3 class="review__name">Константин Спилберг1</h3>
             <div class="review__content">
               <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
             </div>
@@ -433,7 +455,7 @@
             </div>
             <div class="order__row">
               <label class="order__buttons">
-                <button id="openOverlay" type="submit" class="button order__button">
+                <button id="openDeliveryOverlay" type="submit" class="button order__button">
                   <span class="button-text">Заказать</span>
                 </button>
                 <button type="submit" class="order__button-clear">Очистить</button>
@@ -518,11 +540,28 @@
   </ul>
   <script src="./scripts/jquery-3.4.1.min.js"></script>
   <script type="module" async src="./scripts/main.js"></script>
-  <script type="template" id="overlayTemplate">
+  <script type="template" id="deliveryModalTemplate">
     <div class="modal-overlay">
       <div class="modal-container">
-        <a class="modal-close" href="#">x</a>
+        <button type="submit" class="button modal-close">
+          <span class="button-text">Закрыть</span>
+        </button>
         <div class="modal-content"></div>
+      </div>
+    </div>
+  </script>
+  <script type="template" id="reviewsModalTemplate">
+    <div class="review__modal-overlay">
+      <div class="review__modal-container">
+        <a href=""class="review__modal-close">
+          <svg class="review__modal-close_icon">
+            <use xlink:href="./img/svg/sprite.svg#close"></use>
+          </svg>
+        </a>
+        <div class="review__modal-content">
+          <div class="review__modal-name"></div>
+          <div class="review__modal-text"></div>
+        </div>
       </div>
     </div>
   </script>

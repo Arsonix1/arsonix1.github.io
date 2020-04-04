@@ -528,7 +528,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 1.875rem;
   height: 0.9375rem;
-  top: -10.75rem;
+  top: -19.75rem;
   left: 2.375rem;
   transform: rotate(90deg);
 }
@@ -548,7 +548,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 1.875rem;
   height: 0.9375rem;
-  top: -10.75rem;
+  top: -19.75rem;
   left: 64.4375rem;
   transform: rotate(-90deg);
 }
@@ -935,56 +935,56 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.black-burger {
+.burgers-slider {
   background: linear-gradient(to top, #f9b43b 0%, #eb8c38 50%, #f9b43b 100%);
   position: relative;
 }
-.black-burger__img {
+.burgers-slider__img {
   position: relative;
   top: 10.5rem;
-  left: 2.5%;
+  left: 5.5%;
   width: 31.25rem;
   height: 20.625rem;
 }
 @media screen and (max-width: 768px) {
-  .black-burger__img {
+  .burgers-slider__img {
     top: 11.9375rem;
     left: 6.9375rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .black-burger__img {
+  .burgers-slider__img {
     position: relative;
     transform: scale(0.8);
     top: 7.9375rem;
     left: -1.4375rem;
   }
 }
-.black-burger__icon {
+.burgers-slider__icon {
   width: 2.875rem;
   height: 2.75rem;
   position: absolute;
-  left: 9.4%;
+  left: 7.4%;
   top: 6.5rem;
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
-  .black-burger__icon {
+  .burgers-slider__icon {
     left: 20.4%;
     top: 8rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .black-burger__icon {
+  .burgers-slider__icon {
     left: 4.4%;
     top: 4rem;
   }
 }
-.black-burger__icon svg {
+.burgers-slider__icon svg {
   width: 2.875rem;
   height: 2.5625rem;
 }
-.black-burger__icon::before {
+.burgers-slider__icon::before {
   content: "";
   position: absolute;
   left: -1.3125rem;
@@ -995,7 +995,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f08c33;
   z-index: -1;
 }
-.black-burger__icon::after {
+.burgers-slider__icon::after {
   content: "состав";
   font-size: 0.875rem;
   line-height: 1.75rem;
@@ -1003,25 +1003,25 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Gagalin";
   text-align: center;
 }
-.black-burger__calories {
+.burgers-slider__calories {
   position: absolute;
-  left: 7.4%;
+  left: 6%;
   top: 30.375rem;
   opacity: 0.6;
 }
 @media screen and (max-width: 768px) {
-  .black-burger__calories {
+  .burgers-slider__calories {
     left: 74%;
     top: 7.1rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .black-burger__calories {
+  .burgers-slider__calories {
     left: 87%;
     top: 3.1rem;
   }
 }
-.black-burger__calories::before {
+.burgers-slider__calories::before {
   content: "1200";
   position: absolute;
   font-size: 1.25rem;
@@ -1033,7 +1033,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0.8125rem;
   opacity: 0.8;
 }
-.black-burger__calories::after {
+.burgers-slider__calories::after {
   content: "ккал";
   position: absolute;
   font-size: 0.875rem;
@@ -1045,27 +1045,27 @@ h1, h2, h3, h4, h5, h6 {
   left: 0.9375rem;
   opacity: 0.8;
 }
-.black-burger__text {
+.burgers-slider__text {
   display: flex;
   flex-direction: column;
-  margin-left: 29.5%;
+  margin-left: 51.5%;
   margin-top: -12.0625rem;
 }
 @media screen and (max-width: 768px) {
-  .black-burger__text {
+  .burgers-slider__text {
     text-align: center;
     margin-top: 13rem;
     margin-left: 12.5rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .black-burger__text {
+  .burgers-slider__text {
     text-align: center;
     margin-top: 6.6875rem;
     margin-left: 3.9375rem;
   }
 }
-.black-burger__text-title {
+.burgers-slider__text-title {
   width: 20.625rem;
   font-size: 4.5rem;
   line-height: 4rem;
@@ -1074,12 +1074,12 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 @media screen and (max-width: 480px) {
-  .black-burger__text-title {
+  .burgers-slider__text-title {
     font-size: 3.125rem;
     line-height: 1.1;
   }
 }
-.black-burger__text-desc {
+.burgers-slider__text-desc {
   margin-top: 2.9375rem;
   width: 28.6875rem;
   height: 9.5625rem;
@@ -1090,20 +1090,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 @media screen and (max-width: 768px) {
-  .black-burger__text-desc {
+  .burgers-slider__text-desc {
     margin-top: 2.8125rem;
     margin-left: -7.5rem;
     width: 35.4375rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .black-burger__text-desc {
+  .burgers-slider__text-desc {
     margin-top: 1.4375rem;
     margin-left: -4.0625rem;
     width: 25%;
   }
 }
-.black-burger__text-price {
+.burgers-slider__text-price {
   margin-top: -1rem;
   font-size: 4.5rem;
   letter-spacing: -0.125rem;
@@ -1113,61 +1113,80 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 @media screen and (max-width: 768px) {
-  .black-burger__text-price {
+  .burgers-slider__text-price {
     margin-top: -2rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .black-burger__text-price {
+  .burgers-slider__text-price {
     margin-top: -2.125rem;
     margin-left: 1.5rem;
     font-size: 3.125rem;
   }
 }
-.black-burger__text-price h3 {
+.burgers-slider__text-price h3 {
   margin-top: 1rem;
   margin-left: 0.625rem;
   font-size: 1.9375rem;
 }
 @media screen and (max-width: 480px) {
-  .black-burger__text-price h3 {
+  .burgers-slider__text-price h3 {
     margin-top: 0.6875rem;
     font-size: 1.625rem;
     margin-left: 0.5625rem;
   }
 }
-.black-burger__text-button {
+.burgers-slider__text-button {
   width: 6.0625rem;
   height: 2.1875rem;
   background-color: #e45028;
 }
-.black-burger__button {
+.burgers-slider__button {
   position: absolute;
   margin-top: 20.5rem;
   margin-left: 14.375rem;
 }
 @media screen and (max-width: 768px) {
-  .black-burger__button {
+  .burgers-slider__button {
     margin-top: 19.5rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .black-burger__button {
+  .burgers-slider__button {
     margin-top: 16.125rem;
     margin-left: 12.875rem;
   }
 }
 
-.slider {
-  display: flex;
-}
 .slider__slides {
-  display: flex;
   position: relative;
-  will-change: right;
+  overflow: hidden;
+  height: 40.625rem;
 }
-.slider__slide {
-  width: 118.75rem;
+.slider__list {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider__item {
+  position: relative;
+  white-space: normal;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.slider__dots-item {
+  position: absolute;
+  display: flex;
+}
+.slider__dots-circle {
+  width: 50px;
+  height: 50px;
+  color: #2f3234;
 }
 
 .team {
@@ -1579,6 +1598,51 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.review__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0005;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review__modal-container {
+  position: relative;
+}
+.review__modal-name {
+  color: #000;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  letter-spacing: 1.5px;
+  font-family: "Gagalin";
+}
+.review__modal-content {
+  width: 26.25rem;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2f3234;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  color: #000;
+  margin: 0;
+}
+.review__modal-close {
+  position: absolute;
+  right: 1.5625rem;
+  top: 0.8125rem;
+}
+.review__modal-close_icon {
+  fill: #e45028;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 .how-work {
   position: relative;
 }
@@ -1824,36 +1888,28 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10000;
 }
-
 .modal-container {
   position: relative;
 }
-
 .modal-content {
-  width: 400px;
-  background: #444;
+  width: 15.625rem;
+  height: 6.25rem;
+  text-align: center;
+  background: #fff;
   border-radius: 5px;
   padding: 10px;
-  color: #fff;
+  color: #000;
   font: 16px Helvetica, sans-serif;
   margin: 0;
 }
-
 .modal-close {
-  font: 16px Helvetica, sans-serif;
-  color: #fff;
   position: absolute;
-  right: -5px;
-  top: -10px;
-  background: #d00;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
+  width: 6.0625rem;
+  height: 2.25rem;
+  margin-left: 5.1875rem;
+  margin-top: 2.8125rem;
+  background-color: #e45028;
 }
 
 .contacts {

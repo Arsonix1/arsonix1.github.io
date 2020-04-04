@@ -1,6 +1,6 @@
 const deliveryForm = document.querySelector('#order')
-const sendButton = document.querySelector('#openOverlay')
-const template = document.querySelector('#overlayTemplate').innerHTML
+const sendButton = document.querySelector('#openDeliveryOverlay')
+const template = document.querySelector('#deliveryModalTemplate').innerHTML
 const overlay = createOverlay(template)
 let sendStatus = false
 const fields = ['name', 'phone', 'comment']
@@ -26,7 +26,7 @@ sendButton.addEventListener('click', (event) => {
       overlay.open()
       document.body.classList.add('body__overlay')
       if (xhr.status === 200) {
-        overlay.setContent('Loftschool на связи')
+        overlay.setContent('Сообщение отправлено')
       } else {
         overlay.setContent('Ошибочка')
       }
