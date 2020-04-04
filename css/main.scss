@@ -113,36 +113,34 @@ h1, h2, h3, h4, h5, h6 {
       left: 47%;
     }
   }
-  &__black {
-    &-left {
-      position: absolute;
-      width: 1.875rem;
-      height: 0.9375rem;
-      top: -19.75rem;
+  &__burgers-slider {
+    position: absolute;
+    width: 1.875rem;
+    height: 0.9375rem;
+    top: -19.75rem;
+    @include tablets {
+      top: -23.25rem;
+    }
+    @include phones {
+      top: -22rem;
+    }
+    &.left {
       left: 2.375rem;
       transform: rotate(90deg);
       @include tablets {
-        top: -23.25rem;
         left: 1.1875rem;
       }
       @include phones {
-        top: -22rem;
         left: -0.625rem;
       }
     }
-    &-right {
-      position: absolute;
-      width: 1.875rem;
-      height: 0.9375rem;
-      top: -19.75rem;
+    &.right {
       left: 64.4375rem;
       transform: rotate(-90deg);
       @include tablets {
-        top: -23.25rem;
         left: 42.625rem;
       }
       @include phones {
-        top: -22rem;
         left: 27.125rem;
       }
     }
@@ -165,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 @import './blocks/header/header';
 @import './blocks/burgers/burgers-base';
 @import './blocks/we-best/we-best-base';
-@import './blocks/black-burger/black-burger-base';
+@import './blocks/burgers-slider/burgers-slider-base';
 @import './blocks/team/team-base';
 @import './blocks/menu/menu-base';
 @import './blocks/reviews/reviews-base';

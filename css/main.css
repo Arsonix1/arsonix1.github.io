@@ -524,43 +524,47 @@ h1, h2, h3, h4, h5, h6 {
     left: 47%;
   }
 }
-.arrow__black-left {
+.arrow__burgers-slider {
   position: absolute;
   width: 1.875rem;
   height: 0.9375rem;
   top: -19.75rem;
+}
+@media screen and (max-width: 768px) {
+  .arrow__burgers-slider {
+    top: -23.25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .arrow__burgers-slider {
+    top: -22rem;
+  }
+}
+.arrow__burgers-slider.left {
   left: 2.375rem;
   transform: rotate(90deg);
 }
 @media screen and (max-width: 768px) {
-  .arrow__black-left {
-    top: -23.25rem;
+  .arrow__burgers-slider.left {
     left: 1.1875rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .arrow__black-left {
-    top: -22rem;
+  .arrow__burgers-slider.left {
     left: -0.625rem;
   }
 }
-.arrow__black-right {
-  position: absolute;
-  width: 1.875rem;
-  height: 0.9375rem;
-  top: -19.75rem;
+.arrow__burgers-slider.right {
   left: 64.4375rem;
   transform: rotate(-90deg);
 }
 @media screen and (max-width: 768px) {
-  .arrow__black-right {
-    top: -23.25rem;
+  .arrow__burgers-slider.right {
     left: 42.625rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .arrow__black-right {
-    top: -22rem;
+  .arrow__burgers-slider.right {
     left: 27.125rem;
   }
 }
@@ -1179,14 +1183,27 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
 }
-.slider__dots-item {
+.slider__dots {
   position: absolute;
   display: flex;
+  left: 44%;
+}
+.slider__dots-item {
+  margin-right: 10px;
+}
+.slider__dots-item.active .slider__dots-circle {
+  background-color: #fff;
 }
 .slider__dots-circle {
-  width: 50px;
-  height: 50px;
-  color: #2f3234;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #2f3234;
+  opacity: 0.5;
+}
+.slider__dots-circle:hover {
+  background-color: #fff;
+  transition: 0.5s;
 }
 
 .team {
