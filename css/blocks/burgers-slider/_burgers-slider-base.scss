@@ -187,6 +187,17 @@
       margin-left: 12.875rem;
     }
   }
+  &__structure {
+    &:hover {
+      .structure {
+        display: block;
+        opacity: .95;
+      }
+      .burgers-slider__icon::before {
+        background-color: $red;
+      }
+    }
+  }
 }
 
 .slider {
@@ -234,5 +245,42 @@
         transition: .5s;
       }
     }
+  }
+}
+
+.structure {
+  position: absolute;
+  top: 5.625rem;
+  left: 9.375rem;
+  display: none;
+  width: 16.875rem;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2f3234;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  opacity: 0;
+  transition: .3s opacity;
+  padding: 1.5625rem 1.25rem 1.5625rem 2.0625rem;
+  border: 0.0625rem solid #eee;
+  border-radius: 5px;
+  z-index: 1;
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 0.9375rem;
+  }
+  &__icon {
+    margin-right: 1.5625rem;
+    &-pic {
+      width: 2.1875rem;
+      height: 2.1875rem;
+      flex-shrink: 0;
+    }
+  }
+  &__text {
+    margin-right: auto;
   }
 }
