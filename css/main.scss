@@ -50,8 +50,12 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 100%;
-  
+  height: 100%;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
 }
 
 .container {
@@ -129,9 +133,11 @@ h1, h2, h3, h4, h5, h6 {
       transform: rotate(90deg);
       @include tablets {
         left: 1.1875rem;
+        margin-top: -18.75rem;
       }
       @include phones {
         left: -0.625rem;
+        margin-top: -12.75rem;
       }
     }
     &.right {
@@ -139,9 +145,11 @@ h1, h2, h3, h4, h5, h6 {
       transform: rotate(-90deg);
       @include tablets {
         left: 42.625rem;
+        margin-top: -18.75rem;
       }
       @include phones {
         left: 27.125rem;
+        margin-top: -12.75rem;
       }
     }
   }

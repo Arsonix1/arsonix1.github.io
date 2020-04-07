@@ -464,7 +464,15 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
+}
+
+.maincontent {
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .container {
@@ -583,12 +591,14 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .arrow__burgers-slider.left {
     left: 1.1875rem;
+    margin-top: -18.75rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .arrow__burgers-slider.left {
     left: -0.625rem;
+    margin-top: -12.75rem;
   }
 }
 
@@ -601,12 +611,14 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .arrow__burgers-slider.right {
     left: 42.625rem;
+    margin-top: -18.75rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .arrow__burgers-slider.right {
     left: 27.125rem;
+    margin-top: -12.75rem;
   }
 }
 
@@ -625,6 +637,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
+  top: 0;
   height: 5.125rem;
   width: 100%;
   display: -webkit-box;
@@ -1105,7 +1118,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
     top: 7.9375rem;
-    left: -1.4375rem;
+    left: 0;
   }
 }
 
@@ -1242,8 +1255,16 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 768px) {
+  .burgers-slider__text-title {
+    width: auto;
+    margin-left: -11.25rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .burgers-slider__text-title {
+    margin-left: -3.75rem;
     font-size: 3.125rem;
     line-height: 1.1;
   }
@@ -1271,8 +1292,8 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 480px) {
   .burgers-slider__text-desc {
     margin-top: 1.4375rem;
-    margin-left: -4.0625rem;
-    width: 25%;
+    margin-left: -2rem;
+    width: 100%;
   }
 }
 
@@ -1290,15 +1311,17 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 768px) {
   .burgers-slider__text-price {
-    margin-top: -2rem;
+    position: absolute;
+    margin-top: 18.75rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .burgers-slider__text-price {
-    margin-top: -2.125rem;
+    margin-top: 19.375rem;
     margin-left: 1.5rem;
     font-size: 3.125rem;
+    position: absolute;
   }
 }
 
@@ -1336,7 +1359,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 480px) {
   .burgers-slider__button {
-    margin-top: 16.125rem;
+    margin-top: 19.6875rem;
     margin-left: 12.875rem;
   }
 }
@@ -1354,6 +1377,18 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   height: 40.625rem;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__slides {
+    height: 65.625rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider__slides {
+    height: 52rem;
+  }
 }
 
 .slider__list {
@@ -1380,6 +1415,20 @@ h1, h2, h3, h4, h5, h6 {
   display: -ms-flexbox;
   display: flex;
   left: 44%;
+}
+
+@media screen and (max-width: 768px) {
+  .slider__dots {
+    left: 40%;
+    bottom: 6.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider__dots {
+    left: 35%;
+    bottom: 0;
+  }
 }
 
 .slider__dots-item {
@@ -1423,6 +1472,20 @@ h1, h2, h3, h4, h5, h6 {
   border: 0.0625rem solid #eee;
   border-radius: 5px;
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .structure {
+    top: 7.0625rem;
+    left: 13.625rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .structure {
+    top: 3.0625rem;
+    left: 5.5625rem;
+  }
 }
 
 .structure__item {
@@ -1848,6 +1911,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 35px;
 }
 
+@media screen and (max-width: 768px) {
+  .reviews__button {
+    margin-top: 0;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .reviews__button {
     margin-top: 1.5625rem;
@@ -1935,7 +2004,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .review__content {
     margin-top: -0.625rem;
-    margin-bottom: 1.625rem;
+    margin-bottom: -0.6875rem;
     width: 100%;
     height: auto;
   }
@@ -2009,31 +2078,16 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 480px) {
   .how-work {
-    height: 57.8rem;
+    height: 100vh;
   }
 }
 
 .delivery {
   background: url("../../img/backgrounds/delivery-bg-texture.png") 50% no-repeat;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media screen and (max-width: 768px) {
-  .delivery {
-    margin-top: -0.8125rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .delivery {
-    margin-top: -7.8125rem;
-  }
 }
 
 .delivery:before {
@@ -2044,18 +2098,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   z-index: -1;
   background: url("../../img/backgrounds/delivery-bg.png") center center/cover no-repeat;
-}
-
-@media screen and (max-width: 768px) {
-  .delivery:before {
-    height: 64rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .delivery:before {
-    height: 50rem;
-  }
 }
 
 .delivery__title {
@@ -2350,70 +2392,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contacts__map {
-  height: 100vh;
-}
-
-@media screen and (max-width: 768px) {
-  .contacts__map {
-    height: 93.4vh;
-  }
-}
-
-.contacts__mark {
-  width: 2.875rem;
-  height: 3.625rem;
-}
-
-.contacts__mark.one {
   position: absolute;
-  top: 8rem;
-  left: 31.3125rem;
-}
-
-@media screen and (max-width: 480px) {
-  .contacts__mark.one {
-    top: 5.625rem;
-    left: 11.5625rem;
-  }
-}
-
-.contacts__mark.two {
-  position: absolute;
-  top: 14.3125rem;
-  left: 39.3125rem;
-}
-
-@media screen and (max-width: 480px) {
-  .contacts__mark.two {
-    top: 11.875rem;
-    left: 21.125rem;
-  }
-}
-
-.contacts__mark.three {
-  position: absolute;
-  top: 21.1875rem;
-  left: 52rem;
-}
-
-@media screen and (max-width: 480px) {
-  .contacts__mark.three {
-    top: 21.1875rem;
-    left: 21.1875rem;
-  }
-}
-
-.contacts__mark.four {
-  position: absolute;
-  top: 27.1875rem;
-  left: 31.5625rem;
-}
-
-@media screen and (max-width: 480px) {
-  .contacts__mark.four {
-    top: 25.75rem;
-    left: 12.375rem;
-  }
+  top: 0;
+  height: 94vh;
+  width: 100%;
 }
 
 .footer {

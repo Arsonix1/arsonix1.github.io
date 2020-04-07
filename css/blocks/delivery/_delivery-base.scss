@@ -1,14 +1,7 @@
 .delivery {
   background: url('../../img/backgrounds/delivery-bg-texture.png') 50% no-repeat;
   background-size: cover;
-  display: flex;
   align-items: center;
-  @include tablets {
-    margin-top: -0.8125rem;
-  }
-  @include phones {
-    margin-top: -7.8125rem;
-  }
   &:before {
     content: "";
     position: absolute;
@@ -17,12 +10,6 @@
     height: 100vh;
     z-index: -1;
     background: url('../../img/backgrounds/delivery-bg.png') center center / cover no-repeat;
-    @include tablets {
-      height: 64rem;
-    }
-    @include phones {
-      height: 50rem;
-    }
   }
   &__title {
     line-height: 4rem;

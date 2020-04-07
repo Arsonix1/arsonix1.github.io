@@ -15,7 +15,7 @@
       position: relative;
       transform: scale(0.8);
       top: 7.9375rem;
-      left: -1.4375rem;
+      left: 0;
     }
   }
   &__icon {
@@ -117,7 +117,12 @@
       color: #fff;
       font-family: "Gagalin";
       text-transform: uppercase;
+      @include tablets {
+        width: auto;
+        margin-left: -11.25rem;
+      }
       @include phones {
+        margin-left: -3.75rem;
         font-size: 3.125rem;
         line-height: 1.1;
       }
@@ -138,8 +143,8 @@
       }
       @include phones {
         margin-top: 1.4375rem;
-        margin-left: -4.0625rem;
-        width: 25%;
+        margin-left: -2rem;
+        width: 100%;
       }
     }
     &-price {
@@ -151,12 +156,14 @@
       font-family: "Gagalin";
       display: flex;
       @include tablets {
-        margin-top: -2rem;
+        position: absolute;
+        margin-top: 18.75rem;
       }
       @include phones {
-        margin-top: -2.125rem;
+        margin-top: 19.375rem;
         margin-left: 1.5rem;
         font-size: 3.125rem;
+        position: absolute;
       }
       & h3 {
         margin-top: 1rem;
@@ -183,7 +190,7 @@
       margin-top: 19.5rem;
     }
     @include phones {
-      margin-top: 16.125rem;
+      margin-top: 19.6875rem;
       margin-left: 12.875rem;
     }
   }
@@ -205,6 +212,12 @@
     position: relative;
     overflow: hidden;
     height: 40.625rem;
+    @include tablets {
+      height: 65.625rem;
+    }
+    @include phones {
+      height: 52rem;
+    }
   }
   &__list {
     position: absolute;
@@ -226,6 +239,14 @@
     position: absolute;
     display: flex;
     left: 44%;
+    @include tablets {
+      left: 40%;
+      bottom: 6.25rem;
+    }
+    @include phones {
+      left: 35%;
+      bottom: 0;
+    }
     &-item {
       margin-right: 10px;
       &.active {
@@ -266,6 +287,14 @@
   border: 0.0625rem solid #eee;
   border-radius: 5px;
   z-index: 1;
+  @include tablets {
+    top: 7.0625rem;
+    left: 13.625rem;
+  }
+  @include phones {
+    top: 3.0625rem;
+    left: 5.5625rem;
+  }
   &__item {
     display: flex;
     align-items: center;

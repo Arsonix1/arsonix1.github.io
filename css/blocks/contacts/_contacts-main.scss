@@ -1,50 +1,10 @@
 .contacts {
   position: relative;
   &__map {
-    height: 100vh;
-    @include tablets {
-      height: 93.4vh;
-    }
-  }
-  &__mark {
-    width: 2.875rem;
-    height: 3.625rem;
-    &.one {
-      position: absolute;
-      top: 8rem;
-      left: 31.3125rem;
-      @include phones {
-        top: 5.625rem;
-        left: 11.5625rem;
-      }
-    }
-    &.two {
-      position: absolute;
-      top: 14.3125rem;
-      left: 39.3125rem;
-      @include phones {
-        top: 11.875rem;
-        left: 21.125rem;
-      }
-    }
-    &.three {
-      position: absolute;
-      top: 21.1875rem;
-      left: 52rem;
-      @include phones {
-        top: 21.1875rem;
-        left: 21.1875rem;
-      }
-    }
-    &.four {
-      position: absolute;
-      top: 27.1875rem;
-      left: 31.5625rem;
-      @include phones {
-        top: 25.75rem;
-        left: 12.375rem;
-      }
-    }
+    position: absolute;
+    top: 0;
+    height: 94vh;
+    width: 100%;
   }
 }
 
