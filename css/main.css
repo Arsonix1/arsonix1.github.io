@@ -2073,13 +2073,66 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .how-work {
+  background: #2f3234 url("../../img/backgrounds/how-work.png") center center no-repeat;
+  background-size: cover;
   position: relative;
 }
 
-@media screen and (max-width: 480px) {
-  .how-work {
-    height: 100vh;
-  }
+.test {
+  position: absolute;
+  display: block;
+  height: 700px;
+  width: 700px;
+  border: 1px solid #2f3234;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.player {
+  position: relative;
+  display: block;
+  height: 70vh;
+  width: 100%;
+  z-index: 10;
+}
+
+.player__elem {
+  height: 70vh;
+}
+
+.player__title {
+  margin-left: 26%;
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35px;
+  background: #3e3e3e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 25px;
 }
 
 .delivery {

@@ -1,6 +1,7 @@
 import './burgers-slider.js'
 import './menu-accordeon.js'
 import './hamburger.js'
+import './player.js'
 import './team.js'
 import './delivery.js'
 import './reviews.js'

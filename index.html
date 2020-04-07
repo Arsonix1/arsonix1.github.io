@@ -737,7 +737,13 @@
       </section>
       <section class="landing-block how-work">
         <div class="container">
-          
+          <h2 class="title player__title">Как мы работаем</h2>
+          <div class="player">
+            <iframe id="ytplayer" type="text/html" width="660" height="405"
+              src="https://www.youtube.com/embed/yxvb3To7wu0?controls=0&disablekb=1&enablejsapi=1&fs=0&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0"
+              frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div id="yt-player" class="player"></div>
         </div>
       </section>
       <section class="landing-block delivery">
@@ -893,6 +899,8 @@
   <script src="./scripts/jquery-3.4.1.min.js"></script>
   <script src="./scripts/mobile-detect.min.js"></script>
   <script src="./scripts/jquery.touchSwipe.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script type="module" async src="./scripts/main.js"></script>
   <script type="template" id="deliveryModalTemplate">
