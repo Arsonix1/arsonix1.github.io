@@ -1,169 +1,88 @@
-// let player
+(function() {
+  const player = $('.wrapper').find('.player')
+  const playerStart = $('.wrapper').find('.player__controls-play')
+  const playerPause = $('.wrapper').find('.player__controls-pause')
+  const video = $('.wrapper').find('.player__elem')
+  const playerPlaybackBtn = $('.wrapper').find('.player__playback-btn')
+  const playerPlayback = $('.wrapper').find('.player__playback')
+  const playerVolBtn = $('.wrapper').find('.player__vol')
+  const playerVolume = $('.wrapper').find('.player__volume')
+  const playerVolumeBtn = $('.wrapper').find('.player__volume-btn')
+  const playerSplash = $('.wrapper').find('.player__splash')
 
-// const formatTime = timeSec => {
-//   const roundTime = Math.round(timeSec);
+  playerStart.on('click', () => {
+    video.trigger('play')
+    player.removeClass('paused')
+    player.addClass('active')
+  })
 
-//   const minutes = Math.floor(roundTime / 60);
-//   const seconds = roundTime - minutes * 60;
+  playerPause.on('click', () => {
+    video.trigger('pause')
+    player.addClass('paused')
+    player.removeClass('active')
+  })
 
-//   const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
-//   return `${minutes}:${formattedSeconds}`;
-// };
+  playerSplash.on('click', () => {
+    video.trigger('play')
+  })
 
-// const onPlayerReady = () => {
-//   let interval;
-//   let durationSec = player.getDuration();
-
-//   $(".player__duration-estimate").text(formatTime(durationSec));
-
-//   if (typeof interval !== "undefined") {
-//     clearInterval(interval);
-//   }
-
-//   interval = setInterval(() => {
-//     const completedSec = player.getCurrentTime();
-//     const completedPercent = (completedSec / durationSec) * 100;
-
-//     $(".player__playback-button").css({
-//       left: `${completedPercent}%`
-//     });
-
-//     $(".player__duration-completed").text(formatTime(completedSec));
-//   }, 1000);
-// };
-
-// const eventsInit = () => {
-//   $(".player__start").on("click", e => {
-//     e.preventDefault();
-//     const btn = $(e.currentTarget);
-
-//     if (btn.hasClass("paused")) {
-//       player.pauseVideo();
-//     } else {
-//       player.playVideo();
-//     }
-//   });
-
-//   $(".player__playback").on("click", e => {
-//     const bar = $(e.currentTarget);
-//     const newButtonPosition = e.pageX - bar.offset().left;
-//     const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
-//     const newPlayerTimeSec = (player.getDuration() / 100) * buttonPosPercent;
-
-//     $(".player__playback-button").css({
-//       left: `${buttonPosPercent}%`
-//     });
-
-//     player.seekTo(newPlayerTimeSec);
-//   });
-
-//   $(".player__splash").on("click", e => {
-//     player.playVideo();
-//   });
-// };
-
-// const onPlayerStateChange = event => {
-//   const playerButton = $(".player__start");
-//   /*
-//   -1 (воспроизведение видео не начато)
-//   0 (воспроизведение видео завершено)
-//   1 (воспроизведение)
-//   2 (пауза)
-//   3 (буферизация)
-//   5 (видео подают реплики).
-//    */
-//   switch (event.data) {
-//     case 1: 
-//       $('.player__wrapper').addClass('active');
-//       playerButton.addClass("paused");
-//       break;
-//     case 2: 
-//       playerButton.removeClass("paused");
-//       break;
-//   }
-// };
-
-function onYouTubeIframeAPIReady() {
-  var player;
-  player = new YT.Player('yt-player', {
-    width: '400',
-    height: '400',
-    videoId: 'M7lc1UVf-VE',
-    events: {
-      'onReady': onPlayerReady,
-      'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
-      'onStateChange': onPlayerStateChange,
-      'onError': onPlayerError
+  video.on('click', () => {
+    if (!video.get(0).paused) {
+      video.trigger('pause')
+      player.addClass('paused')
+      player.removeClass('active')
+    } else {
+      video.trigger('play')
+      player.removeClass('paused')
+      player.addClass('active')
     }
-  });
-}
+  })
 
-function onPlayerReady(event) {
-  event.target.setVolume(100);
-  event.target.playVideo();
-}
+  video.on('play', () => {
+    player.addClass('active')
+  })
 
-// function onYouTubeIframeAPIReady() {
-//   player = new YT.Player('test', {
-//     height: '405',
-//     width: '660',
-//     videoId: 'zmg_jOwa9Fc',
-//     events: {
-//       // onReady: onPlayerReady,
-//       // onStateChange: onPlayerStateChange
-//     },
-//     playerVars: {
-//       controls: 0,
-//       disablekb: 0,
-//       showinfo: 0,
-//       rel: 0,
-//       autoplay: 0,
-//       modestbranding: 0
-//     }
-//   })
-// }
+  video.on('timeupdate', function () {
+    const completedSec = video.get(0).currentTime
+    const completedPercent = (completedSec / video.get(0).duration) * 100
+    playerPlaybackBtn.css({
+      left: `${completedPercent}%`
+    })
+  })
 
-// eventsInit();
+  video.on('ended', function () {
+    video.get(0).currentTime = 0
+    player.removeClass('active')
+  })
 
+  playerPlayback.on('click', (event) => {
+    const bar = $(event.currentTarget)
+    const newButtonPosition = event.pageX - bar.offset().left
+    const buttonPosPercent = (newButtonPosition / bar.width()) * 100
+    const newPlayerTimeSec = (video.get(0).duration / 100) * buttonPosPercent
+    playerPlaybackBtn.css({
+      left: `${buttonPosPercent}%`
+    })
+    video.get(0).currentTime = newPlayerTimeSec
+  })
 
+  playerVolBtn.on('click', () => {
+    video.get(0).volume = !video.get(0).volume
+    const volPos = video.get(0).volume ? 100 : 0
+    playerVolumeBtn.css({
+      left: `${volPos}%`
+    })
+  })
 
-// var tag = document.createElement('script');
-
-//       tag.src = "https://www.youtube.com/iframe_api";
-//       var firstScriptTag = document.getElementsByTagName('script')[0];
-//       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-//       // 3. This function creates an <iframe> (and YouTube player)
-//       //    after the API code downloads.
-//       var player;
-//       function onYouTubeIframeAPIReady() {
-//         player = new YT.Player('player', {
-//           height: '360',
-//           width: '640',
-//           videoId: 'M7lc1UVf-VE',
-//           events: {
-//             'onReady': onPlayerReady,
-//             'onStateChange': onPlayerStateChange
-//           }
-//         });
-//       }
-
-//       // 4. The API will call this function when the video player is ready.
-//       function onPlayerReady(event) {
-//         event.target.playVideo();
-//       }
-
-//       // 5. The API calls this function when the player's state changes.
-//       //    The function indicates that when playing a video (state=1),
-//       //    the player should play for six seconds and then stop.
-//       var done = false;
-//       function onPlayerStateChange(event) {
-//         if (event.data == YT.PlayerState.PLAYING && !done) {
-//           setTimeout(stopVideo, 6000);
-//           done = true;
-//         }
-//       }
-//       function stopVideo() {
-//         player.stopVideo();
-//       }
+  playerVolume.on('click', (event) => {
+    const bar = $(event.currentTarget)
+    const newButtonPosition = event.pageX - bar.offset().left
+    const buttonPosPercent = (newButtonPosition / bar.width()) * 100
+    const newPlayerVolume = (1 / 100) * buttonPosPercent
+    playerVolumeBtn.css({
+      left: `${buttonPosPercent}%`
+    })
+    video.get(0).volume = newPlayerVolume
+  })
+}) ()
