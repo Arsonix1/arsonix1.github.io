@@ -1,0 +1,142 @@
+.header {
+  top: 0;
+  height: 5.125rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  font-size: 0.8125rem;
+  line-height: 1.875rem;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  text-transform: uppercase;
+  z-index: 1;
+  &__button {
+    margin-top: 1.75rem;
+    margin-left: 0.4375rem;
+    width: 6.0625rem;
+    height: 2.1875rem;
+    background-color: #e45028;
+    @include tablets {
+      margin-left: 78%;
+    }
+    @include phones {
+      margin-left: 67%;
+    }
+  }
+  &__logo {
+    position: absolute;
+    width: 5.75rem;
+    height: 4.3125rem;
+    margin-left: 7%;
+    margin-top: 0.8125rem;
+    @include tablets {
+      margin-left: 0.3125rem;
+    }
+  }
+}
+
+.navigation {
+  width: 68%;
+  margin-left: 15.3%;
+  @include tablets {
+    display: none;
+    &_hamburger {
+      display: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: #0a0a16;
+      opacity: 0;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      .navigation__menu {
+        margin-left: 0;
+        flex-direction: column;
+        font-family: 'Lifehack-Medium';
+        align-items: center;
+        justify-content: center;
+      }
+      .navigation__menu-item {
+        text-align: center;
+        margin-bottom: 1.25rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::before {
+          display: none;
+        }
+      }
+      & a {
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+
+  &_hamburger-visible {
+    @include tablets {
+      display: flex;
+      z-index: 2;
+      opacity: .9;
+      margin-left: 0;
+      .hamburger__close {
+        display: block;
+      }
+    }
+  }
+  
+  &__menu {
+    display: flex;
+    margin-left: 4.375rem;
+    &-item {
+      margin-top: 1.875rem;
+      &::before {
+        content:"•";
+        font-size: 0.8125rem;
+        color: #fff;
+        margin-left: 0.9375rem;
+        margin-right: 0.75rem;
+      }
+      &:first-child:before {
+        content: "";
+        margin: 0;
+      }
+      & a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.hamburger {
+  &__close {
+    display: none;
+    &-icon {
+      fill: #fff;
+      height: 1.25rem;
+      width: 1.25rem;
+      position: absolute;
+      top: 5%;
+      right: 5%;
+    }
+  }
+  &__icon {
+    display: none;
+    @include tablets {
+      display: block;
+      margin-top: 1.875rem;
+      margin-left: 1.25rem;
+    }
+    &-img {
+      height: 1.5625rem;
+      width: 1.5625rem;
+      fill: #fff;
+    }
+  }
+}

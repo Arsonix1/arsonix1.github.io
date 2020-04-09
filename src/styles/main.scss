@@ -1,0 +1,173 @@
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+$phones: 480px;
+$tablets: 768px;
+$laptop: 992px;
+$desktop: 1200px;
+
+@import './misc/*.scss';
+
+ul {
+  margin: 0;
+  padding: 0;
+  & li {
+    list-style: none;
+  }
+}
+
+button {
+  border: 2px solid black;
+  background-color: chartreuse;
+  color: black;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 95%;
+}
+
+.body__overlay {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.error {
+  font-family: 'Lifehack-Medium';
+  font-size: 24px;
+  color: $red;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.landing-block {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 72px;
+  font-family: "Gagalin";
+  @include phones {
+    font-size: 50px;
+  }
+}
+
+.arrow {
+  position: relative;
+  &__burger {
+    position: absolute;
+    top: 37.25rem;
+    left: 33.375rem;
+    width: 1.875rem;
+    height: 0.9375rem;
+    @include tablets {
+      top: 110%;
+      left: 48%;
+    }
+    @include phones {
+      top: 120%;
+      left: 47%;
+    }
+    &-img {
+      width: 1.8125rem;
+      height: 0.9375rem;
+    }
+  }
+  &__burgers-slider {
+    position: absolute;
+    width: 1.875rem;
+    height: 0.9375rem;
+    top: -19.75rem;
+    @include tablets {
+      top: -23.25rem;
+    }
+    @include phones {
+      top: -22rem;
+    }
+    &.left {
+      left: 2.375rem;
+      transform: rotate(90deg);
+      @include tablets {
+        left: 1.1875rem;
+        margin-top: -18.75rem;
+      }
+      @include phones {
+        left: -0.625rem;
+        margin-top: -12.75rem;
+      }
+    }
+    &.right {
+      left: 64.4375rem;
+      transform: rotate(-90deg);
+      @include tablets {
+        left: 42.625rem;
+        margin-top: -18.75rem;
+      }
+      @include phones {
+        left: 27.125rem;
+        margin-top: -12.75rem;
+      }
+    }
+  }
+}
+
+.button {
+  font-size: 0.8125rem;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  border-radius: 0.3125rem;
+  color: #fff;
+  border: none;
+  &-text {
+    text-transform: uppercase;
+    position: relative;
+  }
+}
+
+@import './blocks/*.scss';

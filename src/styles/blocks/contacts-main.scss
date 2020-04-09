@@ -1,0 +1,123 @@
+.contacts {
+  position: relative;
+  &__map {
+    position: absolute;
+    top: 0;
+    height: 94vh;
+    width: 100%;
+    &-marker {
+      width: 2.875rem;
+      height: 3.625rem;
+    }
+  }
+}
+
+.footer {
+	background: url('../../img/backgrounds/delivery-bg.png') center bottom no-repeat;
+	background-size: cover;
+  position: absolute;
+  height: 3.625rem;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  padding: 0.625rem 0;
+  @include phones {
+    text-align: center;
+    height: 7.1875rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include phones {
+      flex-direction: column;
+    }
+  }
+  &__col {
+    width: 50%;
+    height: 100%;
+    margin-bottom: 0.9375rem;
+    @include phones {
+      width: auto;
+    }
+    &_right {
+      text-align: right;
+      margin-bottom: 0;
+      @include tablets {
+        margin-left: 170px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      @include phones {
+        margin-left: 0;
+        justify-content: center;
+      }
+    }
+  }
+  &__address {
+    margin-top: -0.1875rem;
+    margin-left: 30.125rem;
+    margin-bottom: 0.4375rem;
+    color: #fff;
+    font-size: 0.875rem;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    text-decoration: none;
+    @include tablets {
+      margin-left: 1.5rem;
+      width: 100%;
+    }
+    @include phones {
+      margin-left: 0;
+      margin-top: 0.375rem;
+    }
+  }
+  &__phone {
+    color: #e35028;
+    font-family: "Ubuntu";
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.875rem;
+    &-icon {
+      margin-left: 30.125rem;
+      margin-right: 0.375rem;
+      width: 0.6875rem;
+      height: 0.6875rem;
+      @include tablets {
+        margin-left: 1.5rem;
+      }
+      @include phones {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.socials {
+	position: relative;
+	text-align: center;
+	margin-top: -1rem;
+	left: -8.7%;
+	@include phones {
+		margin-top: 0;
+  }
+  &__item {
+    display: inline-block;
+    margin-left: 0.9375rem;
+  }
+  &__link {
+    color: #fff;
+    display: inline-block;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    opacity: .3;
+    transition: .3s;
+    &:hover {
+      opacity: 1;
+    }
+    &-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
