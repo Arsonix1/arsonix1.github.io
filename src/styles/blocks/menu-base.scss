@@ -1,6 +1,6 @@
 .menu {
   position: relative;
-  background: url('../../img/backgrounds/menu-main.png') 50% no-repeat;
+  background: url('./img/backgrounds/menu-main.png') 50% no-repeat;
   background-size: cover;
   &__title {
     position: absolute;
@@ -37,7 +37,7 @@
     }
     @each $bg in $bgs {
       &_#{$bg} {
-        background: url('../../img/backgrounds/menu-#{$bg}.png') center center / cover no-repeat;
+        background: url('./img/backgrounds/menu-#{$bg}.png') center center / cover no-repeat;
       }
     }
     &.menu-active {

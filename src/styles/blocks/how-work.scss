@@ -1,5 +1,5 @@
 .how-work {
-  background: $black url('../../img/backgrounds/how-work.png') center center no-repeat;
+  background: $black url('./img/backgrounds/how-work.png') center center no-repeat;
   background-size: 100% 103%;
   position: relative;
   @include tablets {
@@ -96,7 +96,7 @@
     bottom: 0;
     top: 0;
     cursor: pointer;
-    background: url('../../../img/backgrounds/player-splash.png') center no-repeat;
+    background: url('./img/backgrounds/player-splash.png') center no-repeat;
     background-size: 141% 195%;
     background-position-y: -4.8125rem;
     &-play {
