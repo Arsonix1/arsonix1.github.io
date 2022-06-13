@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Afficher le cache Google de tous les sites Web - Visualiseur de sites Web archivés</title>
+	<meta name="title" content="Afficher le cache Google de tous les sites Web - Visualiseur de sites Web archivés">
+	<link href="fr.html" rel="canonical">
+  <meta name="description" content="24 pages d'archivage Google en cache pour tous les sites Web. Vous pouvez trouver des pages Web archivées de sites Web dans Google, Yahoo, Bing, Waybackmachine.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="viewcachedpages.com">
+	<meta HTTP-EQUIV="Content-language" content="fr">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/business-frontpage.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+<link rel="alternate" hreflang="en-US" href="index.html" />
+<link rel="alternate" hreflang="ru-RU" href="ru.html" />
+<link rel="alternate" hreflang="fr-FR" href="fr.html" />
+<link rel="alternate" hreflang="uk-UA" href="ua.html" />
+<meta name="google-site-verification" content="pp7cSj6db81EVfQZzaBi8s2pG5E48AqRxWvn535uUJ0" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TWVWWCN');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWVWWCN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">viewcachedpages.com</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">À propos de nous</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact">Contactez nous</a>
+          </li>
+        </ul>
+<ul class="languagepicker roundborders large">
+	<a href="fr.html#"><li><img src="fr.png"/>Francais</li></a>
+  <a href="index.html"><li><img src="us.png"/>English</li></a>
+	<a href="ru.html"><li><img src="ru.png"/>Русский</li></a>
+	<a href="ua.html"><li><img src="ua.png"/>Українська</li></a>
+<!-- 	<a href="#nl"><li><img src="nl.png"/>Nederlands</li></a>
+	<a href="#de"><li><img src="de.png"/>German</li></a>
+	<a href="#es"><li><img src="es.png"/>Espanol</li></a>
+	<a href="#it"><li><img src="it.png"/>Italiano</li></a> -->
+</ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12" id="cache-search"><span class="headd"><p>viewcachedpages.com</p></span>
+          <h1 class="display-4 text-white mt-5 mb-2">Afficher la version en cache de n'importe quelle page sur Internet - archive de pages Internet</h1>
+<form class="form-horizontal" onsubmit="event.preventDefault()">
+<div class="form-group">
+<div class="col-sm-10">
+<input type="text" class="form-control search-input" id="inputUrl" name="url" placeholder="https://google.fr/" autofocus="" required="required">
+</div>
+</div>
+<div class="form-group">
+<div class="col-sm-12 archive-buttons">
+<!-- <button type="submit" class="btn btn-success" value="Google" name="cache">Google Web Cache</button> -->
+<button data-archive-url="http://webcache.googleusercontent.com/search?igu=1&q=cache%3Ahttp%3A%2F%2F[YOUR_SITE]" type="submit" class="btn btn-warning" value="Google.fr" name="cache">Google Cache</button>
+<button data-archive-url="http://www.bing.com/search?q=url:http%3A%2F%2F[YOUR_SITE]" type="submit" class="btn btn-warning" value="Bing" name="cache">Bing cache</button>
+<button id="yahooBtn" data-archive-url="http://search.yahoo.com/search?p=url:http%3A%2F%2F[YOUR_SITE]" type="submit" class="btn btn-warning" value="Yahoo" name="cache">Yahoo cache</button>
+<button data-archive-url="http://web.archive.org/web/*/[YOUR_SITE]" type="submit" class="btn btn-warning" value="Archive.org" name="cache">Archive.org</button>
+<button data-archive-url="//[YOUR_SITE]" type="submit" class="btn btn-default" value="Live" name="cache">Page d'origine</button>
+<span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+<button data-archive-url="https://web.archive.org/save/[YOUR_SITE]" type="submit" class="btn btn-success" value="Archive submit" name="cache">Ajouter un site à Archive.org</button>
+</div>
+</div>
+</form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Page Content -->
+  <div class="container">
+    <iframe id="results_frame" style="height:3000px;width:100%;display:none;overflow: hidden;" src=""></iframe>
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Qu’est-ce que Google Cache et comment reconnaitre/identifier les pages en Cache ?</h2>
+        <hr>
+        <p>Google Cache n’est rien d’autre, c’est tout simplement une reproduction intégrale, une imitation exacte, ou alors une copie conforme de Google (sauve)gardée par Google lui-même pour une utilisation à venir.</p>
+<p>Google examine toujours avec soins une page qui lui est parvenue et il se statue sur cette version qui sera conservée ou gardée comme une souche. Ainsi, la version en cache n’est que ce que Google prend avec soi dans le but d’en savoir tôt ou tard si cette page correspondra tout à fait à notre demande (qu’elle soit instante, verbale ou écrite). Chez Google, le système qui prend en charge toutes les consultations directes de leur banque de données (serveur) est plus rapide que tous les autres serveurs du monde internet ; ce qui donne accès direct à la version en cache d’une page le plus vite possible!</p>
+<p>Cela se traduit par le fait que tous les sites web mis en cache sont liés selon leur index et remis en ordre suite à leurs références dans les indexeurs. Dommage qu’on ne puisse à chaque fois les voir suite aux recherches sur internet. Sauf si un instantané est indiqué dans les résultats de la recherche. En supposant qu’on souhaite vivement avoir accès aux pages en cache de Google dans sa totalité, la meilleure façon serait d’attendre que les indexeurs programment avec assurance ce fonctionnement des plateformes réelles à partir desquelles on a pris les instantanés.</p>
+<p>Voilà la raison pour laquelle les détenteurs de sites internet mettent en place des idées qui vont permettre à une indexation plus rapide, ce qui va permettre à découvrir leur contenu le plus vite possible sur internet. En cas de modification du contenu, il sera tout simplement réindexé. Les fichiers seront remplacés au fur et à mesure par les nouveaux. Rien que les informations qui conviennent exactement à la chose en question et qui existent depuis peu de temps feront leur apparition dans les résultats de la recherche.</p>
+<p>Lorsque Google affiche la page en cache, un en-tête en haut vous (re)fait savoir que ce qu’on voit n’est pas automatiquement l’état de la chose.</p>
+<p>Il y’a des liens qui passent sous silence sur certains sites ; ce qui ne nous permet pas d’avoir des informations que nous recherchons. C’est ce qui pousse la plupart de propriétaires de site internet de solliciter une suppression de la version de leur contenu mise en cache sur leur site. Ces détenteurs souhaitent vivement que toutes leurs informations sur le site soient visibles, parcourues ou lues et non être placées en mode cache ; et que Google attribue à toutes ces informations une marque distincte.</p>
+<p>Si la page d’origine pèse plus de 101 Ko, l’état du texte qui a subi la modification en cache sera composée également des 101 premiers KO (120 KO pour les fichiers PDF).</p>
+<p>La plus grande part ou le plus grand nombre des sites internet ont des caches, sauf ce qui pourra faire certaines particularités. Les détenteurs de site internet peuvent employer un fichier robots.txt pour informer ou avertir que leur site ne soit pas indexé dans Google et que le cache soit tout simplement retiré.</p>
+<p>Cela peut-être le même cas lorsqu’un site internet est supprimé et qu’on voudrait bien être rassuré que le contenu n’a pas été conservé nulle part dans le monde. Peu de données mentionnées sur internet s’apparentent à un contenu tout à fait ‘sombre ‘ ou à des éléments qui ne sont pas indexés, telles que les places des réunions-débats, des places où se discutent les affaires publiques ; des endroits où on tient secret des informations des cartes de crédit ou là où on tient des informations précises sur des sites pour sous un paywall (un système qui sert à bloquer tout ou partie de l’accès à un site à l’aide d’un système de payement). Fondamentalement, chaque résultat de votre recherche comporte ou implique un lien mis en cache. En actionnant le bouton de la souris sur ce lien, vous aurez accès à la version mise en cache de cette page web par Google.</p>
+<p>Ceci est important et capital si la page d’origine n’est pas disponible pour des raisons suivantes :</p>
+<ol><li>Encombrement internet</li>
+<li>Un site qui excède la charge permise ou tout simplement qui est si lent.</li>
+<li>Le propriétaire a tout simplement supprimé la page web, il n y’a pas longtemps.</li></ol>
+<p>De temps en temps, un site qui conseille ou recommande un enregistrement ou un abonnement peut avoir accès à la version mise en cache à partir de ce site particulier. Vous pouvez toujours avoir l’accès à la version de la page plus rapidement que la page elle-même. Tout le monde sait que les serveurs de google sont dans son ensemble beaucoup plus rapides que tous les autres serveurs web du monde entier.
+Raison pour utiliser Google cache<br>
+Google cache peut être valable pour plusieurs raisons. Les suivantes :</p>
+<ul><li>Pour en savoir plus sur la signification des éléments qui le constituent (si le site d’origine est temporairement indisponible).</li>
+<li>Pour afficher le contenu de la page étant générée avec dynamisme (si la page d’origine a été mise à jour depuis le cache et ne contient plus les informations dont vous ressentez la nécessité. Ainsi, si Google renvoie un lien vers une page qui semble avoir peu à voir avec votre contenu à proprement dit, à votre demande adressée, ou si vous ne trouvez point des informations que vous recherchez sur la version actuelle de la page, alors il sera temps que vous fassiez un tour à la version mise en cache.</li></ul>
+        <a class="btn btn-primary btn-lg" href="fr.html#cache-search">Afficher le cache de Google &raquo;</a>
+      </div>
+      <div class="col-md-4 mb-5">
+<center><a rel="nofollow" onclick="return !window.open(this.href)" href="https://google.fr/" title="Afficher le cache de Google"><img style="max-width: 350px;" src="view-google-cached-page.jpg" alt="Afficher le cache de Google"></a></center>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Qu’est-ce que le Bing cache et comment afficher les pages en cache?</h2>
+        <hr>
+        <p>Tel comme vous avez la possibilité d’obtenir des pages en cache dans Bing est aussi de la même façon dont vous l’aurez dans Google.
+S’il y’a une cache, la petite flèche qu’on peut dérouler apparaitra. Alors, faites-en un clic sur ladite flèche, et puis, sur «Page mise en cache».</p>
+        <p>S’il n’y a pas de cache, alors c’est clair que la flèche en question ne s’affichera pas. Dans ce cas, ne faites pas de clic sur la question au moment où elle apparaîtra sur la page de recherche de Bing. Il suffira de regarder directement en bas : on verra une petite flèche minuscule, s’il y aube cache entre temps une cache dont on peut disposer.</p>
+<p>S’il n’y a aucun opérateur de recherche, n’hésiter pas à accéder à la version en cache dans les résultats fournis de la recherche. Il suffit de chercher « url : websiteur.com », puis de cliquer sur la flèche \/ pour ouvrir les options de page. Il y’a un lien pour afficher la version en cache.
+En outre, la mise en jour de la date du cache Bing n’est pas opérationnelle pour les adresses IP basées en Asie (entre autres à Hong Kong).</p>
+<p>Bing a l’habitude de récupérer des URL arrivé en retard par rapport à Google. A coup sûr, çà prendra du temps, comme par exemple, entre une semaine et un mois ».
+En l’an 2016, Bing AMP Cache donne la possibilité aux pages Web compatibles AMP de jouer le rôle ou d’accomplir une fonction directement à partir de la recherche mobile de Bing, ce qui favorise à Bing de donner autant d’expériences mobiles plus rapides aux personnes qui utilisent Bing.</p>
+        <a class="btn btn-primary btn-lg" href="fr.html#cache-search">Afficher le cache Bing &raquo;</a>
+      </div>
+      <div class="col-md-4 mb-5">
+<center><a rel="nofollow" onclick="return !window.open(this.href)" href="https://www.bing.com/" title="Afficher le cache Bing"><img style="max-width: 350px;" src="view-bing-cache.png" alt="Afficher la page en cache dans Bing"></a></center>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Qu’est-ce que le cache Yahoo et comment afficher les pages en caches?</h2>
+        <hr>
+			<p>Yahoo est toujours parmi les moteurs de recherches les plus anciens en actualité sur la toile, sur le Web. Il (Yahoo) bat le record de détention de plusieurs millions de pages pour les sites web ; et il prend le soin d’analyser correctement toutes pages par ordre d’arrivée avant de leur attribuer un index, justement parce que très souvent, la plupart des données sont souvent modifiées sur le site du jour au lendemain. Avec Yahoo cache, on peut afficher des pages ou des sites tels qu’ils étaient lors de leur indexation par ledit moteur de recherche. Cela pourra vous aider à retrouver d’anciens articles, publications ou même les autres informations que le site d’origine aurait annulées, abrogées, abolies, détruites ou même classer dans les archives. Le moteur de recherche Yahoo est mondialement reconnu. Yahoo Search a attribué des marques distinctives en mode cache pour des formats HTML qui existent de nos jours, ainsi que plusieurs catégories de réunions de fiches/ classeurs contenant des fiches tels que PDF, feuilles de calcul Excel, PowerPoint, documents Word fichiers RSS/XML et texte à l’état le plus primitif.</p>
+<p>Pour certains types de fichiers pris en charge, Yahoo Search a donné, communiqué ou évoqué des liens en cache sur leurs résultats de recherches, ce qui permet alors de regarder tout entier ces catégories de fichiers en HTML en mode standard.</p>
+<ol><li>Lancez votre navigateur web et vous accéderez au site internet de Yahoo. Placez votre souris sur la barre « Web » au-dessus de la zone de recherche s’il ne s’agit pas de lien actif sur la page d’accueil du moteur de recherche Yahoo.</li>
+<li>Veuillez saisir des mots-clés de recherche ou une phrase dans la zone réservée pour des recherches, puis veuillez cliquer sur le bouton « Rechercher ».</li>
+<li>Vous devez faire se succéder sans aucune interruption les liens de la page des résultats obtenus. Puis, lisez le texte du passage qui évoque la réalité concrète située sous les liens pour préciser quel lien mène à un site qui a une capacité des informations convenant exactement à l’objet dont il s’agit.</li>
+<li>Renfermez le lien « mis en cache » sous le lien primordial et le texte à décrire. Cliquez avec le bouton droit de la souris sur le lien « En cache », puis cliquez sur » Ouvrir dans un nouvel onglet ». ou « Ouvrir dans une nouvelle fenêtre ». Une nouvelle fenêtre va s’ouvrir et va afficher l’ancienne version de la page telle qu’elle a été notée sur les serveurs de cache Yahoo.</li>
+<li>Regardez pour y chercher des renseignements ou des informations dans le contraire, les autres versions en cache de la page de résultats de recherche Yahoo.</li></ol>
+
+        <a class="btn btn-primary btn-lg" href="fr.html#cache-search">Afficher le cache Yahoo &raquo;</a>
+      </div>
+      <div class="col-md-4 mb-5">
+<center><a rel="nofollow" onclick="return !window.open(this.href)" href="https://www.yahoo.com/" title="Afficher le cache Yahoo"><img style="max-width: 350px;" src="view-yahoo-cache.jpg" alt="Afficher la page en cache dans yahoo"></a></center>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Qu’est-ce que Wayback Machine et comment afficher les pages archivées?</h2>
+        <hr>
+        <p>Au cas où vous utilisez le moteur de recherche alternatif Yandex, Bing ou Google, alors, il existe bel et bien un autre moyen de voir le cache. En plus de l’aide du géant Google, on peut pourra également tout voir regarder ou voir à quoi ressemble au juste une page Web pendant un temps donné. Web Archive est une entité qui n’a pas pour but la recherche du bénéfice à partager entre ses membres, mais plutôt une entité qui fait la collection des copies ou reproduction sauvegardées de sites Web, pas de même graphiques, vidéos, etc. L’objectif majeur est de fournir l’archivage des documents à long terme collecté en accès libre pour toutes les personnes qui utilisent Internet. Il procède à l’enregistrement de des sites Web les plus anciens reproduits dont l’âge du domaine a plus de vingt ans. La Wayback machine est fabriquée pour être utilisée et référencée. Au cas où on trouve une page en mode archivage et qu’on a l’envie de référencer sur sa page Web ou dans un article, alors vous à coup sûr / certainement même utiliser une liaison définie d’URL qui n’est pas clair et une spécification de date…</p><p>La pratique de recherches de site de Wayback Machine est centrée sur une référence faite en estimation, en appréciation des termes de centaines de milliards de liens vers la page d’accueil d’environs 350 millions de sites. Les informations fournies lors de la recherche sont alors classées selon le nombre de capture dans Wayback et du nombre de liens pertinent vers ladite page d’accueil du site.</p>
+
+        <p>Il y’a des sites internet qui ne pouvant être inclus car les robots d’exploitation ignorent leur présence effective en cours d’analyse. Ainsi, il est fort possible que certains n’aient pas pu être sauvegardés car ils avaient bénéficié d’une protection maximale suite à un mot de passe, ou à défaut qu’ils ont été bloqués par la réunion ou la collection des fiches robots.txt ou alors qu’ils n’aient pas eu la possibilité d’accès d’une façon ou d’une autre à aux systèmes automatisés. Des détenteurs des site internet peuvent néanmoins avoir eu la possibilité de soumettre leurs sites internet en les excluant de la Wayback Machine.</p>
+
+        <a class="btn btn-primary btn-lg" href="fr.html#cache-search">View Archived Page &raquo;</a>
+      </div>
+      <div class="col-md-4 mb-5">
+<center><a rel="nofollow" onclick="return !window.open(this.href)" href="https://archive.org/web/" title="View Waybackmachine Arhived page"><img style="max-width: 350px;" src="waybackmachine.jpg" alt="View Waybackmachine Arhived page"></a></center>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+<center><div class="social">
+<a onclick="return !window.open(this.href)" href="cdn-cgi/l/email-protection.html#5877672b2d3a323d3b2c650d367d6a683d203b3d34343d362c7d6a683537213d367d6a683c3d7d6a682e312b2d3934312b3d2a7d6a6834397d6a6828393f3d7d6a683c3d7d6a683b393b303d7d6a682b2d2a7d6a6811362c3d2a363d2c7e3a373c2165302c2c287d6b197d6a1e7d6a1e6a6c75192a3b30312e3d763b3735" title="Partager le site viewcachedpages.com par mail"><img src="mail.png"></a>
+<a onclick="return !window.open(this.href)" href="https://www.facebook.com/sharer/sharer.php?u=http://viewcachedpages.com/" title="Partagez viewcachedpages.com sur Facebook"><img src="facebook.png"></a>
+<a onclick="return !window.open(this.href)" href="https://tumblr.com/share?s=&v=3&t=viewcachedpages.com&u=http%3A%2F%2Fviewcachedpages.com" title="Partager viewcachedpages.com dans Tumblr"><img src="tumblr.png"></a>
+<a onclick="return !window.open(this.href)" href="https://www.linkedin.com/shareArticle?mini=true&url=http://viewcachedpages.com&title=viewcachedpages.com&summary=24-Archive" title="Partagez viewcachedpages.com sur LinkedIn"><img src="linkedin.png"></a>
+<a onclick="return !window.open(this.href)" href="https://twitter.com/home?status=viewcachedpages.com%20at%20http://viewcachedpages.com" title="Partagez viewcachedpages.com sur Twitter"><img src="twitter.png"></a>
+<a onclick="return !window.open(this.href)" href="https://www.reddit.com/submit?url=http://viewcachedpages.com" title="Partager viewcachedpages.com dans Reddit"><img src="reddit.png"></a>
+<a onclick="return !window.open(this.href)" href="https://pinterest.com/pin/create/button/?url=http://viewcachedpages.com&description=viewcachedpages.com" title="Partagez viewcachedpages.com sur Pinterest"><img src="pinterest.png"></a>
+</div></center>
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="cacheWidget.js"></script>
+<br><br>
+<div class="contact-form-box"><h3 id="contact">Nous contacter</h3>
+<form name="contact-form">
+<input id="ContactForm1_contact-form-name" name="name" placeholder="Name" size="30"
+type="text" value="" /><br />
+<input id="ContactForm1_contact-form-email" name="email" placeholder="Email" size="30" 
+type="text" value="" /><br />
+<textarea cols="25" id="ContactForm1_contact-form-email-message" name="email-message" 
+placeholder="Message" rows="5"></textarea><br />
+<input id="ContactForm1_contact-form-submit" type="button" value="Submit" /><br />
+<div style="max-width: 222px; text-align: center; width: 100%;">
+<div id="ContactForm1_contact-form-error-message">
+</div>
+<div id="ContactForm1_contact-form-success-message">
+</div>
+</div>
+</form>
+</div><br>
+<center><div>
+<p>Si vous rencontrez des difficultés lors de l'envoi d'un message via le formulaire, écrivez directement des lettres: <strong>24archive.com(at)gmail.com</strong></p>
+<p>P.S. Ce site n'est pas affilié à Google, Bing, etc. Vous pouvez regarder les pages de cache gratuitement et sans inscription.</p></div></center>
+<script type="text/javascript">
+//<![CDATA[
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+//]]>
+</script>
+<script src="https://www.blogger.com/static/v1/widgets/2271878333-widgets.js" type="text/javascript"></script> <script type="text/javascript">
+//<![CDATA[
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '7379913919060446187';BLOG_attachCsiOnload(''); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d4764656151717031237','//www.kompiajaib.com/','7379913919060446187'); _WidgetManager._RegisterWidget('_ContactFormView', new _WidgetInfo('ContactForm1', 'footer1', null, document.getElementById('ContactForm1'), {'contactFormMessageSendingMsg': 'Sending...', 'contactFormMessageSentMsg': 'Your message has been sent.', 'contactFormMessageNotSentMsg': 'Message could not be sent. Please try again later.', 'contactFormInvalidEmailMsg': 'A valid email address is required.', 'contactFormEmptyMessageMsg': 'Message field cannot be empty.', 'title': 'Contact Form', 'blogId': '7379913919060446187', 'contactFormNameMsg': 'Name', 'contactFormEmailMsg': 'Email', 'contactFormMessageMsg': 'Message', 'contactFormSendMsg': 'Send', 'submitUrl': 'https://www.blogger.com/contact-form.do'}, 'displayModeFull')); //]]> </script>
+  <!-- /.container -->
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; viewcachedpages.com 2010-2021 Tous droits réservés.</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
