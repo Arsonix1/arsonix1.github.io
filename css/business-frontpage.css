@@ -1,0 +1,101 @@
+body {
+  padding-top: 56px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+body > header > div > div > div > span > p {font-size: 4em; text-shadow: 2px 2px 3px rgba(0,0,0,.6); color: #fff !important; margin: 0 auto; }
+h1 {font-size: 1.4rem !important; font-weight: 350 !important; text-shadow: 2px 2px 3px rgba(0,0,0,.6);}
+.navbar-nav {
+	padding-right: 200px;
+}
+
+.navbar-collapse {
+	position: relative;
+}
+.languagepicker {
+	background-color: #FFF;
+	display: inline-block;
+	padding: 0;
+	height: 40px;
+	overflow: hidden;
+	transition: all .3s ease;
+	margin: 0 50px 10px 0;
+	vertical-align: top;
+	float: left;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.languagepicker:hover {
+	height: 81px;
+}
+
+.languagepicker a{
+	color: #000;
+	text-decoration: none;
+}
+
+.languagepicker li {
+	display: block;
+	padding: 0px 20px;
+	line-height: 40px;
+	border-top: 1px solid #EEE;
+}
+
+.languagepicker li:hover{
+	background-color: #EEE;
+}
+
+.languagepicker a:first-child li {
+	border: none;
+	background: #FFF !important;
+}
+
+.languagepicker li img {
+	margin-right: 5px;
+}
+
+.roundborders {
+	border-radius: 5px;
+}
+
+.large:hover {
+	height: 165px;
+}
+
+@media only screen and (max-width: 992px) {
+	.languagepicker {
+		top: 10px;
+		right: -50px;
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	.headd p {
+		font-size: 55px !important;
+	}
+}
+
+@media only screen and (max-width: 424px) {
+	.headd p {
+		font-size: 25px !important;
+	}
+}
+
+.contact-form-box{width:58%;margin:20px auto;padding:0;}
+#ContactForm1_contact-form-name, #ContactForm1_contact-form-email{width: 100%;height:auto;margin: 5px auto 15px;padding: 10px;background: #ebebeb;border: 1px solid #ccc;color:#777;border-radius:3px;box-shadow: 0px 4px 0px 0px #c7c5c7;}
+#ContactForm1_contact-form-name:focus, #ContactForm1_contact-form-email:focus, #ContactForm1_contact-form-email-message:focus{background: #fffff7;outline:none}
+#ContactForm1_contact-form-email-message{width: 100%;height: 100px;margin: 5px auto;padding: 10px;background: #ebebeb;border: 1px solid #ccc;color:#777;font-family:Arial, sans-serif;border-radius:3px;box-shadow: 0px 4px 0px 0px #c7c5c7;}
+#ContactForm1_contact-form-submit {display:block;height: 35px;width:100%;float: left;color: #FFF;padding: 0 20px;margin: 10px 0 5px 0;cursor: pointer;background-color:#007bff;box-shadow: 0px 4px 0px 0px #0164ce;border:1px solid #0878f1;border-radius:3px;text-shadow:0px 1px 0px #0164ce;} #ContactForm1_contact-form-submit:hover {background-color:#006fe6;}
+#ContactForm1_contact-form-submit:active {position:relative;top:2px;box-shadow: 0px 2px 0px 0px #0164ce;}
+#ContactForm1_contact-form-submit:focus{outline:none}
+#ContactForm1_contact-form-error-message, #ContactForm1_contact-form-success-message{width: 100%;margin-top:35px;text-align:left}
+@media screen and (max-width: 768px){ .contact-form-box{width:100%;}
+#ContactForm1_contact-form-name, #ContactForm1_contact-form-email,#ContactForm1_contact-form-email-message{width: 96%;}
+}
+@media screen and (max-width: 480px){ #ContactForm1_contact-form-name, #ContactForm1_contact-form-email,#ContactForm1_contact-form-email-message{width: 94%;}
+}
+body > header > div > div > div > form > div:nth-child(2) > div > button.btn.btn-default {background-color: #ffffff !important; border-color: #e4e4e4;}
+body > header > div > div > div > form > div:nth-child(2) > div > button.btn.btn-default:hover {background-color: #7dcc8f !important; border-color: #69af79;}
+body > header > div > div > div > form {margin-left: -14px !important;}
