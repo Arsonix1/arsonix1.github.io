@@ -9,9 +9,9 @@ var cacheWidget = {
     },
 
     listen: function () {
-        this.input.addEventListener('keyup', (e) => {
+        this.input.addEventListener('input', (e) => {
             this.input.value = this.removeHttp(e.target.value);
-            this.url = e.target.value;
+            this.url = this.input.value;
         });
 
         Array.from(this.archiveButtons).forEach(button => {
@@ -31,18 +31,17 @@ var cacheWidget = {
     },
 
     redirectToArchiveUrl: function (el) {
-        if (el.id === 'yahooBtn' || el.id === 'yandexBtn') {
-            el.id === 'yahooBtn'
-                ? window.open('http://search.yahoo.com/search?p=url:http%3A%2F%2F'+this.url, '_blank')
-                : window.open('https://yandex.ru/yandsearch?lr=213&text=url%3A'+this.url, '_blank')
+        if (!this.url) return;
+        var archiveUrl = el.dataset.archiveUrl;
+        var url = archiveUrl.replace('[YOUR_SITE]', this.url);
+        if (el.id) {
+            window.open(url, '_blank')
         } else {
-            if (!this.url) return;
-            var archiveUrl = el.dataset.archiveUrl;
-            var url = archiveUrl.replace('[YOUR_SITE]', this.url);
             frame.style.display = "block";
             frame.src = url;
         }
     }
+
 }
 
 cacheWidget.init()
