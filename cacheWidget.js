@@ -37,7 +37,6 @@ var cacheWidget = {
         if (el.id) {
             window.open(url, '_blank')
         } else {
-            frame.style.width = window.innerWidth;
             frame.style.display = "block";
             frame.src = url;
         }
