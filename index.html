@@ -1,29 +1,254 @@
 <!DOCTYPE html>
 <html>
-  <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<meta name="keywords" content="Тихоокеанский, лосось, Камчатка">
-	<meta name="rights" content="ООО РК &quot;Тихоокеанский лосось&quot;">
-	<meta name="description" content="ООО РК &quot;Тихоокеанский лосось&quot;">
-	<title>Главная - ООО РК "ТИХООКЕАНСКИЙ ЛОСОСЬ"</title>
-	<link href="new_300.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
-	<meta property="og:title" content="Главная">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://arsonix1.github.io/">
-	<meta property="og:site_name" content="ООО РК &quot;ТИХООКЕАНСКИЙ ЛОСОСЬ&quot;">
-	<meta property="og:image" itemprop="image" content="https://arsonix1.github.io/new_300.png">
-	<meta property="og:image:type" content="image/jpeg">
-	<meta name="robots" content="follow,index">
-	<meta property="og:image:width" content="300">
-	<meta property="og:image:height" content="300">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="ООО РК &quot;ТИХООКЕАНСКИЙ ЛОСОСЬ&quot;">
-	<meta name="twitter:image:src" content="https://arsonix1.github.io/new_300.png">
-	  <meta property="og:updated_time" content="1440432930" />
-  </head>
-  <body>
-    <div>Test</div>
-  </body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=74a120e9-bd1e-45eb-b286-93d009be5f57" type="text/javascript"></script>
+  <link href="https://yastatic.net/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .area_list {
+      display: none;
+    }
+    .area_owner {
+      cursor: pointer;
+    }
+    #map {
+      width: 80%;
+      height: 100%;
+    }
+    #menu_map {
+      height: 100%;
+      background-color: aliceblue;
+      width: 20%;
+    }
+    .menu_map {
+      list-style: none;
+      padding: 5px;
+      margin: 0;
+      margin-left: 15px;
+    }
+    .submenu_map {
+      list-style: none;
+      margin: 0 0 0 20px;
+      padding: 0;
+    }
+    .submenu_map li {
+      font-size: 90%;
+      margin-bottom: 5px;
+    }
+    .submenu_map li a {
+      color: #205891;
+    }
+    #fullMap {
+      display: flex;
+      height: 500px;
+    }
+    .parentPoints_map {
+      padding: 7px;
+      margin-bottom: 5px;
+      background-color: #205891;
+      border: none;
+    }
+    .parentPoints_map a {
+      color: white;
+    }
+    @media screen and (max-device-width:767px){
+      #fullMap {
+        display: block;
+        height: auto;
+      }
+      #map {
+        width: 100%;
+        height: 500px;
+      }
+      #menu_map {
+        width: 100%;
+        text-align: end;
+        height: auto;
+      }
+      .menu_map {
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+      }
+      .submenu_map {
+        margin: 0;
+      }
+    }
+  </style>
+	<title>Ya.Maps API for IMC</title>
+</head>
+<body>
+  <div style="width:100%">
+    <div id="fullMap">
+      <div id="map"></div>
+      <div id="menu_map"></div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  jQuery(".area_owner").click(function()
+  {
+    let showElem = jQuery(this).find("+.area_list");
+    jQuery(".area_list").not(showElem).hide(400);
+    showElem.toggle(400);
+  });
+  var groups = [
+  {
+    name: "Главрыбвод",
+    style: "islands#redIcon",
+    items: [
+      {
+        name: "Участок № 1",
+        description: `Владелец участка - Главрыбвод<br>
+          Голец (15шт) - 250р<br>
+          Горбуша (1шт) - 35р<br>
+          Кета (1шт) - 70р<br><br>
+          <a href="https://gosuslugi41.ru/pgu/fishing.htm" style="padding:4px; border:2px solid #205891;background-color:#205891;color:white!important;margin-top:10px;">Оформить путевку</a>`,
+        center: [53.237, 158.3176],
+        border: [
+          [53.238299, 158.317943],
+          [53.238234, 158.317752],
+          [53.236257, 158.317334],
+          [53.235613, 158.318158],
+          [53.235742, 158.318480],
+          [53.236465, 158.317656],
+          [53.237590, 158.318215]
+        ],
+        borderColor: '#00f913'
+      },
+      {
+        name: "Участок № 2",
+        description: `Владелец участка - Главрыбвод<br>
+          Голец (15шт) - 250р<br>
+          Горбуша (1шт) - 35р<br>
+          Кета (1шт) - 70р<br><br>
+          <a href="https://gosuslugi41.ru/pgu/fishing.htm" style="padding:4px; border:2px solid #205891;background-color:#205891;color:white!important;margin-top:10px;">Оформить путевку</a>`,
+        center: [53.278, 158.242145],
+        border: [
+          [53.280114, 158.238796],
+          [53.279854, 158.238525],
+          [53.277457, 158.242053],
+          [53.277620, 158.244749],
+          [53.280114, 158.238796]
+        ],
+        borderColor: '#f90000'
+      }
+    ]
+  },
+  {
+    name: "Биг-Ривер",
+    style: "islands#greenIcon",
+    items: [
+      {
+        name: "Участок № 3",
+        description: `Владелец - Биг-Ривер<br>
+          Голец (30шт) - 500р<br>
+          Горбуша (20шт) - 500р<br>
+          Кета (5шт) - 500р<br>
+          Кижуч (3шт) - 500р<br><br>
+          <a href="https://gosuslugi41.ru/pgu/services/fishlicence.htm" style="padding:4px; border:2px solid #205891;background-color:#205891;color:white!important;margin-top:10px;">Оформить путевку</a>`,
+        center: [53.148122, 158.378899],
+        border: [
+          [53.148861, 158.379089],
+          [53.148468, 158.377856],
+          [53.147220, 158.377329],
+          [53.147239, 158.378457],
+          [53.148050, 158.379205]
+        ],
+        borderColor: '#0f00f9'
+      },
+      {
+        name: "Участок № 4",
+        description: `Владелец - Биг-Ривер<br>
+          Голец (30шт) - 500р<br>
+          Горбуша (20шт) - 500р<br>
+          Кета (5шт) - 500р<br>
+          Кижуч (3шт) - 500р<br><br>
+          <a href="https://gosuslugi41.ru/pgu/services/fishlicence.htm" style="padding:4px; border:2px solid #205891;background-color:#205891;color:white!important;margin-top:10px;">Оформить путевку</a>`,
+        center: [53.129796, 158.407468],
+        border: [
+          [53.134759, 158.409592],
+          [53.134609, 158.406896],
+          [53.128483, 158.403850],
+          [53.128483, 158.403850],
+          [53.126290, 158.408543]
+        ],
+        borderColor: '#f9e600'
+      }
+    ]
+  }
+];
+ymaps.ready(init);
+
+function init() {
+  var myMap = new ymaps.Map('map', {
+        center: [53.2, 158.38],
+        zoom: 12,
+        controls: ['geolocationControl']
+    }, {
+        searchControlProvider: 'yandex#search'
+    }),
+    menu = $('<ul class="menu_map"></ul>');
+    
+  for (var i = 0, l = groups.length; i < l; i++) {
+    createMenuGroup(groups[i]);
+  }
+
+  function createMenuGroup (group) {
+    var menuItem = $('<li><button class="btn parentPoints_map"><a href="#">' + group.name + '</a></button></li>'),
+      collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
+      submenu = $('<ul class="submenu_map"></ul>');
+    myMap.geoObjects.add(collection);
+    menuItem
+      .append(submenu)
+      .appendTo(menu)
+      .find('button')
+      .bind('click', function (evt) {
+        evt.preventDefault();
+        if (collection.getParent()) {
+          myMap.geoObjects.remove(collection);
+          submenu.hide();
+        } else {
+          myMap.geoObjects.add(collection);
+          submenu.show();
+        }
+      });
+    for (var j = 0, m = group.items.length; j < m; j++) {
+      createSubMenu(group.items[j], collection, submenu);
+    }
+  }
+
+  function createSubMenu (item, collection, submenu) {
+    var submenuItem = $('<li><a href="#">' + item.name + '</a></li>'),
+      placemark = new ymaps.Placemark(
+        item.center,
+        { balloonContent: item.description, iconCaption: item.name },
+        {
+          preset: 'islands#glyphIcon'
+        }
+      );
+    collection.add(placemark);
+    var myPolygon = new ymaps.Polygon(
+      [ item.border ],
+      { balloonContent: "Многоугольник" },
+      { fillColor: item.borderColor, opacity: 0.7, strokeWidth: false }
+    );
+    collection.add(myPolygon);
+    submenuItem
+      .appendTo(submenu)
+      .find('a')
+      .bind('click', function () {
+        if (!placemark.balloon.isOpen()) {
+          placemark.balloon.open();
+        } else {
+          placemark.balloon.close();
+        }
+      return false;
+    });
+  }
+  menu.appendTo($('#menu_map'));
+  myMap.setBounds(myMap.geoObjects.getBounds());
+}
+</script>
 </html>
