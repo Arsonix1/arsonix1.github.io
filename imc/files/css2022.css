@@ -1,0 +1,231 @@
+/* Изменение размера отображения div при наведении для значков предпрофильного образования /predprof_obrazovanie 05.07.2022 */
+.card {
+    height: 200px;
+    width: 100px;  
+    padding: 15px;
+    position: relative;
+    z-index: 5;
+    transition: all .4s;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: 2px 2px 3px;
+    transition: all .4s;
+}
+.card:hover::before {
+    content: '';
+    position: absolute;
+    left: -5%;
+    width: 110%;
+    top: -5%;
+    height: 110%;
+    background: rgba(0, 255, 0, .3);
+    z-index: 3;
+    transition: all .4s;
+}
+/* Изменение размера рисунка img при наведении на 20% /predprof_obrazovanie 05.07.2022 */
+.scale10 {
+    transition: 1s; /* Время эффекта */
+}
+.scale10:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+}
+/* Изменение размера рисунка img при наведении на 20% /predprof_obrazovanie 05.07.2022 */
+.scale20 {
+    transition: 1s; /* Время эффекта */
+}
+.scale20:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+}
+/* Изменение размера рисунка img при наведении на 50% /predprof_obrazovanie 05.07.2022 */
+.scale50 {
+    transition: 1s; /* Время эффекта */
+}
+.scale50:hover {
+    transform: scale(1.5); /* Увеличиваем масштаб */
+}
+/* Скрывает текст белым градиентом после 216 пикселей при наведении мышки снова показывает /predprof_obrazovanie 05.07.2022 */
+.items-text-hide-show-216px {
+    height: 216px;
+    overflow: hidden;
+    text-align: justify;
+	position: relative;
+}
+.items-text-hide-show-216px:after {
+	content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 1.2em;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+	pointer-events: none;
+}
+.items-text-hide-show-216px:hover {
+    height: auto;
+    cursor: pointer;
+}
+/* Скрывает текст белым градиентом после 540 пикселей при наведении мышки снова показывает /predprof_obrazovanie 05.07.2022 */
+.items-text-hide-show-540px {
+    height: 540px;
+    overflow: hidden;
+    text-align: justify;
+	position: relative;
+}
+.items-text-hide-show-540px:after {
+	content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 1.2em;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+	pointer-events: none;
+}
+.items-text-hide-show-540px:hover {
+    height: auto;
+    cursor: pointer;
+}
+/* Создание эффекта перетекания одного рисунка в другой с альфа блендом */
+.animate-blend-two-images{
+  position:relative;
+  margin:0 auto;/* устанваливаем блок div по центру страницы*/
+  width: 30%; /* Ширина */
+  height: 30%;  /* Высота */    
+}
+.animate-blend-two-images img {
+  position:absolute; /* абсолютное позиционирование*/
+  left: 30%; /* выравниваем картинки по левому верхнему углу div-а*/
+  top: 5%; /* выравниваем картинки по левому верхнему углу div-а */  
+}
+.animate-blend-two-images img.first { /* первая картинка полностью прозрачная */
+  opacity:0;
+  filter: alpha(opacity=0);  
+}
+.animate-blend-two-images:hover img.first { /* при наведении курсора первая картинка становится не прозрачной */
+  opacity:1;
+  filter: alpha(opacity=100);
+}
+.animate-blend-two-images:hover img.second, .animate2 img.second:hover {
+  opacity:0;
+  filter: alpha(opacity=0);
+  -moz-transition: all 5s ease;
+  -webkit-transition: all 5s ease;
+  -o-transition: all 5s ease;
+  transition: all 5s ease;
+}
+/* Для рисунка 500 на 500 Создание эффекта перетекания одного рисунка в другой с альфа блендом за 1 секунду*/
+.animate-blend-two-images-500-1s{
+  position:relative;
+  margin:0 auto;/* устанваливаем блок div по центру страницы*/
+}
+.animate-blend-two-images-500-1s img {
+  position:absolute; /* абсолютное позиционирование*/
+  left: 3%; /* Главное !!!!!!!!!!!!!!!!!!!! выравниваем картинки по левому верхнему углу div-а*/
+  top: 3%; /* Главное !!!!!!!!!!!!!!!!!!!!!!!!!выравниваем картинки по левому верхнему углу div-а */  
+}
+.animate-blend-two-images-500-1s img.first { /* первая картинка полностью прозрачная */
+  opacity:0;
+  filter:alpha(opacity=0);  
+}
+.animate-blend-two-images-500-1s:hover img.first { /* при наведении курсора первая картинка становится не прозрачной */
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+.animate-blend-two-images-500-1s:hover img.second, .animate2 img.second:hover {
+  opacity:0;
+  filter:alpha(opacity=0);
+  -moz-transition: all 3s ease;
+  -webkit-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 2s ease;
+}
+/* Для рисунка 500 на 500 Создание эффекта перетекания одного рисунка в другой с альфа блендом за 3 секунды*/
+.animate-blend-two-images-500-3s{
+  position:relative;
+  margin:0 auto;/* устанваливаем блок div по центру страницы*/
+}
+.animate-blend-two-images-500-3s img {
+  position:absolute; /* абсолютное позиционирование*/
+  left: 3%; /* Главное !!!!!!!!!!!!!!!!!!!! выравниваем картинки по левому верхнему углу div-а*/
+  top: 3%; /* Главное !!!!!!!!!!!!!!!!!!!!!!!!!выравниваем картинки по левому верхнему углу div-а */  
+}
+.animate-blend-two-images-500-3s img.first { /* первая картинка полностью прозрачная */
+  opacity:0;
+  filter:alpha(opacity=0);  
+}
+.animate-blend-two-images-500-3s:hover img.first { /* при наведении курсора первая картинка становится не прозрачной */
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+.animate-blend-two-images-500-3s:hover img.second, .animate2 img.second:hover {
+  opacity:0;
+  filter:alpha(opacity=0);
+  -moz-transition: all 3s ease;
+  -webkit-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;
+}
+.div-PP-obr-var1 {
+align-content: center;
+padding: 5%;
+}
+.div-PP-obr-var2 {
+align-content:center;
+text-align:center;
+line-height: 150%;
+padding: 5%;		
+}
+.div-PP-obr-var3 {
+align-content:center;
+text-align:center;
+line-height: 100%;
+padding: 15%;		
+}
+@media screen and (orientation:portrait) {
+.hidemobile {
+    visibility: hidden;
+    display: none;
+  }
+}
+@media screen and (orientation:landscape) {
+.hidedesktop {
+    visibility: hidden;
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.hide_menu_992 {
+    visibility: hidden;
+    display: none;
+  }
+}
+/* �⨫� ����⨢���� �३�� ifame ��� vk */
+.myvideo {
+position:relative;
+padding: 0 0 56.25% 0;
+height:0;
+overflow:hidden;
+}
+.myvideo iframe,.myvideo object,.myvideo embed {
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+#map {
+	width: 100%;
+    height: 680px;
+}
+#map_mob {
+	width: 100%;
+	height: 480px;
+}
