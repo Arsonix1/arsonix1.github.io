@@ -159,20 +159,6 @@ function init() {
       collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
       submenu = $('<ul class="submenu_map"></ul>');
     myMap.geoObjects.add(collection);
-    /*menuItem
-      .append(submenu)
-      .appendTo(menu)
-      .find('button')
-      .bind('click', function (evt) {
-        evt.preventDefault();
-        if (collection.getParent()) {
-          myMap.geoObjects.remove(collection);
-          submenu.hide();
-        } else {
-          myMap.geoObjects.add(collection);
-          submenu.show();
-        }
-      });*/
     for (var j = 0; j < group.items.length; j++) {
       createSubMenu(group.items[j], collection, submenu);
     }
@@ -188,12 +174,6 @@ function init() {
         }
       );
     collection.add(placemark);
-    /*var myPolygon = new ymaps.Polygon(
-      [ item.border ],
-      { balloonContent: "Многоугольник" },
-      { fillColor: item.borderColor, opacity: 0.7, strokeWidth: false }
-    );
-    collection.add(myPolygon);*/
     submenuItem
       .appendTo(menu)
       .find('a')
