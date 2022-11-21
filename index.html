@@ -106,17 +106,7 @@
           Горбуша (1шт) - 35р<br>
           Кета (1шт) - 70р<br><br>
           <a href="https://gosuslugi41.ru/pgu/fishing.htm" style="padding:4px; border:2px solid #205891;background-color:#205891;color:white!important;margin-top:10px;">Оформить путевку</a>`,
-        center: [53.237, 158.3176],
-        border: [
-          [53.238299, 158.317943],
-          [53.238234, 158.317752],
-          [53.236257, 158.317334],
-          [53.235613, 158.318158],
-          [53.235742, 158.318480],
-          [53.236465, 158.317656],
-          [53.237590, 158.318215]
-        ],
-        borderColor: '#00f913'
+        center: [53.237, 158.3176]
       },
       {
         name: "Участок № 2",
@@ -125,57 +115,7 @@
           Горбуша (1шт) - 35р<br>
           Кета (1шт) - 70р<br><br>
           <a href="https://gosuslugi41.ru/pgu/fishing.htm" style="padding:4px; border:2px solid #205891;background-color:#205891;color:white!important;margin-top:10px;">Оформить путевку</a>`,
-        center: [53.278, 158.242145],
-        border: [
-          [53.280114, 158.238796],
-          [53.279854, 158.238525],
-          [53.277457, 158.242053],
-          [53.277620, 158.244749],
-          [53.280114, 158.238796]
-        ],
-        borderColor: '#f90000'
-      }
-    ]
-  },
-  {
-    name: "Биг-Ривер",
-    style: "islands#greenIcon",
-    items: [
-      {
-        name: "Участок № 3",
-        description: `Владелец - Биг-Ривер<br>
-          Голец (30шт) - 500р<br>
-          Горбуша (20шт) - 500р<br>
-          Кета (5шт) - 500р<br>
-          Кижуч (3шт) - 500р<br><br>
-          <a href="https://gosuslugi41.ru/pgu/services/fishlicence.htm" style="padding:4px; border:2px solid #205891;background-color:#205891;color:white!important;margin-top:10px;">Оформить путевку</a>`,
-        center: [53.148122, 158.378899],
-        border: [
-          [53.148861, 158.379089],
-          [53.148468, 158.377856],
-          [53.147220, 158.377329],
-          [53.147239, 158.378457],
-          [53.148050, 158.379205]
-        ],
-        borderColor: '#0f00f9'
-      },
-      {
-        name: "Участок № 4",
-        description: `Владелец - Биг-Ривер<br>
-          Голец (30шт) - 500р<br>
-          Горбуша (20шт) - 500р<br>
-          Кета (5шт) - 500р<br>
-          Кижуч (3шт) - 500р<br><br>
-          <a href="https://gosuslugi41.ru/pgu/services/fishlicence.htm" style="padding:4px; border:2px solid #205891;background-color:#205891;color:white!important;margin-top:10px;">Оформить путевку</a>`,
-        center: [53.129796, 158.407468],
-        border: [
-          [53.134759, 158.409592],
-          [53.134609, 158.406896],
-          [53.128483, 158.403850],
-          [53.128483, 158.403850],
-          [53.126290, 158.408543]
-        ],
-        borderColor: '#f9e600'
+        center: [53.278, 158.242145]
       }
     ]
   }
@@ -201,20 +141,6 @@ function init() {
       collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
       submenu = $('<ul class="submenu_map"></ul>');
     myMap.geoObjects.add(collection);
-    /*menuItem
-      .append(submenu)
-      .appendTo(menu)
-      .find('button')
-      .bind('click', function (evt) {
-        evt.preventDefault();
-        if (collection.getParent()) {
-          myMap.geoObjects.remove(collection);
-          submenu.hide();
-        } else {
-          myMap.geoObjects.add(collection);
-          submenu.show();
-        }
-      });*/
     for (var j = 0, m = group.items.length; j < m; j++) {
       createSubMenu(group.items[j], collection, submenu);
     }
