@@ -150,7 +150,7 @@ function init() {
     }),
     menu = $('<ul class="menu_map"></ul>');
     
-  for (var i = 0, l = groups.length; i < l; i++) {
+  for (var i = 0; i < groups.length; i++) {
     createMenuGroup(groups[i]);
   }
 
@@ -159,7 +159,7 @@ function init() {
       collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
       submenu = $('<ul class="submenu_map"></ul>');
     myMap.geoObjects.add(collection);
-    menuItem
+    /*menuItem
       .append(submenu)
       .appendTo(menu)
       .find('button')
@@ -172,8 +172,8 @@ function init() {
           myMap.geoObjects.add(collection);
           submenu.show();
         }
-      });
-    for (var j = 0, m = group.items.length; j < m; j++) {
+      });*/
+    for (var j = 0; j < group.items.length; j++) {
       createSubMenu(group.items[j], collection, submenu);
     }
   }
@@ -188,14 +188,14 @@ function init() {
         }
       );
     collection.add(placemark);
-    var myPolygon = new ymaps.Polygon(
+    /*var myPolygon = new ymaps.Polygon(
       [ item.border ],
       { balloonContent: "Многоугольник" },
       { fillColor: item.borderColor, opacity: 0.7, strokeWidth: false }
     );
-    collection.add(myPolygon);
+    collection.add(myPolygon);*/
     submenuItem
-      .appendTo(submenu)
+      .appendTo(menu)
       .find('a')
       .bind('click', function () {
         if (!placemark.balloon.isOpen()) {
