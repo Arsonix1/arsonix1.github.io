@@ -1,0 +1,68 @@
+#block-smm-icons {
+    position: fixed;
+    top:150px;
+    right: 0;
+    max-height:150px;
+    background: radial-gradient(at right, #FEFFFF, #FFFFFF);
+    box-shadow: 0 0 0 #ccc;
+    padding: 20px;
+    z-index:9999;
+}
+#block-smm-icons .field{
+    display: flex;
+    flex-direction: column;
+}
+.block-smm-icons_link {
+    content:url(https://edu.pkgo.ru/sites/default/files/SMM_Icons/VK_Compact_Logo-face1.png):
+	opacity:1;
+	-moz-transition: all 2s ease;
+	-webkit-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	transition: all 2s ease;
+}
+.block-smm-icons_link:hover {
+    content:url(https://edu.pkgo.ru/sites/default/files/SMM_Icons/VK_Compact_Logo1.png);
+    width:40px;
+    height:40px;
+	opacity:1;
+	filter:alpha (opacity=100);
+	-moz-transition: all 2s ease;
+	-webkit-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	transition: all 2s ease;
+}
+.block-smm-icons_link2 {
+    content:url(https://edu.pkgo.ru/sites/default/files/SMM_Icons/Logo_old-face.png);
+    width:40px;
+    height:40px;
+	opacity:1;
+	-moz-transition: all 2s ease;
+	-webkit-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	transition: all 2s ease;
+}
+.block-smm-icons_link2:hover {
+    content:url(https://edu.pkgo.ru/sites/default/files/SMM_Icons/Logo_old.png);
+    width:40px;
+    height:40px;
+	opacity:1;
+	filter:alpha (opacity=100);
+	-moz-transition: all 2s ease;
+	-webkit-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	transition: all 2s ease;
+}
+.img-smm-icons {
+    max-width: 100$;
+    max-height: 100%;
+}
+.block-smm-icons-info {
+    width:40px;
+    height:40px;
+    vertical-align:unset;
+}
+/*#block-blokdlaslabovidasih{
+  width: 820px;
+  margin: auto;
+  padding-bottom:5px;
+}*/
