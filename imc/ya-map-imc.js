@@ -1,0 +1,139 @@
+var schools = [
+    {
+      name:'МАОУ «Средняя школа № 1»',
+      address:'ул. Пограничная, 18/1',
+      number:'1',
+      sportAreas:'Футбольное поле/Баскетбольная площадка',
+      sportInv:'уличные тренажеры, яма для прыжков в длину, полоса препятствий',
+      buzy:'',
+      workTime:'пн-пт с 08:15 до 18:00',
+      coords:[53.0339319,158.6681443],
+      images:['files/1_1.webp', 'files/1_2.webp', 'files/1_3.webp'],
+      icons:['files/football_basketball.png']
+    },
+    {
+      name:'МАОУ «Средняя школа № 3»',
+      address:'ул. Зеленая Роща, 24',
+      number:'3',
+      sportAreas:'',
+      sportInv:'',
+      buzy:'',
+      workTime:'',
+      coords:[52.9711463,158.6889099],
+      images: ['files/ДО_0.png', 'files/ДО_1.png', 'files/football.png'],
+      icons:['files/football_hockey.png']
+    },
+  ],
+  iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
+  ymaps.ready(init);
+
+  function init() {
+    var geolocation = ymaps.geolocation,
+      myMap = new ymaps.Map('ya-map', {
+        center: [53, 158.67],
+        zoom: 12,
+        controls: ['geolocationControl', 'routeButtonControl']
+      }, {
+        searchControlProvider: 'yandex#search'
+      }),
+      menu = $('<div class="menu-map__list"></div>');
+      menuMobile = $('<select class="menu-map__list-mobile"></select>');
+    for (var i = 0; i < schools.length; i++) {
+      createMenu(schools[i]);
+    }
+
+    function createMenu (school) {
+      var collection = new ymaps.GeoObjectCollection(null, { preset: 'islands#' + iconColors[Math.floor(Math.random() * iconColors.length)] + 'Icon' }),
+          menuItem = $(`<div class="menu-map__item-wrapper"><p class="menu-map__item">${school.name}, ${school.address}</p></div>`),
+          menuMobileItem = $(`<option class="mobile-menu-item"><p>${school.name}, ${school.address}</p>`),
+          descriptionBalloon = `<span style="font-size:14px;">${school.name}<br/>${school.address}</span><br/>
+                                <span>Время пользования населением:</span><br/>
+                                <span><b>${school.buzy}</b></span><br/><br/>
+                                <span class="map-balloon" number="${school.number}">Построить маршрут</span><br/>`,
+          placemark = new ymaps.Placemark(
+            school.coords,
+            { balloonContent: descriptionBalloon, iconContent: school.number }
+          );
+      placemark.events.add('balloonopen', function(e) {
+        showDesc(school);
+      });
+      collection.add(placemark);
+      menuItem
+        .appendTo(menu)
+        .find('p')
+        .bind('click', function () {
+          if (placemark.balloon.isOpen()) {
+            placemark.balloon.close();
+          } else {
+            placemark.balloon.open();
+            showDesc(school);
+          } 
+          return false;
+      });
+      menuMobileItem
+        .appendTo(menuMobile)
+        .find('p')
+        .bind('click', function () {
+          if (placemark.balloon.isOpen()) {
+            placemark.balloon.close();
+          } else {
+            placemark.balloon.open();
+            showDesc(school);
+          } 
+          return false;
+      });
+      myMap.geoObjects.add(collection);
+    }
+
+    function showDesc(school) {
+      var control = myMap.controls.get('routeButtonControl'),
+          userLocation = control.routePanel.geolocate('from'),
+          description = $(`<span style="font-size:14px;">${school.name}, ${school.address}</span><br/>
+                        <span>Спортивные площадки: <b>${school.sportAreas}</b></span><br/>
+                        <span>Спортивное оборудование: <b>${school.sportInv}</b></span><br/>
+                        <span>График работы: <b>${school.workTime}</b></span><br/>
+                        <span>Время пользования населением: <b>${school.buzy}</b></span><br/>`);
+      document.getElementsByClassName('school-desc__text')[0].replaceChildren();
+      description.appendTo($(".school-desc__text"))
+      document.getElementsByClassName('images')[0].replaceChildren();
+      school.images.forEach(image => {
+        var img = $(`<li><img src="${image}"></li>`);
+        img.appendTo($(".images"));
+      });
+      if (document.getElementsByClassName('map-balloon')[0]) {
+        document.getElementsByClassName('map-balloon')[0].addEventListener('click', event => {
+          var toLocation = schools.find(school => school.number === event.target.attributes[1].value).coords;
+          control.routePanel.state.set({
+            type: 'auto',
+            from: userLocation,
+            to: toLocation
+          });
+          control.routePanel.getRouteAsync();
+          control.state.set('expanded', true);
+        })
+      }
+    }
+
+    menu.appendTo($('#menu-map'));
+    menuMobile.appendTo($('#menu-map'));
+    myMap.setBounds(myMap.geoObjects.getBounds());
+    const gallery = document.getElementById("gallery");
+    const viewer = new Viewer(gallery, {
+      title: false,
+      toolbar: {
+        oneToOne: false,
+        prev() {
+          viewer.prev(true);
+        },
+        play: false,
+        next() {
+          viewer.next(true);
+        }
+      }
+    });
+    [...document.getElementsByClassName('menu-map__item')].forEach(item => {
+      item.addEventListener('click', event => {
+        viewer.update();
+      })
+    })
+  }
