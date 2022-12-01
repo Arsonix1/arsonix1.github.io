@@ -65,7 +65,7 @@ var schools = [
           descriptionBalloon = `<span style="font-size:14px;">${school.name}<br/>${school.address}</span><br/>
                                 <span>Время пользования населением:</span><br/>
                                 <span><b>${school.buzy}</b></span><br/>
-                                <img src="${school.icon}" style="width:${school.iconSize[0]}px;height:${school.iconSize[1]}px"><br/><br/>
+                                <img src="${school.icon}" style="width:${school.iconSize[0]}px;height:${school.iconSize[1]}px"><br/>
                                 <span class="map-balloon" number="${school.number}">Построить маршрут</span><br/>`,
           placemark = new ymaps.Placemark(
             school.coords,
