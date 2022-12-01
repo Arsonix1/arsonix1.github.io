@@ -8,8 +8,9 @@ var schools = [
       buzy:'',
       workTime:'пн-пт с 08:15 до 18:00',
       coords:[53.0339319,158.6681443],
-      images:['sites/default/files/sport_fields/1_1.webp', 'sites/default/files/sport_fields/1_2.webp', 'sites/default/files/sport_fields/1_3.webp'],
-      icons:[]
+      images:['files/1_1.webp', 'files/1_2.webp', 'files/1_3.webp'],
+      icon:'files/football_basketball.png',
+      iconSize: [32,16]
     },
     {
       name:'МАОУ «Средняя школа № 3»',
@@ -19,15 +20,17 @@ var schools = [
       sportInv:'',
       buzy:'',
       workTime:'',
-      coords:[52.9711463,158.6889099],
-      images: ['sites/default/files/sport_fields/3_1.webp', 'sites/default/files/sport_fields/3_2.webp'],
-      icons:[]
+      coords:[52.9711463,158.6889999],
+      images: ['files/ДО_1.png'],
+      icon:'files/football_hockey.png',
+      iconSize: [40,16]
     },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
   ymaps.ready(init);
 
   function init() {
+    var collection = new ymaps.GeoObjectCollection(null, { preset: 'islands#' + iconColors[Math.floor(Math.random() * iconColors.length)] + 'Icon' });
     const gallery = document.getElementById("gallery");
     const viewer = new Viewer(gallery, {
       title: false,
@@ -50,26 +53,29 @@ var schools = [
       }, {
         searchControlProvider: 'yandex#search'
       }),
-      menu = $('<div class="menu-map__list"></div>');
-      menuMobile = $('<select class="menu-map__list-mobile"></select>');
+      menu = $('<div class="menu-map__list"></div>'),
+      menuMobile = $('<select id="menu-map__list-mobile"></select>');
     for (var i = 0; i < schools.length; i++) {
       createMenu(schools[i]);
     }
 
     function createMenu (school) {
-      var collection = new ymaps.GeoObjectCollection(null, { preset: 'islands#' + iconColors[Math.floor(Math.random() * iconColors.length)] + 'Icon' }),
-          menuItem = $(`<div class="menu-map__item-wrapper"><p class="menu-map__item">${school.name}, ${school.address}</p></div>`),
-          menuMobileItem = $(`<option class="mobile-menu-item"><p>${school.name}, ${school.address}</p>`),
+      var menuItem = $(`<div class="menu-map__item-wrapper"><p class="menu-map__item">${school.name}, ${school.address}</p></div>`),
+          menuMobileItem = $(`<option class="mobile-menu-item">${school.name}, ${school.address}</option>`),
           descriptionBalloon = `<span style="font-size:14px;">${school.name}<br/>${school.address}</span><br/>
                                 <span>Время пользования населением:</span><br/>
                                 <span><b>${school.buzy}</b></span><br/><br/>
                                 <span class="map-balloon" number="${school.number}">Построить маршрут</span><br/>`,
           placemark = new ymaps.Placemark(
             school.coords,
-            { balloonContent: descriptionBalloon, iconContent: school.number }
+            { balloonContent: descriptionBalloon, iconContent: school.number },
+            {
+              iconLayout: 'default#image',
+              iconImageHref: school.icon,
+              iconImageSize: school.iconSize
+            }
           );
       placemark.events.add('balloonopen', function(e) {
-        viewer.update();
         showDesc(school);
       });
       collection.add(placemark);
@@ -85,17 +91,16 @@ var schools = [
           } 
           return false;
       });
-      menuMobileItem
-        .appendTo(menuMobile)
-        .find('p')
-        .bind('click', function () {
-          if (placemark.balloon.isOpen()) {
-            placemark.balloon.close();
-          } else {
-            placemark.balloon.open();
-            showDesc(school);
-          } 
-          return false;
+      menu.appendTo($('#menu-map'));
+      menuMobileItem.appendTo(menuMobile);
+      menuMobile.appendTo($('#menu-map'));
+      menuMobile.change(function() {
+        showDesc(school);
+        if (placemark.balloon.isOpen()) {
+          placemark.balloon.close();
+        } else {
+          placemark.balloon.open();
+        }
       });
       myMap.geoObjects.add(collection);
     }
@@ -103,7 +108,7 @@ var schools = [
     function showDesc(school) {
       var control = myMap.controls.get('routeButtonControl'),
           userLocation = control.routePanel.geolocate('from'),
-          description = $(`<span style="font-size:14px;">${school.name}, ${school.address}</span><br/>
+          description = $(`<span style="font-size:24px;">${school.name}, ${school.address}</span><br/>
                         <span>Спортивные площадки: <b>${school.sportAreas}</b></span><br/>
                         <span>Спортивное оборудование: <b>${school.sportInv}</b></span><br/>
                         <span>График работы: <b>${school.workTime}</b></span><br/>
@@ -115,6 +120,8 @@ var schools = [
         var img = $(`<li><img src="${image}"></li>`);
         img.appendTo($(".images"));
       });
+      $('#gallery').css('border', '2px solid #005c9d');
+      viewer.update();
       if (document.getElementsByClassName('map-balloon')[0]) {
         document.getElementsByClassName('map-balloon')[0].addEventListener('click', event => {
           var toLocation = schools.find(school => school.number === event.target.attributes[1].value).coords;
@@ -128,13 +135,8 @@ var schools = [
         })
       }
     }
-
-    menu.appendTo($('#menu-map'));
-    menuMobile.appendTo($('#menu-map'));
     myMap.setBounds(myMap.geoObjects.getBounds());
-    [...document.getElementsByClassName('menu-map__item')].forEach(item => {
-      item.addEventListener('click', event => {
-        viewer.update();
-      })
+    document.getElementsByClassName('ymaps-2-1-79-events-pane ymaps-2-1-79-user-selection-none')[0].addEventListener('click', event => {
+      viewer.update();
     })
   }
