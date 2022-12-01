@@ -78,6 +78,7 @@ var schools = [
             placemark.balloon.close();
           } else {
             placemark.balloon.open();
+            viewer.update();
             showDesc(school);
           } 
           return false;
