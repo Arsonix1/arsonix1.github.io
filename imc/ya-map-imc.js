@@ -62,11 +62,11 @@ var schools = [
         .appendTo(menu)
         .find('p')
         .bind('click', function () {
+          viewer.update();
           if (placemark.balloon.isOpen()) {
             placemark.balloon.close();
           } else {
             placemark.balloon.open();
-            viewer.update();
             showDesc(school);
           } 
           return false;
@@ -75,11 +75,11 @@ var schools = [
         .appendTo(menuMobile)
         .find('p')
         .bind('click', function () {
+          viewer.update();
           if (placemark.balloon.isOpen()) {
             placemark.balloon.close();
           } else {
             placemark.balloon.open();
-            viewer.update();
             showDesc(school);
           } 
           return false;
