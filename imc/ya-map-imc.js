@@ -64,7 +64,8 @@ var schools = [
           menuMobileItem = $(`<option class="mobile-menu-item">${school.name}, ${school.address}</option>`),
           descriptionBalloon = `<span style="font-size:14px;">${school.name}<br/>${school.address}</span><br/>
                                 <span>Время пользования населением:</span><br/>
-                                <span><b>${school.buzy}</b></span><br/><br/>
+                                <span><b>${school.buzy}</b></span><br/>
+                                <img src="${school.icon}" style="width:${school.iconSize[0]};height:${school.iconSize[1]}"><br/><br/>
                                 <span class="map-balloon" number="${school.number}">Построить маршрут</span><br/>`,
           placemark = new ymaps.Placemark(
             school.coords,
