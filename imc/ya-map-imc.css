@@ -67,9 +67,6 @@
       content: "\f019";
     }
     @media screen and (max-device-width:767px){
-      .ymaps-2-1-79-map {
-        margin-top: 0px!important
-      }
       #full-map {
         display: block;
         height: auto;
