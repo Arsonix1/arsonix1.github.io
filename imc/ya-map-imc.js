@@ -69,6 +69,7 @@ var schools = [
             { balloonContent: descriptionBalloon, iconContent: school.number }
           );
       placemark.events.add('balloonopen', function(e) {
+        viewer.update();
         showDesc(school);
       });
       collection.add(placemark);
@@ -133,9 +134,9 @@ var schools = [
     menu.appendTo($('#menu-map'));
     menuMobile.appendTo($('#menu-map'));
     myMap.setBounds(myMap.geoObjects.getBounds());
-    [...document.getElementsByClassName('menu-map__item')].forEach(item => {
+    /*[...document.getElementsByClassName('menu-map__item')].forEach(item => {
       item.addEventListener('click', event => {
         viewer.update();
       })
-    })
+    })*/
   }
