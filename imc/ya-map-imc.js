@@ -23,7 +23,7 @@ var schools = [
       coords:[52.9711463,158.6889999],
       images: ['sites/default/files/sport_fields/3_1.webp', 'sites/default/files/sport_fields/3_2.webp'],
       icon:'sites/default/files/sport_fields/football_hockey.png',
-      iconSize: [40,16]
+      iconSize: [32,16]
     },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
