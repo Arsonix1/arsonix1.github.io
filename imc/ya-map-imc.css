@@ -1,29 +1,54 @@
 .ymaps-2-1-79-map {
   margin-top: -20px!important
 }
-#ya-map {
+.map-title {
+      text-align: center;
+      font-size: 24px;
+    }
+    .school-desc__text {
+      text-align: center;
+    }
+    #ya-map {
       width: 80%;
       height: 100%;
     }
     #menu-map {
       height: 100%;
-      background-color: aliceblue;
+      overflow: auto;
+      background-color: #005c9d;
       width: 20%;
+    }
+    #menu-map::-webkit-scrollbar {
+      width: 12px;
+    }
+    #menu-map::-webkit-scrollbar-track {
+      background: white;
+    }
+    #menu-map::-webkit-scrollbar-thumb {
+      background-color: #005c9d;
+      border-radius: 20px;
+      border: 3px solid white;
+    }
+    #gallery {
+      border-radius: 25px;
+      margin-top: 15px;
     }
     .menu-map__list {
       list-style: none;
       padding: 5px;
       margin: 0;
-      margin-left: 15px;
     }
-    .menu-map__list-mobile {
+    #menu-map__list-mobile {
       display: none;
     }
     .menu-map__item {
       cursor: pointer;
+      color: white;
     }
     .menu-map__item-wrapper {
-      border-bottom: 2px solid blue;
+      border-bottom: 2px solid #00a5e7;
+      margin-top: 5px;
+      height: 50px;
     }
     .menu-map__item-wrapper p {
       margin: 0;
@@ -41,7 +66,7 @@
     }
     .images {
       list-style: none;
-      margin: 30px 0 0;
+      margin: 30px 0;
       padding: 0;
       display: flex;
       justify-content: space-evenly;
@@ -83,7 +108,7 @@
       .menu-map__list {
         display: none;
       }
-      .menu-map__list-mobile {
+      #menu-map__list-mobile {
         display: block;
       }
       .images > li > img {
