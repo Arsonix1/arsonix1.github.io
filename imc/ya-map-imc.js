@@ -28,6 +28,20 @@ var schools = [
   ymaps.ready(init);
 
   function init() {
+    const gallery = document.getElementById("gallery");
+    const viewer = new Viewer(gallery, {
+      title: false,
+      toolbar: {
+        oneToOne: false,
+        prev() {
+          viewer.prev(true);
+        },
+        play: false,
+        next() {
+          viewer.next(true);
+        }
+      }
+    });
     var geolocation = ymaps.geolocation,
       myMap = new ymaps.Map('ya-map', {
         center: [53, 158.67],
@@ -119,20 +133,6 @@ var schools = [
     menu.appendTo($('#menu-map'));
     menuMobile.appendTo($('#menu-map'));
     myMap.setBounds(myMap.geoObjects.getBounds());
-    const gallery = document.getElementById("gallery");
-    const viewer = new Viewer(gallery, {
-      title: false,
-      toolbar: {
-        oneToOne: false,
-        prev() {
-          viewer.prev(true);
-        },
-        play: false,
-        next() {
-          viewer.next(true);
-        }
-      }
-    });
     [...document.getElementsByClassName('menu-map__item')].forEach(item => {
       item.addEventListener('click', event => {
         viewer.update();
