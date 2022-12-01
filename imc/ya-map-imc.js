@@ -68,7 +68,7 @@ var schools = [
                                 <span class="map-balloon" number="${school.number}">Построить маршрут</span><br/>`,
           placemark = new ymaps.Placemark(
             school.coords,
-            { balloonContent: descriptionBalloon, iconContent: school.number },
+            { balloonContent: descriptionBalloon },
             {
               iconLayout: 'default#image',
               iconImageHref: school.icon,
