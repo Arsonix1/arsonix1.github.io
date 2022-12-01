@@ -104,12 +104,14 @@
         width: 100%;
         text-align: end;
         height: auto;
+        margin-bottom: 10px;
       }
       .menu-map__list {
         display: none;
       }
       #menu-map__list-mobile {
         display: block;
+        margin-top: -20px;
       }
       .images > li > img {
         max-width: 150px!important;
