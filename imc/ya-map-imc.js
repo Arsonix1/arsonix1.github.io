@@ -8,8 +8,8 @@ var schools = [
       buzy:'',
       workTime:'пн-пт с 08:15 до 18:00',
       coords:[53.0339319,158.6681443],
-      images:['files/1_1.webp', 'files/1_2.webp', 'files/1_3.webp'],
-      icons:['files/football_basketball.png']
+      images:['sites/default/files/sport_fields/1_1.webp', 'sites/default/files/sport_fields/1_2.webp', 'sites/default/files/sport_fields/1_3.webp'],
+      icons:[]
     },
     {
       name:'МАОУ «Средняя школа № 3»',
@@ -20,8 +20,8 @@ var schools = [
       buzy:'',
       workTime:'',
       coords:[52.9711463,158.6889099],
-      images: ['files/ДО_0.png', 'files/ДО_1.png', 'files/football.png'],
-      icons:['files/football_hockey.png']
+      images: ['sites/default/files/sport_fields/3_1.webp', 'sites/default/files/sport_fields/3_2.webp'],
+      icons:[]
     },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
