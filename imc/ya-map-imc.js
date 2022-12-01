@@ -77,7 +77,6 @@ var schools = [
         .appendTo(menu)
         .find('p')
         .bind('click', function () {
-          viewer.update();
           if (placemark.balloon.isOpen()) {
             placemark.balloon.close();
           } else {
@@ -90,7 +89,6 @@ var schools = [
         .appendTo(menuMobile)
         .find('p')
         .bind('click', function () {
-          viewer.update();
           if (placemark.balloon.isOpen()) {
             placemark.balloon.close();
           } else {
@@ -134,9 +132,9 @@ var schools = [
     menu.appendTo($('#menu-map'));
     menuMobile.appendTo($('#menu-map'));
     myMap.setBounds(myMap.geoObjects.getBounds());
-    /*[...document.getElementsByClassName('menu-map__item')].forEach(item => {
+    [...document.getElementsByClassName('menu-map__item')].forEach(item => {
       item.addEventListener('click', event => {
         viewer.update();
       })
-    })*/
+    })
   }
