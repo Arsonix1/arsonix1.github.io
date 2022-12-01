@@ -105,6 +105,7 @@
         text-align: end;
         height: auto;
         margin-bottom: 10px;
+        background-color: white;
       }
       .menu-map__list {
         display: none;
