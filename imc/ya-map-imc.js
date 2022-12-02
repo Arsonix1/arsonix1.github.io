@@ -159,6 +159,19 @@ var schools = [
       icon:'sites/default/files/sport_fields/football_basketball.png',
       iconSize: [32,16]
     },
+    {
+      name:'МАОУ «Средняя школа № 42»',
+      address:'ул. Савченко, 12',
+      number:'42',
+      sportAreas:'футбольное поле, хоккейная коробка, площадка для стритбола',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-пт 18:00 - 20:00, сб 15:00 - 20:00, вс 09:00 - 20:00',
+      coords:[53.0763281,158.6462756],
+      images: [],
+      icon:'sites/default/files/sport_fields/football_hockey.png',
+      iconSize: [32,16]
+    },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
   ymaps.ready(init);
