@@ -108,6 +108,19 @@ var schools = [
       iconSize: [16,16]
     },
     {
+      name:'МАОУ «Средняя школа № 36»',
+      address:'пр. Победы, 6/1',
+      number:'36',
+      sportAreas:'футбольное поле',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-пт 16:00 - 20:00, сб-вс 12:00 - 20:00',
+      coords:[53.0721518,158.6107755],
+      images: [],
+      icon:'sites/default/files/sport_fields/football.png',
+      iconSize: [16,16]
+    },
+    {
       name:'МБОУ «Средняя школа № 37»',
       address:'пер. Светлый, 1',
       number:'37',
@@ -117,7 +130,7 @@ var schools = [
       workTime:'пн-вс 09:00 - 20:00',
       coords:[53.066810, 158.542210],
       images: [],
-      icon:'sites/default/files/sport_fields/football_basketballl.png',
+      icon:'sites/default/files/sport_fields/football_basketball.png',
       iconSize: [32,16]
     },
   ],
