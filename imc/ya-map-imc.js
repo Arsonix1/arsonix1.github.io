@@ -282,15 +282,19 @@ var schools = [
     }
       
     function createMobileMenu(school, placemark) {
-      var menuMobileItem = $(`<option class="mobile-menu-item" value="${school.number}">${school.name}, ${school.address}</option>`);
+      var menuMobileItem = $(`<option class="mobile-menu-item" value="${school.number}">${school.name}, ${school.address}</option>`),
+          clickedElem = '';
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
+      $("#menu-map__list-mobile option").click(function () {
+        clickedElem = $(this).val();
+        console.log(clickedElem);
+      });
       menuMobile.change(function(e) {
         var selected = $(this).val(),
             fullTitle = schools.find(school => school.number === selected).name + ', ' + schools.find(school => school.number === selected).address;
-        console.log(e);
         console.log(fullTitle);
-        if ($('#menu-map__list-mobile').children(':selected').text() !== fullTitle) return;
+        if (clickedElem !== selected) return;
         showDesc(school);
         if (placemark.balloon.isOpen()) {
           placemark.balloon.close();
