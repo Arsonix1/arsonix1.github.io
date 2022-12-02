@@ -299,7 +299,8 @@ var schools = [
         $('#gallery').css('border', '2px solid #005c9d');
         viewer.update();
       } else {
-          $('#gallery').css('border', 'none');
+          console.log('none');
+        $('#gallery').css('border', 'none');
       }
       if (document.getElementsByClassName('map-balloon')[0]) {
         document.getElementsByClassName('map-balloon')[0].addEventListener('click', event => {
