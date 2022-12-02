@@ -200,7 +200,7 @@ var schools = [
       iconSize: [16,16]
     }
   ],
-  iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
+  clickedElem = '';
   ymaps.ready(init);
 
   function init() {
@@ -283,13 +283,9 @@ var schools = [
       
     function createMobileMenu(school, placemark) {
       var menuMobileItem = $(`<option class="mobile-menu-item" value="${school.number}">${school.name}, ${school.address}</option>`),
-          clickedElem = '';
+          
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
-      document.getElementById('menu-map__list-mobile option').addEventListener('click', event => {
-        clickedElem = $(this).val();
-        console.log(clickedElem);
-      });
       /*$("#menu-map__list-mobile option").click(function () {
         clickedElem = $(this).val();
         console.log(clickedElem);
@@ -345,5 +341,9 @@ var schools = [
     myMap.setBounds(myMap.geoObjects.getBounds());
     document.getElementsByClassName('ymaps-2-1-79-events-pane ymaps-2-1-79-user-selection-none')[0].addEventListener('click', event => {
       viewer.update();
+    });
+    document.getElementById('menu-map__list-mobile option').addEventListener('click', event => {
+      clickedElem = $(this).val();
+      console.log(clickedElem);
     })
   }
