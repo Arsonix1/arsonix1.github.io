@@ -286,11 +286,11 @@ var schools = [
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
       menuMobile.change(function() {
-        var selected = $('#menu-map__list-mobile').children(':selected').val(),
+        var selected = $(this).val(),
             fullTitle = schools.find(school => school.number === selected).name + ', ' + schools.find(school => school.number === selected).address;
-        console.log($(this).text());
+        console.log($('#menu-map__list-mobile').children(':selected').text());
         console.log(fullTitle);
-        if ($(this).text() !== fullTitle) return;
+        if ($('#menu-map__list-mobile').children(':selected').text() !== fullTitle) return;
         showDesc(school);
         if (placemark.balloon.isOpen()) {
           placemark.balloon.close();
