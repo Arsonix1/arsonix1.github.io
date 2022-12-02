@@ -286,10 +286,14 @@ var schools = [
           clickedElem = '';
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
-      $("#menu-map__list-mobile option").click(function () {
+      document.getElementById('menu-map__list-mobile option').addEventListener('click', event => {
         clickedElem = $(this).val();
         console.log(clickedElem);
       });
+      /*$("#menu-map__list-mobile option").click(function () {
+        clickedElem = $(this).val();
+        console.log(clickedElem);
+      });*/
       menuMobile.change(function(e) {
         var selected = $(this).val(),
             fullTitle = schools.find(school => school.number === selected).name + ', ' + schools.find(school => school.number === selected).address;
