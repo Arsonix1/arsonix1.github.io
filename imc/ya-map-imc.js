@@ -286,7 +286,7 @@ var schools = [
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
       menuMobile.change(function() {
-        console.log(this.val());
+        console.log($(this).val());
         showDesc(school);
         if (placemark.balloon.isOpen()) {
           placemark.balloon.close();
