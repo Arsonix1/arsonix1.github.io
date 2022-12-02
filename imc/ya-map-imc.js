@@ -70,7 +70,7 @@ var schools = [
     },
     {
       name:'МАОУ «Средняя школа № 28»',
-      address:'ул. Пономарева, 13',
+      address:'ул. Кирдищева, 8',
       number:'28',
       sportAreas:'баскетбольная площадка',
       sportInv:'',
@@ -93,6 +93,19 @@ var schools = [
       images: ['sites/default/files/sport_fields/30_1.webp', 'sites/default/files/sport_fields/30_2.webp', 'sites/default/files/sport_fields/30_3.webp'],
       icon:'sites/default/files/sport_fields/football_hockey_volleyball_basketball.png',
       iconSize: [64,16]
+    },
+    {
+      name:'МБОУ «Средняя школа № 32»',
+      address:'ул. Дальняя, 42',
+      number:'32',
+      sportAreas:'баскетбольная площадка',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-вс 09:00 - 20:00',
+      coords:[53.058716,158.678160],
+      images: [],
+      icon:'sites/default/files/sport_fields/basketball.png',
+      iconSize: [16,16]
     },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
