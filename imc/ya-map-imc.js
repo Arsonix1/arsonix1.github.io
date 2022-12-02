@@ -204,7 +204,7 @@ var schools = [
   ymaps.ready(init);
 
   function init() {
-    var collection = new ymaps.GeoObjectCollection(null, { preset: 'islands#' + iconColors[Math.floor(Math.random() * iconColors.length)] + 'Icon' });
+    var collection = new ymaps.GeoObjectCollection(null, { preset: 'islands#redIcon' });
     const gallery = document.getElementById("gallery");
     const viewer = new Viewer(gallery, {
       title: false,
