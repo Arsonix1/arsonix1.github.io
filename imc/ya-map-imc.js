@@ -37,7 +37,7 @@ var schools = [
       images: ['sites/default/files/sport_fields/17_1.webp', 'sites/default/files/sport_fields/17_2.webp', 'sites/default/files/sport_fields/17_3.webp',
                'sites/default/files/sport_fields/17_4.webp', 'sites/default/files/sport_fields/17_5.webp', 'sites/default/files/2022-12/17_6.jpg',
                'sites/default/files/2022-12/17_7.jpg', 'sites/default/files/2022-12/17_8.jpg', 'sites/default/files/2022-12/17_9.jpg',
-               'sites/default/files/2022-12/17_10.jpgp'],
+               'sites/default/files/2022-12/17_10.jpg'],
       icon:'sites/default/files/sport_fields/football_basketball_volleyball.png',
       iconSize: [48,16]
     },
@@ -199,8 +199,7 @@ var schools = [
       icon:'sites/default/files/sport_fields/football.png',
       iconSize: [16,16]
     }
-  ],
-  clickedElem = '';
+  ];
   ymaps.ready(init);
 
   function init() {
@@ -235,7 +234,6 @@ var schools = [
 
     function createMenu (school) {
       var menuItem = $(`<div class="menu-map__item-wrapper"><p class="menu-map__item">${school.name}, ${school.address}</p></div>`),
-          //menuMobileItem = $(`<option class="mobile-menu-item">${school.name}, ${school.address}</option>`),
           descriptionBalloon = `<span style="font-size:14px;">${school.name}<br/>${school.address}</span><br/>
                                 <img src="${school.icon}" style="width:${school.iconSize[0]}px;height:${school.iconSize[1]}px"><br/>
                                 <span>График свободного доступа для населения:</span><br/>
@@ -267,42 +265,24 @@ var schools = [
           return false;
       });
       menu.appendTo($('#menu-map'));
-        createMobileMenu(school, placemark);
-      //menuMobileItem.appendTo(menuMobile);
-      //menuMobile.appendTo($('#menu-map'));
-      /*menuMobile.change(function() {
-        showDesc(school);
-        if (placemark.balloon.isOpen()) {
-          placemark.balloon.close();
-        } else {
-          placemark.balloon.open();
-        }
-      });*/
+      createMobileMenu(school, placemark);
       myMap.geoObjects.add(collection);
     }
       
     function createMobileMenu(school, placemark) {
-      var menuMobileItem = $(`<option class="mobile-menu-item" value="${school.number}">${school.name}, ${school.address}</option>`);
-      menuMobileItem.appendTo(menuMobile);
-        menuMobile.insertBefore($('#ya-map'));
-      //document.getElementById('full-map').insertBefore(menuMobile, document.getElementById('ya-map'));
-      //menuMobile.appendTo($('#menu-map'));
-      /*$("#menu-map__list-mobile option").click(function () {
-        clickedElem = $(this).val();
-        console.log(clickedElem);
-      });*/
-      menuMobile.change(function(e) {
-        var selected = $(this).val(),
-            fullTitle = schools.find(school => school.number === selected).name + ', ' + schools.find(school => school.number === selected).address;
-        console.log(fullTitle);
-        if (clickedElem !== selected) return;
-        showDesc(school);
-        if (placemark.balloon.isOpen()) {
-          placemark.balloon.close();
-        } else {
-          placemark.balloon.open();
-        }
-      })
+      var menuMobileItem = $(`<a href="#">${school.name}, ${school.address}</a>`);
+      menuMobileItem.appendTo($('#mobile-menu--list'))
+        .bind('click', function(e) {
+          e.preventDefault();
+          $('.mobile-menu__button').text(school.name);
+          $('#mobile-menu--list').toggle('mobile-menu--show');
+          showDesc(school);
+          if (placemark.balloon.isOpen()) {
+            placemark.balloon.close();
+          } else {
+            placemark.balloon.open();
+          }
+        })
     }
 
     function showDesc(school) {
@@ -343,12 +323,7 @@ var schools = [
     document.getElementsByClassName('ymaps-2-1-79-events-pane ymaps-2-1-79-user-selection-none')[0].addEventListener('click', event => {
       viewer.update();
     });
-      $('.mobile-menu-item').on('click', function() {
-        clickedElem = $(this).val();
-        console.log(clickedElem);
-      });
-    /*document.getElementById('menu-map__list-mobile option').addEventListener('click', event => {
-      clickedElem = $(this).val();
-      console.log(clickedElem);
-    })*/
+    $('.mobile-menu__button').on('click', function() {
+      $('#mobile-menu--list').toggle('mobile-menu--show');
+    })
   }
