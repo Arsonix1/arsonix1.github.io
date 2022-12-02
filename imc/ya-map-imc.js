@@ -186,6 +186,19 @@ var schools = [
       icon:'sites/default/files/sport_fields/football_basketball.png',
       iconSize: [32,16]
     },
+    {
+      name:'МАОУ «Средняя школа № 45»',
+      address:'ул. Якорная, 11',
+      number:'45',
+      sportAreas:'футбольное поле, хоккейная коробка, площадка для стритбола',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-пт 17:30 - 20:00, сб 17:00 - 22:00, вс 10:00 - 22:00',
+      coords:[53.0612827,158.5961176],
+      images: [],
+      icon:'sites/default/files/sport_fields/football.png',
+      iconSize: [16,16]
+    }
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
   ymaps.ready(init);
