@@ -168,7 +168,8 @@ var schools = [
       buzy:'',
       workTime:'пн-пт 18:00 - 20:00, сб 15:00 - 20:00, вс 09:00 - 20:00',
       coords:[53.0763281,158.6462756],
-      images: [],
+      images: ['sites/default/files/sport_fields/42_1.webp', 'sites/default/files/sport_fields/42_2.webp', 'sites/default/files/sport_fields/42_3.webp',
+              'sites/default/files/sport_fields/42_4.webp', 'sites/default/files/sport_fields/42_5.webp'],
       icon:'sites/default/files/sport_fields/football_hockey.png',
       iconSize: [32,16]
     },
