@@ -146,6 +146,19 @@ var schools = [
       icon:'sites/default/files/sport_fields/football_basketball.png',
       iconSize: [32,16]
     },
+    {
+      name:'МБОУ «Средняя школа № 41»',
+      address:'ул. Первомайская, 15А',
+      number:'41',
+      sportAreas:'футбольное поле, баскетбольная площадка',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-вс 19:00 - 19:00',
+      coords:[53.034027, 158.744900],
+      images: [],
+      icon:'sites/default/files/sport_fields/football_basketball.png',
+      iconSize: [32,16]
+    },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
   ymaps.ready(init);
