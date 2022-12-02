@@ -282,8 +282,7 @@ var schools = [
     }
       
     function createMobileMenu(school, placemark) {
-      var menuMobileItem = $(`<option class="mobile-menu-item" value="${school.number}">${school.name}, ${school.address}</option>`),
-          
+      var menuMobileItem = $(`<option class="mobile-menu-item" value="${school.number}">${school.name}, ${school.address}</option>`);
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
       /*$("#menu-map__list-mobile option").click(function () {
