@@ -133,6 +133,19 @@ var schools = [
       icon:'sites/default/files/sport_fields/football_basketball.png',
       iconSize: [32,16]
     },
+    {
+      name:'МАОУ «Гимназия № 39»',
+      address:'ул. Космический проезд, 14',
+      number:'39',
+      sportAreas:'футбольное поле, баскетбольная площадка',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-пт 16:00 - 19:00, сб-вс 10:00 - 19:00',
+      coords:[53.0580747,158.6636040],
+      images: [],
+      icon:'sites/default/files/sport_fields/football_basketball.png',
+      iconSize: [32,16]
+    },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
   ymaps.ready(init);
