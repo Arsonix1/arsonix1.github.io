@@ -173,6 +173,19 @@ var schools = [
       icon:'sites/default/files/sport_fields/football_hockey.png',
       iconSize: [32,16]
     },
+    {
+      name:'МАОУ «Средняя школа № 43»',
+      address:'ул. Ватутина, 1Б',
+      number:'43',
+      sportAreas:'футбольное поле, хоккейная коробка, площадка для стритбола',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-вс 16:00 - 19:00',
+      coords:[53.0535739,158.6323787],
+      images: [],
+      icon:'sites/default/files/sport_fields/football_basketball.png',
+      iconSize: [32,16]
+    },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
   ymaps.ready(init);
