@@ -3,13 +3,26 @@ var schools = [
       name:'МАОУ «Средняя школа № 1»',
       address:'ул. Пограничная, 18/1',
       number:'1',
-      sportAreas:'Футбольное поле/Баскетбольная площадка',
-      sportInv:'уличные тренажеры, яма для прыжков в длину, полоса препятствий',
+      sportAreas:'футбольное поле/Баскетбольная площадка',
+      sportInv:'баскетбольные кольца, футбольные ворота, уличные тренажеры, яма для прыжков в длину, полоса препятствий',
       buzy:'',
-      workTime:'пн-пт с 08:15 до 18:00',
+      workTime:'пн, ср, пт с 16:00-19:00 до 18:00<br/>сб-вс 14:00-19:00',
       coords:[53.0339319,158.6681443],
       images:['sites/default/files/sport_fields/1_1.webp', 'sites/default/files/sport_fields/1_2.webp', 'sites/default/files/sport_fields/1_3.webp'],
       icon:'sites/default/files/sport_fields/football_basketball.png',
+      iconSize: [32,16]
+    },
+    {
+      name:'МАОУ «Средняя школа № 12»',
+      address:'ул. Капитана Драбкина, 7',
+      number:'12',
+      sportAreas:'беговая дорожка, футбольное поле, площадка для стритбола',
+      sportInv:'',
+      buzy:'пн-пт 17:30 - 20:00, сб-вс 10:00 - 20:00',
+      workTime:'пн-пт 08:00 - 17:20',
+      coords:[52.9888905,158.6689818],
+      images: ['sites/default/files/2022-12/12_1.jpg', 'sites/default/files/2022-12/12_2.jpg'],
+      icon:'sites/default/files/sport_fields/football_hockey.png',
       iconSize: [32,16]
     },
     {
@@ -117,12 +130,14 @@ var schools = [
       document.getElementsByClassName('school-desc__text')[0].replaceChildren();
       description.appendTo($(".school-desc__text"))
       document.getElementsByClassName('images')[0].replaceChildren();
-      school.images.forEach(image => {
-        var img = $(`<li><img src="${image}"></li>`);
-        img.appendTo($(".images"));
-      });
-      $('#gallery').css('border', '2px solid #005c9d');
-      viewer.update();
+      if (school.images.length > 0) {
+        school.images.forEach(image => {
+          var img = $(`<li><img src="${image}"></li>`);
+          img.appendTo($(".images"));
+        });
+        $('#gallery').css('border', '2px solid #005c9d');
+        viewer.update();
+      }
       if (document.getElementsByClassName('map-balloon')[0]) {
         document.getElementsByClassName('map-balloon')[0].addEventListener('click', event => {
           var toLocation = schools.find(school => school.number === event.target.attributes[1].value).coords;
