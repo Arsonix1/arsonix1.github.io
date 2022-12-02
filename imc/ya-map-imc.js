@@ -68,6 +68,32 @@ var schools = [
       icon:'sites/default/files/sport_fields/football_basketball.png',
       iconSize: [32,16]
     },
+    {
+      name:'МАОУ «Средняя школа № 28»',
+      address:'ул. Пономарева, 13',
+      number:'28',
+      sportAreas:'баскетбольная площадка',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-пт 08:30 - 20:00',
+      coords:[53.053691,158.673141],
+      images: [],
+      icon:'sites/default/files/sport_fields/basketball.png',
+      iconSize: [16,16]
+    },
+    {
+      name:'МАОУ «Средняя школа № 30»',
+      address:'ул. Кроноцкая, 6/1',
+      number:'30',
+      sportAreas:'футбольное поле, баскетбольная площадка, беговая дорожка',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-вс 09:00 - 20:00',
+      coords:[53.0462515,158.6593808],
+      images: ['sites/default/files/sport_fields/30_1.webp', 'sites/default/files/sport_fields/30_2.webp', 'sites/default/files/sport_fields/30_3.webp'],
+      icon:'sites/default/files/sport_fields/football_hockey_volleyball_basketball.png',
+      iconSize: [64,16]
+    },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
   ymaps.ready(init);
