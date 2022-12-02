@@ -285,10 +285,10 @@ var schools = [
       var menuMobileItem = $(`<option class="mobile-menu-item" value="${school.number}">${school.name}, ${school.address}</option>`);
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
-      menuMobile.change(function() {
+      menuMobile.change(function(e) {
         var selected = $(this).val(),
             fullTitle = schools.find(school => school.number === selected).name + ', ' + schools.find(school => school.number === selected).address;
-        console.log($('#menu-map__list-mobile').children(':selected').text());
+        console.log(e);
         console.log(fullTitle);
         if ($('#menu-map__list-mobile').children(':selected').text() !== fullTitle) return;
         showDesc(school);
