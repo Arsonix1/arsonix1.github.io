@@ -128,7 +128,7 @@ var schools = [
       sportInv:'',
       buzy:'',
       workTime:'пн-вс 09:00 - 20:00',
-      coords:[53.066810, 158.542210],
+      coords:[53.063852, 158.540399],
       images: [],
       icon:'sites/default/files/sport_fields/football_basketball.png',
       iconSize: [32,16]
