@@ -235,7 +235,7 @@ var schools = [
 
     function createMenu (school) {
       var menuItem = $(`<div class="menu-map__item-wrapper"><p class="menu-map__item">${school.name}, ${school.address}</p></div>`),
-          menuMobileItem = $(`<option class="mobile-menu-item">${school.name}, ${school.address}</option>`),
+          //menuMobileItem = $(`<option class="mobile-menu-item">${school.name}, ${school.address}</option>`),
           descriptionBalloon = `<span style="font-size:14px;">${school.name}<br/>${school.address}</span><br/>
                                 <img src="${school.icon}" style="width:${school.iconSize[0]}px;height:${school.iconSize[1]}px"><br/>
                                 <span>График свободного доступа для населения:</span><br/>
@@ -267,6 +267,22 @@ var schools = [
           return false;
       });
       menu.appendTo($('#menu-map'));
+        createMobileMenu(school, placemark);
+      //menuMobileItem.appendTo(menuMobile);
+      //menuMobile.appendTo($('#menu-map'));
+      /*menuMobile.change(function() {
+        showDesc(school);
+        if (placemark.balloon.isOpen()) {
+          placemark.balloon.close();
+        } else {
+          placemark.balloon.open();
+        }
+      });*/
+      myMap.geoObjects.add(collection);
+    }
+      
+    function createMobileMenu(school, placemark) {
+      var menuMobileItem = $(`<option class="mobile-menu-item">${school.name}, ${school.address}</option>`);
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
       menuMobile.change(function() {
@@ -276,8 +292,7 @@ var schools = [
         } else {
           placemark.balloon.open();
         }
-      });
-      myMap.geoObjects.add(collection);
+      })
     }
 
     function showDesc(school) {
