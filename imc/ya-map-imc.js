@@ -343,8 +343,12 @@ var schools = [
     document.getElementsByClassName('ymaps-2-1-79-events-pane ymaps-2-1-79-user-selection-none')[0].addEventListener('click', event => {
       viewer.update();
     });
-    document.getElementById('menu-map__list-mobile option').addEventListener('click', event => {
+      $('.mobile-menu-item').on('click', function() {
+        clickedElem = $(this).val();
+        console.log(clickedElem);
+      });
+    /*document.getElementById('menu-map__list-mobile option').addEventListener('click', event => {
       clickedElem = $(this).val();
       console.log(clickedElem);
-    })
+    })*/
   }
