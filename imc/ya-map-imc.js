@@ -286,7 +286,7 @@ var schools = [
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
       menuMobile.change(function() {
-        var selected = $(this).val(),
+        var selected = $('#menu-map__list-mobile).children(':selected').val(),
             fullTitle = schools.find(school => school.number === selected).name + ', ' + schools.find(school => school.number === selected).address;
         console.log($(this).text());
         console.log(fullTitle);
