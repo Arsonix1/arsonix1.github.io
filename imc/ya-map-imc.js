@@ -286,7 +286,11 @@ var schools = [
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
       menuMobile.change(function() {
-        console.log($(this).val());
+        var selected = $(this).val(),
+            fullTitle = schools.find(school => school.number === selected).name + ', ' + schools.find(school => school.number === selected).address;
+        console.log($(this).text());
+        console.log(fullTitle);
+        if ($(this).text() !== fullTitle) return;
         showDesc(school);
         if (placemark.balloon.isOpen()) {
           placemark.balloon.close();
@@ -303,7 +307,7 @@ var schools = [
                         <span>Спортивные площадки: <b>${school.sportAreas}</b></span><br/>
                         <span>Спортивное оборудование: <b>${school.sportInv}</b></span><br/>
                         <span>График работы: <b>${school.workTime}</b></span><br/>
-                        <span>Время пользования населением: <b>${school.buzy}</b></span><br/>`);
+                        <span>График свободного доступа для населения: <b>${school.buzy}</b></span><br/>`);
       document.getElementsByClassName('school-desc__text')[0].replaceChildren();
       description.appendTo($(".school-desc__text"))
       document.getElementsByClassName('images')[0].replaceChildren();
