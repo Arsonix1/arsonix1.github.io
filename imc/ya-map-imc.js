@@ -107,6 +107,19 @@ var schools = [
       icon:'sites/default/files/sport_fields/basketball.png',
       iconSize: [16,16]
     },
+    {
+      name:'МБОУ «Средняя школа № 37»',
+      address:'пер. Светлый, 1',
+      number:'37',
+      sportAreas:'футбольное поле, баскетбольная площадка',
+      sportInv:'',
+      buzy:'',
+      workTime:'пн-вс 09:00 - 20:00',
+      coords:[53.066810, 158.542210],
+      images: [],
+      icon:'sites/default/files/sport_fields/football_basketballl.png',
+      iconSize: [32,16]
+    },
   ],
   iconColors = ['blue', 'red', 'darkOrange', 'night', 'darkBlue', 'pink', 'gray', 'brown'];
   ymaps.ready(init);
