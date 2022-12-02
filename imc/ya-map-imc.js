@@ -282,10 +282,11 @@ var schools = [
     }
       
     function createMobileMenu(school, placemark) {
-      var menuMobileItem = $(`<option class="mobile-menu-item">${school.name}, ${school.address}</option>`);
+      var menuMobileItem = $(`<option class="mobile-menu-item" value="${school.number}">${school.name}, ${school.address}</option>`);
       menuMobileItem.appendTo(menuMobile);
       menuMobile.appendTo($('#menu-map'));
       menuMobile.change(function() {
+        console.log(this.val());
         showDesc(school);
         if (placemark.balloon.isOpen()) {
           placemark.balloon.close();
