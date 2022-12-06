@@ -325,5 +325,8 @@ var schools = [
     });
     $('.mobile-menu__button').on('click', function() {
       $('#mobile-menu--list').toggle('mobile-menu--show');
-    })
+    });
+    window.addEventListener('orientationchange', function() {
+      $('#mobile-menu--list').css('display', 'none');
+    }, false);
   }
