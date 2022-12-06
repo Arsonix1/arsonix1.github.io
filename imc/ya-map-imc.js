@@ -222,7 +222,7 @@ var schools = [
       myMap = new ymaps.Map('ya-map', {
         center: [53, 158.67],
         zoom: 12,
-        controls: ['geolocationControl', 'routeButtonControl']
+        controls: ['geolocationControl', 'routeButtonControl', 'typeSelector']
       }, {
         searchControlProvider: 'yandex#search'
       }),
