@@ -110,9 +110,10 @@
 }
 .images > li > img {
   cursor: zoom-in;
-  max-width: 300px;
-  max-height: 300px;
+  width: 200px;
+  max-height: 200px;
   object-fit: cover;
+  border-radius: 20px;
 }
 .viewer-download {
   color: #fff;
