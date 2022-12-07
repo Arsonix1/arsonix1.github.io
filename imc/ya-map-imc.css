@@ -147,7 +147,7 @@
     display: none;
   }
   .images > li > img {
-    max-width: 150px!important;
-    max-height: 150px!important;
+    width: 100px;
+    height: 100px;
   }
 }
