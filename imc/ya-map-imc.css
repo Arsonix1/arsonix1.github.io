@@ -114,6 +114,7 @@
   max-height: 200px;
   object-fit: cover;
   border-radius: 20px;
+  margin-bottom: 15px;
 }
 .viewer-download {
   color: #fff;
