@@ -1,4 +1,3 @@
-// logistic - процент логистики, storage - процент хранения
 [
   {"name": "Коледино", "logistic": 140, "storage": 150},
   {"name": "Подольск", "logistic": 161, "storage": 230},
