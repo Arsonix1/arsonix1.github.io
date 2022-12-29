@@ -1,0 +1,23 @@
+// logistic - процент логистики, storage - процент хранения
+[
+  {"name": "Коледино", "logistic": 140, "storage": 150},
+  {"name": "Подольск", "logistic": 161, "storage": 230},
+  {"name": "Электросталь", "logistic": 108, "storage": 57},
+  {"name": "Алексин", "logistic": 84, "storage": 90},
+  {"name": "Новоселки Чехов", "logistic": 135, "storage": 160},
+  {"name": "Белая Дача", "logistic": 145, "storage": 155},
+  {"name": "Домодедово", "logistic": 130, "storage": 100},
+  {"name": "Невинномысск", "logistic": 22, "storage": 100},
+  {"name": "Казань", "logistic": 68, "storage": 100},
+  {"name": "Краснодар", "logistic": 40, "storage": 30},
+  {"name": "Санкт-Петербург Уткина Заводь", "logistic": 64, "storage": 120},
+  {"name": "Санкт-Петербург Шушары", "logistic": 41, "storage": 30},
+  {"name": "Екатеринбург", "logistic": 150, "storage": 160},
+  {"name": "Новосибирск", "logistic": 125, "storage": 390},
+  {"name": "Хабаровск", "logistic": 100, "storage": 150},
+  {"name": "Нур-Султан", "logistic": 115, "storage": 195},
+  {"name": "Крекшино КБТ", "logistic": 115, "storage": 120},
+  {"name": "Домодедово КБТ", "logistic": 140, "storage": 100},
+  {"name": "Электросталь КБТ", "logistic": 115, "storage": 220},
+  {"name": "Санкт-Петербург КБТ", "logistic": 115, "storage": 260}  
+]
