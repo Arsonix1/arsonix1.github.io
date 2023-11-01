@@ -1,0 +1,25 @@
+{
+  "box": {
+    "logistic": {
+      "volume": 3,
+      "baseCost": 40,
+      "overvolumeCost": 5
+    },
+    "store": {
+      "volume": 3,
+      "baseCost": 0.3,
+      "overvolumeCost": 0.04
+    }
+  },
+  "pallet": {
+    "logistic": {
+      "volume": 3,
+      "baseCost": 40,
+      "overvolumeCost": 5
+    },
+    "store": {
+      "baseCost": 55
+    }
+  },
+  "returnLogisticCost": 50
+}
