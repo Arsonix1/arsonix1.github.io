@@ -1,0 +1,4 @@
+yandex.ru
+google.com
+mail.ru
+127.0.0.1
