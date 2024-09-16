@@ -1,4 +1,4 @@
-yandex.ru
-google.com
-mail.ru
-127.0.0.1
+yandex.ru, Яндекс
+google.com, Google
+mail.ru, Мэйл.ру
+127.0.0.1 Localhost
